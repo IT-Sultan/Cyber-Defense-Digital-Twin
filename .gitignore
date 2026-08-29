@@ -216,3 +216,24 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Dataset files
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.jsonl
+*.log
+*.pcap
+*.pcapng
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables
+.env
