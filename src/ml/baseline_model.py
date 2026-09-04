@@ -67,8 +67,14 @@ def run_ml_pipeline():
     df['model_name'] = 'IsolationForest_Baseline_v2'
 
     # 5. تصدير المخرجات المتوافقة مع ml-interface.md
-    df['event_id'] = df['_id'] if '_id' in df.columns else [f"event_{i}" for i in range(len(df))]
+    if 'event_id' not in df.columns:
+        if '_id' in df.columns:
+            df['event_id'] = df['_id']
+        else:
+            df['event_id'] = [f"event_{i}" for i in range(len(df))]
+
     df['host'] = df['host.name'] if 'host.name' in df.columns else 'unknown'
+
     if '@timestamp' not in df.columns:
         df['@timestamp'] = pd.Timestamp.now().isoformat()
 
@@ -78,6 +84,7 @@ def run_ml_pipeline():
     os.makedirs("data/processed", exist_ok=True)
     output_path = "data/processed/ml_predictions.csv"
     output_df.to_csv(output_path, index=False)
+
     print(f"[+] تم توليد المخرجات بنجاح في: {output_path}")
 
 if __name__ == "__main__":
