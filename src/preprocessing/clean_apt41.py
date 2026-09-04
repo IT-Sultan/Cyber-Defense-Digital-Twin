@@ -68,7 +68,8 @@ removed_duplicates = before_duplicates - len(df)
 
 # 7. Sort events chronologically
 df = df.sort_values("@timestamp").reset_index(drop=True)
-
+# Create one canonical event ID for the entire pipeline
+df["event_id"] = range(1, len(df) + 1)
 # 8. Save cleaned dataset
 OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 
