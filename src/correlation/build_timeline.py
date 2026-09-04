@@ -11,8 +11,9 @@ df = pd.read_csv(INPUT_FILE, parse_dates=["@timestamp"])
 # Sort all events chronologically
 df = df.sort_values("@timestamp").reset_index(drop=True)
 
-# Create a simple event ID
-df["event_id"] = range(1, len(df) + 1)
+# event_id must come from preprocessing
+if "event_id" not in df.columns:
+    raise KeyError("event_id missing from cleaned dataset")
 
 # Columns useful for the first attack timeline
 timeline_columns = [

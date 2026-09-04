@@ -108,7 +108,7 @@ for index, row in df.iterrows():
             flags=re.IGNORECASE
         ):
             detections.append({
-                "event_id": index + 1,
+                "event_id": row["event_id"],
                 "@timestamp": row.get("@timestamp"),
                 "host": row.get("host.name"),
                 "command": command,
