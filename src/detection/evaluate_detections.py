@@ -1,7 +1,9 @@
 import pandas as pd
 from pathlib import Path
+import os
+DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
 
-INPUT_FILE = Path("data/processed/apt41_detections.csv")
+INPUT_FILE = Path(f"data/processed/{DATASET_SLUG}_detections.csv")
 
 print("[+] Loading detections...")
 

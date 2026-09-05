@@ -3,10 +3,12 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import textwrap
 from pathlib import Path
+import os
+DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
 
-NODES_FILE = Path("data/processed/apt41_graph_nodes.csv")
-EDGES_FILE = Path("data/processed/apt41_graph_edges.csv")
-OUTPUT_FILE = Path("docs/apt41_attack_graph.png")
+NODES_FILE = Path(f"data/processed/{DATASET_SLUG}_graph_nodes.csv")
+EDGES_FILE = Path(f"data/processed/{DATASET_SLUG}_graph_edges.csv")
+OUTPUT_FILE = Path(f"docs/{DATASET_SLUG}_attack_graph.png")
 
 print("[+] Loading attack graph data...")
 
@@ -100,7 +102,7 @@ nx.draw_networkx_labels(
 )
 
 plt.title(
-    "APT41 Attack Path — MITRE ATT&CK Timeline",
+    f"{DATASET_SLUG.upper()} Attack Path — MITRE ATT&CK Timeline",
     fontsize=18
 )
 

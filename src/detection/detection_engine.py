@@ -1,11 +1,13 @@
 import pandas as pd
 import re
 from pathlib import Path
+import os
+DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
 
-INPUT_FILE = Path("data/processed/apt41_clean.csv")
-OUTPUT_FILE = Path("data/processed/apt41_detections.csv")
+INPUT_FILE = Path(f"data/processed/{DATASET_SLUG}_clean.csv")
+OUTPUT_FILE = Path(f"data/processed/{DATASET_SLUG}_detections.csv")
 
-print("[+] Loading cleaned APT41 events...")
+print("[+] Loading cleaned events...")
 
 df = pd.read_csv(
     INPUT_FILE,

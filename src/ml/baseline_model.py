@@ -5,14 +5,12 @@ from sklearn.ensemble import IsolationForest
 
 def run_ml_pipeline():
     # 1. تحديد مسار الإدخال
-    input_path = "data/processed/apt41_clean.csv"
+    DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
+    input_path = f"data/processed/{DATASET_SLUG}_clean.csv"
     if not os.path.exists(input_path):
-        if os.path.exists("data/apt41_clean_sample.csv"):
-            input_path = "data/apt41_clean_sample.csv"
-        elif os.path.exists("data/APT41-Campaign-1-logs.csv"):
-            input_path = "data/APT41-Campaign-1-logs.csv"
-        else:
-            raise FileNotFoundError("لم يتم العثور على ملف البيانات المدخل!")
+        raise FileNotFoundError(
+            f"Clean dataset not found: {input_path}. Run preprocessing first."
+        )
 
     print(f"[*] قراءة البيانات من: {input_path}")
     df = pd.read_csv(input_path, low_memory=False)

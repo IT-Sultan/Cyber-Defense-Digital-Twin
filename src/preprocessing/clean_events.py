@@ -1,9 +1,15 @@
 import pandas as pd
 from pathlib import Path
+import os
+DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
 
-RAW_FILE = Path("data/raw/cyber/APT41-Campaign-1-logs.csv")
-OUTPUT_FILE = Path("data/processed/apt41_clean.csv")
-
+RAW_FILE = Path(
+    os.getenv(
+        "CYBER_RAW_FILE",
+        "data/raw/cyber/APT41-Campaign-1-logs.csv"
+    )
+)
+OUTPUT_FILE = Path(f"data/processed/{DATASET_SLUG}_clean.csv")
 print("[+] Loading dataset...")
 
 df = pd.read_csv(RAW_FILE)
