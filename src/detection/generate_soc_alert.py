@@ -1,35 +1,16 @@
 import pandas as pd
 from pathlib import Path
 
-DETECTIONS_FILE = Path("data/processed/apt41_detections.csv")
-ML_FILE = Path("data/processed/ml_predictions.csv")
+CHAINS_FILE = Path("data/processed/apt41_correlated_chains.csv")
 OUTPUT_FILE = Path("data/processed/apt41_soc_alert.csv")
 
-print("[+] Loading detections...")
+print("[+] Loading correlated attack chains...")
 
-df = pd.read_csv(
-    DETECTIONS_FILE,
-    parse_dates=["@timestamp"]
+chains_df = pd.read_csv(
+    CHAINS_FILE,
+    parse_dates=["start_time", "end_time"]
 )
 
-df = df.sort_values("@timestamp").reset_index(drop=True)
-
-# Load ML predictions and join using canonical event_id
-ml_df = pd.read_csv(ML_FILE)
-
-df = df.merge(
-    ml_df[["event_id", "ml_score", "ml_label"]],
-    on="event_id",
-    how="left"
-)
-
-# Ensure every detection matched an ML event
-missing_ml = df["ml_score"].isna().sum()
-
-if missing_ml > 0:
-    print(f"[!] Warning: {missing_ml} detections have no ML prediction")
-
-# Severity weights
 severity_weights = {
     "low": 1,
     "medium": 2,
@@ -37,94 +18,87 @@ severity_weights = {
     "critical": 4
 }
 
-df["severity_weight"] = (
-    df["severity"]
-    .str.lower()
-    .map(severity_weights)
-    .fillna(1)
-)
+alerts = []
 
-# Build attack stage sequence using DETECTED tactics only
-stage_sequence = []
+for _, chain in chains_df.iterrows():
 
-for tactic in df["detected_tactic"].dropna():
+    # Severity data passed from correlation
+    severities_value = chain.get("severities", "")
 
-    tactic = str(tactic)
+    if pd.isna(severities_value):
+        severities = []
+    else:
+        severities = [
+            severity.strip().lower()
+            for severity in str(severities_value).split(" -> ")
+            if severity.strip()
+        ]
 
-    if not stage_sequence or stage_sequence[-1] != tactic:
-        stage_sequence.append(tactic)
+    severity_score = sum(
+        severity_weights.get(severity, 1)
+        for severity in severities
+    )
 
-# Base detection risk score
-raw_score = df["severity_weight"].sum()
+    max_score = len(severities) * 4
 
-max_score = len(df) * 4
+    base_risk_score = (
+        round((severity_score / max_score) * 100)
+        if max_score > 0
+        else 0
+    )
 
-base_risk_score = round(
-    (raw_score / max_score) * 100
-)
+    # Multi-stage bonus
+    unique_stages = int(chain.get("unique_attack_stages", 0))
+    stage_bonus = 15 if unique_stages >= 4 else 0
 
-# Multi-stage attack bonus
-unique_stages = df["detected_tactic"].nunique()
+    # ML contribution
+    # Relative anomaly signal only, not attack probability
+    ml_avg_score = float(chain.get("avg_ml_score", 0.0))
+    ml_bonus = round(ml_avg_score * 10)
 
-stage_bonus = 15 if unique_stages >= 4 else 0
+    risk_score = min(
+        100,
+        base_risk_score + stage_bonus + ml_bonus
+    )
 
-# ML contribution
-# ml_score is a Relative Anomaly Score, not an attack probability.
-ml_avg_score = df["ml_score"].dropna().mean()
+    if risk_score >= 75:
+        final_severity = "CRITICAL"
+    elif risk_score >= 50:
+        final_severity = "HIGH"
+    elif risk_score >= 25:
+        final_severity = "MEDIUM"
+    else:
+        final_severity = "LOW"
 
-if pd.isna(ml_avg_score):
-    ml_avg_score = 0.0
-
-# Keep ML influence limited to max 10 points
-ml_bonus = round(ml_avg_score * 10)
-
-# Final risk score
-risk_score = min(
-    100,
-    base_risk_score + stage_bonus + ml_bonus
-)
-
-# Final severity
-if risk_score >= 75:
-    final_severity = "CRITICAL"
-elif risk_score >= 50:
-    final_severity = "HIGH"
-elif risk_score >= 25:
-    final_severity = "MEDIUM"
-else:
-    final_severity = "LOW"
-
-host = (
-    df["host"].dropna().iloc[0]
-    if df["host"].notna().any()
-    else "unknown"
-)
-
-alert = pd.DataFrame([
-    {
-        "alert_name": "APT41 Multi-Stage Attack Chain",
-        "host": host,
-        "start_time": df["@timestamp"].min(),
-        "end_time": df["@timestamp"].max(),
-        "correlated_events": len(df),
+    alerts.append({
+        "alert_name": "Correlated Multi-Stage Attack Chain",
+        "chain_id": chain["chain_id"],
+        "host": chain["host"],
+        "start_time": chain["start_time"],
+        "end_time": chain["end_time"],
+        "correlated_events": chain["event_count"],
         "unique_attack_stages": unique_stages,
-        "stage_sequence": " -> ".join(stage_sequence),
+        "stage_sequence": chain["stage_sequence"],
+        "context": chain["context"],
         "base_risk_score": base_risk_score,
         "stage_bonus": stage_bonus,
         "ml_avg_score": round(ml_avg_score, 4),
+        "anomaly_count": int(chain.get("anomaly_count", 0)),
+        "anomaly_ratio": round(float(chain.get("anomaly_ratio", 0.0)), 4),
         "ml_bonus": ml_bonus,
         "risk_score": risk_score,
         "severity": final_severity
-    }
-])
+    })
 
-alert.to_csv(
+alert_df = pd.DataFrame(alerts)
+
+alert_df.to_csv(
     OUTPUT_FILE,
     index=False
 )
 
-print("\n=== SOC ALERT ===")
+print("\n=== SOC ALERTS ===")
+print(alert_df.to_string(index=False))
 
-print(alert.to_string(index=False))
-
-print(f"\n[+] Alert saved to: {OUTPUT_FILE}")
+print(f"\n[+] Alerts generated: {len(alert_df)}")
+print(f"[+] Alert saved to: {OUTPUT_FILE}")

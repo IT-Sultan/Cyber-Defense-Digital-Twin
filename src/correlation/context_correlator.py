@@ -65,6 +65,17 @@ chains = []
 for chain_id, group in df.groupby("chain_id"):
 
     rules = group["rule_name"].dropna().tolist()
+    severities = group["severity"].dropna().tolist()
+
+    stage_sequence = []
+
+    for tactic in group["detected_tactic"].dropna():
+        tactic = str(tactic)
+
+        if not stage_sequence or stage_sequence[-1] != tactic:
+            stage_sequence.append(tactic)
+
+    unique_attack_stages = group["detected_tactic"].nunique()
 
     context = []
 
@@ -111,6 +122,9 @@ for chain_id, group in df.groupby("chain_id"):
         "start_time": group["@timestamp"].min(),
         "end_time": group["@timestamp"].max(),
         "event_count": len(group),
+        "unique_attack_stages": unique_attack_stages,
+"stage_sequence": " -> ".join(stage_sequence),
+"severities": " -> ".join(severities),
         "avg_ml_score": round(avg_ml_score, 4),
         "anomaly_count": int(anomaly_count),
         "anomaly_ratio": round(anomaly_ratio, 4),
