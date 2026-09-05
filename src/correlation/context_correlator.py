@@ -1,9 +1,11 @@
 import pandas as pd
 from pathlib import Path
+import os
+DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
 
-INPUT_FILE = Path("data/processed/apt41_detections.csv")
+INPUT_FILE = Path(f"data/processed/{DATASET_SLUG}_detections.csv")
 ML_FILE = Path("data/processed/ml_predictions.csv")
-OUTPUT_FILE = Path("data/processed/apt41_correlated_chains.csv")
+OUTPUT_FILE = Path(f"data/processed/{DATASET_SLUG}_correlated_chains.csv")
 
 WINDOW_SECONDS = 180
 

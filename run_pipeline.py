@@ -2,7 +2,7 @@ import subprocess
 import sys
 
 STEPS = [
-    ("Data Cleaning", "src/preprocessing/clean_apt41.py"),
+    ("Data Cleaning", "src/preprocessing/clean_events.py"),
     ("ML Baseline", "src/ml/baseline_model.py"),
     ("Attack Timeline", "src/correlation/build_timeline.py"),
     ("MITRE Summary", "src/mitre/build_mitre_summary.py"),

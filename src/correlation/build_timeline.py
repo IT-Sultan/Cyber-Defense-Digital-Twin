@@ -1,10 +1,12 @@
 import pandas as pd
 from pathlib import Path
+import os
+DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
 
-INPUT_FILE = Path("data/processed/apt41_clean.csv")
-OUTPUT_FILE = Path("data/processed/apt41_timeline.csv")
+INPUT_FILE = Path(f"data/processed/{DATASET_SLUG}_clean.csv")
+OUTPUT_FILE = Path(f"data/processed/{DATASET_SLUG}_timeline.csv")
 
-print("[+] Loading cleaned APT41 data...")
+print("[+] Loading cleaned dataset...")
 
 df = pd.read_csv(INPUT_FILE, parse_dates=["@timestamp"])
 

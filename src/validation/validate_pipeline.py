@@ -1,18 +1,18 @@
 import sys
 from pathlib import Path
-
+import os
 import pandas as pd
 
 
 DATA_DIR = Path("data/processed")
-
+DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
 FILES = {
-    "clean": DATA_DIR / "apt41_clean.csv",
+    "clean": DATA_DIR / f"{DATASET_SLUG}_clean.csv",
     "ml": DATA_DIR / "ml_predictions.csv",
-    "timeline": DATA_DIR / "apt41_timeline.csv",
-    "detections": DATA_DIR / "apt41_detections.csv",
-    "chains": DATA_DIR / "apt41_correlated_chains.csv",
-    "alerts": DATA_DIR / "apt41_soc_alert.csv",
+    "timeline": DATA_DIR / f"{DATASET_SLUG}_timeline.csv",
+    "detections": DATA_DIR / f"{DATASET_SLUG}_detections.csv",
+    "chains": DATA_DIR / f"{DATASET_SLUG}_correlated_chains.csv",
+    "alerts": DATA_DIR / f"{DATASET_SLUG}_soc_alert.csv",
 }
 
 failures = []

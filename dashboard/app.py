@@ -1,7 +1,7 @@
 from pathlib import Path
 import subprocess
 import sys
-
+import os
 import pandas as pd
 import streamlit as st
 
@@ -13,14 +13,14 @@ import streamlit as st
 ROOT = Path(__file__).resolve().parents[1]
 
 DATA_DIR = ROOT / "data" / "processed"
-
-ALERT_FILE = DATA_DIR / "apt41_soc_alert.csv"
-CHAINS_FILE = DATA_DIR / "apt41_correlated_chains.csv"
-DETECTIONS_FILE = DATA_DIR / "apt41_detections.csv"
-TIMELINE_FILE = DATA_DIR / "apt41_timeline.csv"
+DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
+ALERT_FILE = DATA_DIR / f"{DATASET_SLUG}_soc_alert.csv"
+CHAINS_FILE = DATA_DIR / f"{DATASET_SLUG}_correlated_chains.csv"
+DETECTIONS_FILE = DATA_DIR / f"{DATASET_SLUG}_detections.csv"
+TIMELINE_FILE = DATA_DIR / f"{DATASET_SLUG}_timeline.csv"
 ML_FILE = DATA_DIR / "ml_predictions.csv"
 
-ATTACK_GRAPH_FILE = ROOT / "docs" / "apt41_attack_graph.png"
+ATTACK_GRAPH_FILE = ROOT / "docs" / f"{DATASET_SLUG}_attack_graph.png"
 
 
 # --------------------------------------------------

@@ -1,8 +1,10 @@
 import pandas as pd
 from pathlib import Path
+import os
+DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
 
-CHAINS_FILE = Path("data/processed/apt41_correlated_chains.csv")
-OUTPUT_FILE = Path("data/processed/apt41_soc_alert.csv")
+CHAINS_FILE = Path(f"data/processed/{DATASET_SLUG}_correlated_chains.csv")
+OUTPUT_FILE = Path(f"data/processed/{DATASET_SLUG}_soc_alert.csv")
 
 print("[+] Loading correlated attack chains...")
 

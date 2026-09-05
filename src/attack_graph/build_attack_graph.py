@@ -1,10 +1,11 @@
 import pandas as pd
 from pathlib import Path
+import os
+DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
 
-INPUT_FILE = Path("data/processed/apt41_timeline.csv")
-
-NODES_FILE = Path("data/processed/apt41_graph_nodes.csv")
-EDGES_FILE = Path("data/processed/apt41_graph_edges.csv")
+INPUT_FILE = Path(f"data/processed/{DATASET_SLUG}_timeline.csv")
+NODES_FILE = Path(f"data/processed/{DATASET_SLUG}_graph_nodes.csv")
+EDGES_FILE = Path(f"data/processed/{DATASET_SLUG}_graph_edges.csv")
 
 print("[+] Loading attack timeline...")
 
