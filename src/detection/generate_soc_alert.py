@@ -51,16 +51,38 @@ for _, chain in chains_df.iterrows():
     unique_stages = int(chain.get("unique_attack_stages", 0))
     stage_bonus = 15 if unique_stages >= 4 else 0
 
-    # ML contribution
+    # ML context
+    ml_avg_score = chain.get("avg_ml_score", 0.0)
+
+    if pd.isna(ml_avg_score):
+        ml_avg_score = 0.0
+
+    ml_avg_score = float(ml_avg_score)
+
+    anomaly_count = chain.get("anomaly_count", 0)
+
+    if pd.isna(anomaly_count):
+        anomaly_count = 0
+
+    anomaly_count = int(anomaly_count)
+
+    anomaly_ratio = chain.get("anomaly_ratio", 0.0)
+
+    if pd.isna(anomaly_ratio):
+        anomaly_ratio = 0.0
+
+    anomaly_ratio = float(anomaly_ratio)
+
     # Relative anomaly signal only, not attack probability
-    ml_avg_score = float(chain.get("avg_ml_score", 0.0))
     ml_bonus = round(ml_avg_score * 10)
 
+    # Final risk score
     risk_score = min(
         100,
         base_risk_score + stage_bonus + ml_bonus
     )
 
+    # Final severity
     if risk_score >= 75:
         final_severity = "CRITICAL"
     elif risk_score >= 50:
@@ -69,6 +91,51 @@ for _, chain in chains_df.iterrows():
         final_severity = "MEDIUM"
     else:
         final_severity = "LOW"
+
+    # Risk explanation / reason codes
+    reason_codes = []
+    risk_reasons = []
+
+    if base_risk_score >= 65:
+        reason_codes.append("ELEVATED_DETECTION_SEVERITY")
+        risk_reasons.append(
+            f"Elevated detection severity profile ({base_risk_score}/100)"
+        )
+
+    if unique_stages >= 4:
+        reason_codes.append("MULTI_STAGE_ATTACK")
+        risk_reasons.append(
+            f"Multi-stage attack observed across {unique_stages} tactics"
+        )
+
+    if anomaly_ratio >= 0.75:
+        reason_codes.append("HIGH_ANOMALY_RATIO")
+        risk_reasons.append(
+            f"High anomaly concentration ({anomaly_ratio:.1%} of correlated detections)"
+        )
+
+    context = str(chain.get("context", ""))
+
+    if "Possible persistence chain" in context:
+        reason_codes.append("PERSISTENCE_ACTIVITY")
+        risk_reasons.append("Persistence activity observed")
+
+    if "Credential access activity" in context:
+        reason_codes.append("CREDENTIAL_ACCESS")
+        risk_reasons.append("Credential access activity observed")
+
+    if "Impact / encryption activity" in context:
+        reason_codes.append("IMPACT_ACTIVITY")
+        risk_reasons.append("Impact or encryption activity observed")
+
+    if not risk_reasons:
+        reason_codes.append("SUSPICIOUS_CORRELATED_ACTIVITY")
+        risk_reasons.append("Suspicious correlated activity observed")
+
+    risk_summary = (
+        f"{final_severity} risk ({risk_score}/100): "
+        + "; ".join(risk_reasons)
+    )
 
     alerts.append({
         "alert_name": "Correlated Multi-Stage Attack Chain",
@@ -79,15 +146,18 @@ for _, chain in chains_df.iterrows():
         "correlated_events": chain["event_count"],
         "unique_attack_stages": unique_stages,
         "stage_sequence": chain["stage_sequence"],
-        "context": chain["context"],
+        "context": context,
         "base_risk_score": base_risk_score,
         "stage_bonus": stage_bonus,
         "ml_avg_score": round(ml_avg_score, 4),
-        "anomaly_count": int(chain.get("anomaly_count", 0)),
-        "anomaly_ratio": round(float(chain.get("anomaly_ratio", 0.0)), 4),
+        "anomaly_count": anomaly_count,
+        "anomaly_ratio": round(anomaly_ratio, 4),
         "ml_bonus": ml_bonus,
         "risk_score": risk_score,
-        "severity": final_severity
+        "severity": final_severity,
+        "reason_codes": " | ".join(reason_codes),
+        "risk_reasons": " | ".join(risk_reasons),
+        "risk_summary": risk_summary
     })
 
 alert_df = pd.DataFrame(alerts)
