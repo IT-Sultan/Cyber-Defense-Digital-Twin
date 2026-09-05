@@ -11,6 +11,7 @@ STEPS = [
     ("Attack Graph Builder", "src/attack_graph/build_attack_graph.py"),
     ("Attack Graph Visualization", "src/attack_graph/visualize_attack_graph.py"),
     ("SOC Alert Generation", "src/detection/generate_soc_alert.py"),
+    ("Pipeline Validation", "src/validation/validate_pipeline.py"),
 ]
 
 print("\n====================================")
