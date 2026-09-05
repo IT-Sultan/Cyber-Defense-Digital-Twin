@@ -122,6 +122,12 @@ for chain_id, group in df.groupby("chain_id"):
         "start_time": group["@timestamp"].min(),
         "end_time": group["@timestamp"].max(),
         "event_count": len(group),
+        "event_ids": " | ".join(
+    group["event_id"]
+    .dropna()
+    .astype(int)
+    .astype(str)
+),
         "unique_attack_stages": unique_attack_stages,
 "stage_sequence": " -> ".join(stage_sequence),
 "severities": " -> ".join(severities),

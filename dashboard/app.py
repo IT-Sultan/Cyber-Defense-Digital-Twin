@@ -205,8 +205,111 @@ if alerts_df.empty:
     st.stop()
 
 
-alert = alerts_df.iloc[0]
+# --------------------------------------------------
+# Alert selection
+# --------------------------------------------------
 
+alerts_df = alerts_df.sort_values(
+    by="risk_score",
+    ascending=False
+).reset_index(drop=True)
+
+
+def build_alert_label(index):
+    row = alerts_df.iloc[index]
+
+    chain_id = row.get("chain_id", index + 1)
+    severity = safe_text(row.get("severity"))
+    host = safe_text(row.get("host"))
+    risk = int(row.get("risk_score", 0))
+
+    if pd.notna(chain_id):
+        try:
+            chain_id = int(chain_id)
+        except (TypeError, ValueError):
+            pass
+
+    return (
+        f"Chain {chain_id} • "
+        f"{severity} • "
+        f"{risk}/100 • "
+        f"{host}"
+    )
+
+
+st.sidebar.markdown("### Alert Selection")
+
+selected_alert_index = st.sidebar.selectbox(
+    "Active Alert",
+    options=range(len(alerts_df)),
+    format_func=build_alert_label
+)
+
+st.sidebar.metric(
+    "Total Alerts",
+    len(alerts_df)
+)
+
+alert = alerts_df.iloc[selected_alert_index]
+# --------------------------------------------------
+# Filter data for selected alert
+# --------------------------------------------------
+
+selected_chain_id = alert.get("chain_id")
+
+selected_event_ids = []
+
+if not chains_df.empty and "chain_id" in chains_df.columns:
+
+    chain_ids_numeric = pd.to_numeric(
+        chains_df["chain_id"],
+        errors="coerce"
+    )
+
+    selected_chain_numeric = pd.to_numeric(
+        pd.Series([selected_chain_id]),
+        errors="coerce"
+    ).iloc[0]
+
+    selected_chain_rows = chains_df[
+        chain_ids_numeric == selected_chain_numeric
+    ]
+
+    if not selected_chain_rows.empty:
+
+        event_ids_value = selected_chain_rows.iloc[0].get(
+            "event_ids",
+            ""
+        )
+
+        if pd.notna(event_ids_value):
+
+            for event_id in str(event_ids_value).split("|"):
+
+                event_id = event_id.strip()
+
+                try:
+                    selected_event_ids.append(
+                        int(float(event_id))
+                    )
+                except ValueError:
+                    pass
+
+
+# Filter detections to selected alert
+if selected_event_ids and "event_id" in detections_df.columns:
+
+    detections_df = detections_df[
+        detections_df["event_id"].isin(selected_event_ids)
+    ].copy()
+
+
+# Filter ML predictions to selected alert
+if selected_event_ids and "event_id" in ml_df.columns:
+
+    ml_df = ml_df[
+        ml_df["event_id"].isin(selected_event_ids)
+    ].copy()
 
 # --------------------------------------------------
 # Main metrics
