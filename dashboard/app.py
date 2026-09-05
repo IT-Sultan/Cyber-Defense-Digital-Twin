@@ -236,7 +236,63 @@ def build_alert_label(index):
         f"{host}"
     )
 
+# --------------------------------------------------
+# Alert Queue / Prioritization
+# --------------------------------------------------
 
+st.subheader("🚨 Alert Queue")
+
+queue_columns = [
+    "chain_id",
+    "severity",
+    "risk_score",
+    "host",
+    "correlated_events",
+    "unique_attack_stages",
+    "anomaly_ratio"
+]
+
+available_queue_columns = [
+    column
+    for column in queue_columns
+    if column in alerts_df.columns
+]
+
+queue_df = alerts_df[available_queue_columns].copy()
+
+queue_df.insert(
+    0,
+    "priority",
+    range(1, len(queue_df) + 1)
+)
+
+queue_df = queue_df.rename(columns={
+    "priority": "Priority",
+    "chain_id": "Chain",
+    "severity": "Severity",
+    "risk_score": "Risk Score",
+    "host": "Host",
+    "correlated_events": "Events",
+    "unique_attack_stages": "MITRE Stages",
+    "anomaly_ratio": "Anomaly Ratio"
+})
+
+if "Anomaly Ratio" in queue_df.columns:
+    queue_df["Anomaly Ratio"] = (
+        queue_df["Anomaly Ratio"] * 100
+    ).round(1).astype(str) + "%"
+
+st.dataframe(
+    queue_df,
+    width="stretch",
+    hide_index=True
+)
+
+st.caption(
+    "Alerts are prioritized by risk score from highest to lowest."
+)
+
+st.divider()
 st.sidebar.markdown("### Alert Selection")
 
 selected_alert_index = st.sidebar.selectbox(
