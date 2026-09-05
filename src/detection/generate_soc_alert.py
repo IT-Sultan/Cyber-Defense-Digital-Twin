@@ -92,7 +92,7 @@ for _, chain in chains_df.iterrows():
     else:
         final_severity = "LOW"
 
-    # Risk explanation / reason codes
+    # Risk explanation
     reason_codes = []
     risk_reasons = []
 
@@ -137,6 +137,50 @@ for _, chain in chains_df.iterrows():
         + "; ".join(risk_reasons)
     )
 
+    # Recommended analyst actions
+    recommended_actions = []
+
+    if final_severity == "CRITICAL":
+        recommended_actions.append(
+            "Prioritize immediate analyst investigation of this host"
+        )
+
+    if "IMPACT_ACTIVITY" in reason_codes:
+        recommended_actions.append(
+            "Consider isolating the affected host after preserving relevant evidence"
+        )
+        recommended_actions.append(
+            "Determine the scope of encryption or destructive activity"
+        )
+
+    if "CREDENTIAL_ACCESS" in reason_codes:
+        recommended_actions.append(
+            "Review credential access activity and identify potentially exposed accounts"
+        )
+        recommended_actions.append(
+            "Consider credential rotation after validating exposure"
+        )
+
+    if "PERSISTENCE_ACTIVITY" in reason_codes:
+        recommended_actions.append(
+            "Inspect persistence mechanisms such as cron jobs and startup configuration"
+        )
+
+    if "MULTI_STAGE_ATTACK" in reason_codes:
+        recommended_actions.append(
+            "Expand threat hunting around the host, user, IP addresses, and attack time window"
+        )
+
+    if "HIGH_ANOMALY_RATIO" in reason_codes:
+        recommended_actions.append(
+            "Review the highest-scoring anomalous events for additional context"
+        )
+
+    if not recommended_actions:
+        recommended_actions.append(
+            "Review correlated events and validate whether escalation is required"
+        )
+
     alerts.append({
         "alert_name": "Correlated Multi-Stage Attack Chain",
         "chain_id": chain["chain_id"],
@@ -157,7 +201,8 @@ for _, chain in chains_df.iterrows():
         "severity": final_severity,
         "reason_codes": " | ".join(reason_codes),
         "risk_reasons": " | ".join(risk_reasons),
-        "risk_summary": risk_summary
+        "risk_summary": risk_summary,
+        "recommended_actions": " | ".join(recommended_actions)
     })
 
 alert_df = pd.DataFrame(alerts)
