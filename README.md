@@ -401,8 +401,8 @@ context
 stage_sequence
 unique_attack_stages
 average ML score
-anomaly count
-anomaly ratio
+high-risk ML count (stored as anomaly_count for backward compatibility)
+high-risk ML ratio (stored as anomaly_ratio for backward compatibility)
 ```
 
 This allows the system to move from isolated alerts toward multi-stage attack analysis.
@@ -426,10 +426,10 @@ The generated visualization provides a high-level view of the attack path and is
 The current ML component uses:
 
 ```text
-Isolation Forest
+Random Forest Classifier
 ```
 
-The model currently acts as a relative anomaly baseline.
+The model currently acts as a supervised attack-risk classifier trained using malicious activity and synthetic benign system activity.
 
 The ML output interface includes:
 
@@ -458,7 +458,7 @@ The current dataset contains attack activity without a proper benign or normal t
 
 Therefore:
 
-> The current ML model is a relative anomaly baseline, not an Attack-vs-Benign classifier.
+> The current ML model is a supervised Attack-vs-Benign classifier, but its benign training data is currently synthetic and should not be treated as proof of real-world generalization.
 
 An anomaly score means that an event appears unusual relative to other events in the current dataset.
 
@@ -514,7 +514,7 @@ Example reason codes include:
 ```text
 ELEVATED_DETECTION_SEVERITY
 MULTI_STAGE_ATTACK
-HIGH_ANOMALY_RATIO
+HIGH_ML_RISK_RATIO
 PERSISTENCE_ACTIVITY
 CREDENTIAL_ACCESS
 IMPACT_ACTIVITY
@@ -559,7 +559,7 @@ Current dashboard capabilities include:
 - Host information
 - Correlated event count
 - MITRE ATT&CK stage count
-- ML anomaly ratio
+- High-risk ML ratio
 - Risk summary
 - Risk reason codes
 - Recommended analyst actions
@@ -593,7 +593,7 @@ Risk Score
 Host
 Event Count
 MITRE Stage Count
-Anomaly Ratio
+High-Risk ML Ratio
 ```
 
 ---
@@ -759,6 +759,6 @@ Preprocessing
         Validation
 ```
 
-The current platform successfully connects cybersecurity detection, MITRE ATT&CK context, event correlation, anomaly analysis, attack visualization, SOC risk scoring, and analyst-facing alert presentation.
+The current platform successfully connects cybersecurity detection, MITRE ATT&CK context, event correlation, ML risk analysis, attack visualization, SOC risk scoring, and analyst-facing alert presentation.
 
 The next major development phase is improving the machine learning component using datasets containing both malicious and benign activity.

@@ -109,8 +109,8 @@ for chain_id, group in df.groupby("chain_id"):
         avg_ml_score = 0.0
 
     anomaly_count = (
-        group["ml_label"] == "Anomaly"
-    ).sum()
+    group["ml_score"] >= 0.75
+).sum()
 
     anomaly_ratio = (
         anomaly_count / len(group)

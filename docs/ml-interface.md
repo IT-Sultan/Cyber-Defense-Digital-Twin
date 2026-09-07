@@ -70,7 +70,7 @@ For the current pipeline:
 0.0 <= ml_score <= 1.0
 ```
 
-The current score represents relative anomaly context and must not be treated as a calibrated probability of malicious activity.
+The current score represents the supervised model's attack-risk estimate and must not be treated as a calibrated real-world probability.
 
 ### ml_label
 
@@ -90,7 +90,7 @@ Identifies the model that produced the prediction.
 Example:
 
 ```text
-IsolationForest
+RandomForestClassifier
 ```
 
 ---
@@ -136,10 +136,10 @@ Other fields that directly reveal attack ground truth should also be excluded fr
 The current implementation uses:
 
 ```text
-Isolation Forest
+Random Forest Classifier
 ```
 
-It is currently used as a relative anomaly baseline.
+It is currently used as a supervised attack-risk classifier trained on attack events and synthetic benign activity.
 
 The current development dataset contains simulated attack activity and does not include a proper benign / normal traffic baseline.
 

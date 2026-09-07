@@ -3,7 +3,7 @@ import sys
 
 STEPS = [
     ("Data Cleaning", "src/preprocessing/clean_events.py"),
-    ("ML Baseline", "src/ml/baseline_model.py"),
+    ("ML Supervised Classifier", "src/ml/supervised_classifier.py"),
     ("Attack Timeline", "src/correlation/build_timeline.py"),
     ("MITRE Summary", "src/mitre/build_mitre_summary.py"),
     ("Detection Engine", "src/detection/detection_engine.py"),
