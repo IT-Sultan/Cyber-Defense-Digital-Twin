@@ -75,7 +75,7 @@ for _, chain in chains_df.iterrows():
 
     anomaly_ratio = float(anomaly_ratio)
 
-    # Relative anomaly signal only, not attack probability
+    # Supervised ML risk signal used as supporting context
     ml_bonus = round(ml_avg_score * 10)
 
     # Final risk score
@@ -111,9 +111,9 @@ for _, chain in chains_df.iterrows():
         )
 
     if anomaly_ratio >= 0.75:
-        reason_codes.append("HIGH_ANOMALY_RATIO")
+        reason_codes.append("HIGH_ML_RISK_RATIO")
         risk_reasons.append(
-            f"High anomaly concentration ({anomaly_ratio:.1%} of correlated detections)"
+            f"High ML-risk concentration ({anomaly_ratio:.1%} of correlated detections)"
         )
 
     context = str(chain.get("context", ""))
@@ -173,7 +173,7 @@ for _, chain in chains_df.iterrows():
             "Expand threat hunting around the host, user, IP addresses, and attack time window"
         )
 
-    if "HIGH_ANOMALY_RATIO" in reason_codes:
+    if "HIGH_ML_RISK_RATIO" in reason_codes:
         recommended_actions.append(
             "Review the highest-scoring anomalous events for additional context"
         )

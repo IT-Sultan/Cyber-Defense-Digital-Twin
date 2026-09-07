@@ -186,7 +186,7 @@ ml_df = load_csv(ML_FILE)
 st.title("🛡️ Cyber Defense Digital Twin")
 
 st.caption(
-    "AI-assisted SOC detection, correlation, anomaly analysis and risk prioritization"
+    "AI-assisted SOC detection, correlation, ML risk analysis and risk prioritization"
 )
 
 st.divider()
@@ -274,12 +274,12 @@ queue_df = queue_df.rename(columns={
     "host": "Host",
     "correlated_events": "Events",
     "unique_attack_stages": "MITRE Stages",
-    "anomaly_ratio": "Anomaly Ratio"
+    "anomaly_ratio": "High-Risk ML Ratio"
 })
 
-if "Anomaly Ratio" in queue_df.columns:
-    queue_df["Anomaly Ratio"] = (
-        queue_df["Anomaly Ratio"] * 100
+if "High-Risk ML Ratio" in queue_df.columns:
+    queue_df["High-Risk ML Ratio"] = (
+        queue_df["High-Risk ML Ratio"] * 100
     ).round(1).astype(str) + "%"
 
 st.dataframe(
@@ -422,7 +422,7 @@ bottom_cols[1].metric(
 )
 
 bottom_cols[2].metric(
-    "Anomaly Ratio",
+    "High-Risk ML Ratio",
     f"{anomaly_ratio:.1%}"
 )
 
@@ -537,7 +537,7 @@ with overview_tab:
     )
 
     st.caption(
-        "ML score represents relative anomaly within the current dataset and is not an attack probability."
+        "ML score represents the supervised model's attack-risk estimate and is not a calibrated real-world probability."
     )
 
 
@@ -669,7 +669,7 @@ with detection_tab:
 
 with ml_tab:
 
-    st.subheader("Machine Learning Anomaly Analysis")
+    st.subheader("Machine Learning Risk Analysis")
 
     ml_cols = st.columns(3)
 
@@ -679,17 +679,17 @@ with ml_tab:
     )
 
     ml_cols[1].metric(
-        "Anomaly Ratio",
+        "High-Risk ML Ratio",
         f"{anomaly_ratio:.1%}"
     )
 
     ml_cols[2].metric(
-        "Anomaly Count",
+        "High-Risk ML Count",
         int(alert.get("anomaly_count", 0))
     )
 
     st.caption(
-        "Isolation Forest is currently used as a relative anomaly baseline."
+        "Random Forest is currently used as a supervised attack-risk classifier trained with synthetic benign activity."
     )
 
     if not ml_df.empty:
