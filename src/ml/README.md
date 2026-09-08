@@ -21,7 +21,7 @@ Features are engineered strictly from runtime process behavior to prevent any so
 ## Validation Strategy: Class-Wise Temporal Split
 To guarantee robust evaluation without temporal leakage:
 * Attack logs and Benign `auditd` telemetry are independently sorted chronologically via `@timestamp`.
-* A **70/30 Out-Of-Time (OOT)** split is applied class-wise (`Train: 42`, `Test: 19`).
+* A **70/30 Class-wise Temporal** split is applied class-wise (`Train: 42`, `Test: 19`).
 * Frequency encoding is isolated strictly within the training set to prevent look-ahead bias.
 
 ---
