@@ -1,26 +1,17 @@
 import os
-import sys
 import math
-from pathlib import Path
-
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import StratifiedKFold, cross_val_predict
 from sklearn.metrics import classification_report, roc_auc_score
 
-ROOT = Path(__file__).resolve().parents[2]
-
-if str(ROOT) not in sys.path:
-    sys.path.insert(0, str(ROOT))
-
 def calculate_entropy(text):
-    """حساب شانون انتروبي للأمر لاكتشاف التشفير والتشويش (Obfuscation / Base64)"""
     if not text or text == '-':
         return 0.0
-    text_len = len(text)
+    text_str = str(text)
+    text_len = len(text_str)
     freq = {}
-    for c in text:
+    for c in text_str:
         freq[c] = freq.get(c, 0) + 1
     entropy = 0.0
     for count in freq.values():
@@ -28,128 +19,133 @@ def calculate_entropy(text):
         entropy -= p * math.log2(p)
     return round(entropy, 4)
 
-def extract_advanced_features(df):
-    """هندسة ميزات سلوكية متقدمة مع تجنب تسريب البيانات (No ground truth)"""
+def extract_features(df):
     df['command_executed'] = df['command_executed'].fillna('-').astype(str)
     df['a0'] = df['a0'].fillna('unknown').astype(str)
     df['argc'] = pd.to_numeric(df.get('argc', 1), errors='coerce').fillna(1)
-
-    # 1. الميزات النصية
+    
     df['cmd_length'] = df['command_executed'].apply(len)
     df['entropy'] = df['command_executed'].apply(calculate_entropy)
-
-    # 2. فحص الرموز الخاصة المستخدمة في الهجمات (Pipes, Redirection, Chaining)
+    
     special_chars = [';', '|', '&', '>', '<', '`', '$']
     df['special_char_count'] = df['command_executed'].apply(lambda cmd: sum(cmd.count(ch) for ch in special_chars))
-
-    # 3. مسارات حساسة وأدوات شائعة في الهجمات
+    
     sensitive_paths = ['/tmp', '/etc/passwd', '/etc/shadow', 'LinEnum', 'grab_keys', 'authorized_keys', 'shadow']
     df['is_sensitive_path'] = df['command_executed'].apply(lambda x: 1 if any(p in x for p in sensitive_paths) else 0)
-
+    
     attack_tools = ['curl', 'openssl', 'tar', 'chmod', 'xxd', 'crontab', 'sudo', 'bash', 'sh', 'nc', 'ncat']
     df['is_attack_tool'] = df['a0'].apply(lambda x: 1 if x in attack_tools else 0)
-
-
-
-    # 5. حساب الفارق الزمني لكل host
-    if '@timestamp' in df.columns:
-        df['datetime_temp'] = pd.to_datetime(df['@timestamp'], errors='coerce')
-        host_col = 'host.name' if 'host.name' in df.columns else ('host' if 'host' in df.columns else None)
-        df['host_clean'] = df[host_col] if host_col else 'unknown'
-        df = df.sort_values(by=['host_clean', 'datetime_temp']).reset_index(drop=True)
-        df['time_delta'] = df.groupby('host_clean')['datetime_temp'].diff().dt.total_seconds().fillna(0)
-    else:
-        df['time_delta'] = 0.0
-
-    features = [
-    'argc',
-    'cmd_length',
-    'entropy',
-    'special_char_count',
-    'is_sensitive_path',
-    'is_attack_tool',
-    'time_delta'
-]
-    return df, features
+    
+    return df
 
 def main():
-    # 1. تحميل سجلات الهجوم
-    DATASET_SLUG = os.getenv("CYBER_DATASET_SLUG", "apt41")
+    # 1. تحميل سجلات APT41 النظيفة حصراً لضمان تطابق الـ event_id العددي
+    clean_file = "data/processed/apt41_clean.csv"
+    if not os.path.exists(clean_file):
+        raise FileNotFoundError(f"لم يتم العثور على {clean_file}")
+    
+    raw_attack = pd.read_csv(clean_file, low_memory=False)
 
-    attack_file = f"data/processed/{DATASET_SLUG}_clean.csv"
-
-    if not os.path.exists(attack_file):
-        raise FileNotFoundError(
-            f"Clean dataset not found: {attack_file}. Run preprocessing first."
-        )
-
-    print(f"[*] قراءة بيانات الهجوم من: {attack_file}")
-    df_attack = pd.read_csv(attack_file, low_memory=False)
-    df_attack['is_attack'] = 1
-
-    # 2. تحميل أو توليد السجلات الطبيعية
-    benign_file = "data/processed/benign_synthetic_logs.csv"
-    if not os.path.exists(benign_file):
-        from src.preprocessing.generate_benign_logs import generate_benign_events
-        df_benign = generate_benign_events(num_samples=len(df_attack) * 3)
+    # استخراج event_id المتطابق رقمياً مع الـ Timeline والـ Detections
+    if 'event_id' in raw_attack.columns:
+        attack_ids = raw_attack['event_id'].astype('int64')
     else:
-        df_benign = pd.read_csv(benign_file)
+        attack_ids = pd.Series(range(1, len(raw_attack) + 1), dtype='int64')
 
-    # 3. توحيد ودمج البيانات
-    common_cols = ['_id', '@timestamp', 'command_executed', 'a0', 'argc', 'is_attack']
-    host_src = 'host.name' if 'host.name' in df_attack.columns else 'host'
-    df_attack['host_canonical'] = df_attack[host_src] if host_src in df_attack.columns else '4fa5a8bb3a60'
-    df_benign['host_canonical'] = df_benign['host.name'] if 'host.name' in df_benign.columns else 'srv-app-prod-01'
+    host_val = raw_attack['host.name'] if 'host.name' in raw_attack.columns else raw_attack.get('host', '4fa5a8bb3a60')
 
-    df_attack = df_attack.rename(columns={'host_canonical': 'host'})
-    df_benign = df_benign.rename(columns={'host_canonical': 'host'})
+    df_attack = pd.DataFrame({
+        'event_id': attack_ids,
+        '@timestamp': raw_attack['@timestamp'],
+        'host': host_val,
+        'command_executed': raw_attack['command_executed'],
+        'a0': raw_attack['a0'],
+        'argc': raw_attack.get('argc', 1),
+        'is_attack': 1
+    })
 
-    df_combined = pd.concat([df_attack, df_benign], ignore_index=True)
+    # 2. تحميل الـ Linux Auditd Benign الفعلي
+    benign_file = "data/processed/linux_auditd_benign.csv"
+    raw_benign = pd.read_csv(benign_file)
+    
+    # ترقيم الـ Benign بأرقام مفصولة لتفادي أي تضارب
+    benign_ids = pd.Series(range(10001, 10001 + len(raw_benign)), dtype='int64')
+    host_benign = raw_benign['host.name'] if 'host.name' in raw_benign.columns else raw_benign.get('host', 'auditd-host-01')
 
-    # 4. استخراج الـ Features
-    df_combined, feature_cols = extract_advanced_features(df_combined)
-    X = df_combined[feature_cols]
-    y = df_combined['is_attack']
+    df_benign = pd.DataFrame({
+        'event_id': benign_ids,
+        '@timestamp': raw_benign['@timestamp'],
+        'host': host_benign,
+        'command_executed': raw_benign['command_executed'],
+        'a0': raw_benign['a0'],
+        'argc': raw_benign.get('argc', 1),
+        'is_attack': 0
+    })
 
-    print(f"[*] إجمالي العينات: {len(X)} | عينات الهجوم: {y.sum()} | عينات طبيعية: {len(y) - y.sum()}")
+    # 3. Class-wise Temporal Split (تقسيم زمني مستقل لكل فئة)
+    df_attack['dt_temp'] = pd.to_datetime(df_attack['@timestamp'], errors='coerce')
+    df_attack = df_attack.sort_values('dt_temp').reset_index(drop=True)
 
-    # 5. تدريب النموذج مع Cross Validation لتقييم واقعي
-    clf = RandomForestClassifier(n_estimators=100, max_depth=6, random_state=42, class_weight='balanced')
-    cv = StratifiedKFold(n_splits=3, shuffle=True, random_state=42)
+    df_benign['dt_temp'] = pd.to_datetime(df_benign['@timestamp'], errors='coerce')
+    df_benign = df_benign.sort_values('dt_temp').reset_index(drop=True)
 
-    # الحصول على احتمالية التنبؤ لكل حدث
-    probabilities = cross_val_predict(clf, X, y, cv=cv, method='predict_proba')[:, 1]
-    clf.fit(X, y)
+    split_att = int(len(df_attack) * 0.70)
+    split_ben = int(len(df_benign) * 0.70)
 
-    # 6. المقاييس التشخيصية
-    predictions = (probabilities >= 0.5).astype(int)
+    train_df = pd.concat([df_attack.iloc[:split_att], df_benign.iloc[:split_ben]], ignore_index=True)
+    test_df = pd.concat([df_attack.iloc[split_att:], df_benign.iloc[split_ben:]], ignore_index=True)
+
+    # استخراج الـ Features
+    train_df = extract_features(train_df)
+    test_df = extract_features(test_df)
+
+    # حساب a0_freq داخل الـ Train فقط لتفادي Data Leakage
+    a0_freq_map = train_df['a0'].value_counts(normalize=True).to_dict()
+    train_df['a0_freq'] = train_df['a0'].map(a0_freq_map).fillna(0)
+    test_df['a0_freq'] = test_df['a0'].map(a0_freq_map).fillna(0)
+
+    feature_cols = ['argc', 'cmd_length', 'entropy', 'special_char_count', 'is_sensitive_path', 'is_attack_tool', 'a0_freq']
+
+    X_train, y_train = train_df[feature_cols], train_df['is_attack']
+    X_test, y_test = test_df[feature_cols], test_df['is_attack']
+
+    print(f"[*] Temporal Train: {len(train_df)} (Attacks={y_train.sum()}, Benign={len(train_df)-y_train.sum()})")
+    print(f"[*] Temporal Test: {len(test_df)} (Attacks={y_test.sum()}, Benign={len(test_df)-y_test.sum()})")
+
+    # 4. تدريب المودل
+    clf = RandomForestClassifier(n_estimators=100, max_depth=4, random_state=42, class_weight='balanced')
+    clf.fit(X_train, y_train)
+
+    # 5. التقييم على عينة الاختبار
+    y_pred = clf.predict(X_test)
+    y_prob = clf.predict_proba(X_test)[:, 1]
+
     print("\n" + "="*50)
-    print("نتائج تقييم النموذج (Cross-Validated Metrics):")
-    print(classification_report(y, predictions, target_names=['Benign', 'Attack']))
-    print(f"ROC-AUC Score: {roc_auc_score(y, probabilities):.4f}")
+    print("نتائج التقييم الزمني (Stratified Temporal Evaluation):")
+    print(classification_report(y_test, y_pred, target_names=['Benign', 'Attack'], zero_division=0))
+    if len(np.unique(y_test)) > 1:
+        print(f"Test ROC-AUC Score: {roc_auc_score(y_test, y_prob):.4f}")
     print("="*50)
 
-    # 7. التصدير المطابق للمواصفات القياسية (docs/ml-interface.md)
-    df_combined['ml_score'] = np.round(probabilities, 4)
-    df_combined['ml_label'] = df_combined['ml_score'].apply(lambda s: 'High Risk' if s >= 0.75 else ('Medium Risk' if s >= 0.40 else 'Low Risk'))
-    df_combined['model_name'] = 'RandomForest_Supervised_v1'
-
-    # الحفاظ على canonical event_id
-    if 'event_id' not in df_combined.columns:
-        if '_id' in df_combined.columns:
-            df_combined['event_id'] = df_combined['_id']
-        else:
-            df_combined['event_id'] = [f"event_{i}" for i in range(len(df_combined))]
-
-    # الاقتصار فقط على الأحداث المرتبطة بسجلات المشروع الأساسية للحفاظ على سلامة الداشبورد
-    final_output = df_combined[df_combined['is_attack'] == 1].copy()
+    # 6. توليد التوقعات لبيانات الهجوم بالكامل (الـ 46 حدث بالـ event_id العددي الأصلي)
+    df_attack_features = extract_features(df_attack.copy())
+    df_attack_features['a0_freq'] = df_attack_features['a0'].map(a0_freq_map).fillna(0)
+    
+    attack_probs = clf.predict_proba(df_attack_features[feature_cols])[:, 1]
+    
+    df_attack['ml_score'] = np.round(attack_probs, 4)
+    df_attack['ml_label'] = df_attack['ml_score'].apply(
+        lambda s: 'High Risk' if s >= 0.75 else ('Medium Risk' if s >= 0.40 else 'Low Risk')
+    )
+    df_attack['model_name'] = 'RandomForest_TemporalSplit_v1'
 
     required_cols = ['event_id', '@timestamp', 'host', 'ml_score', 'ml_label', 'model_name']
-    out_df = final_output[required_cols]
+    out_df = df_attack[required_cols].copy()
+    out_df['event_id'] = out_df['event_id'].astype('int64')
 
     out_csv = "data/processed/ml_predictions.csv"
     out_df.to_csv(out_csv, index=False)
-    print(f"\n[+] تم تحديث ملف المخرجات النهائي المتوافق مع الداشبورد: {out_csv}")
-
+    print(f"\n[+] تم تحديث التوقعات لـ {len(out_df)} حدث بالـ IDs المطابقة في: {out_csv}")
+    
 if __name__ == "__main__":
     main()

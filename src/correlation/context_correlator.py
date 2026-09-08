@@ -19,11 +19,16 @@ df = pd.read_csv(
 # Load ML predictions
 ml_df = pd.read_csv(ML_FILE)
 
-# Attach ML context to detections using canonical event_id
+
+# تحويل event_id لنص لضمان تطابق الأنواع
+df['event_id'] = df['event_id'].astype('int64')
+ml_df['event_id'] = ml_df['event_id'].astype('int64')
+
+# دمج التوقعات مرة واحدة فقط
 df = df.merge(
-    ml_df[["event_id", "ml_score", "ml_label"]],
-    on="event_id",
-    how="left"
+    ml_df[['event_id', 'ml_score', 'ml_label', 'model_name']],
+    on='event_id',
+    how='left'
 )
 
 missing_ml = df["ml_score"].isna().sum()

@@ -3,6 +3,7 @@ import sys
 
 STEPS = [
     ("Data Cleaning", "src/preprocessing/clean_events.py"),
+    ("Auditd Ingestion", "src/preprocessing/parse_auditd_raw.py"),
     ("ML Supervised Classifier", "src/ml/supervised_classifier.py"),
     ("Attack Timeline", "src/correlation/build_timeline.py"),
     ("MITRE Summary", "src/mitre/build_mitre_summary.py"),

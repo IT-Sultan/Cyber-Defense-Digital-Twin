@@ -1,0 +1,30 @@
+type=SYSCALL msg=audit(1718704810.100:1001): arch=c000003e syscall=59 success=yes exit=0 a0=55c1e2 a1=55c2f0 a2=55c340 a3=7ffd items=2 ppid=1 pid=842 auid=4294967295 uid=0 gid=0 euid=0 exe="/usr/lib/systemd/systemd-journald" key=(null)
+type=EXECVE msg=audit(1718704810.100:1001): argc=1 a0="/usr/lib/systemd/systemd-journald"
+type=SYSCALL msg=audit(1718704845.220:1002): arch=c000003e syscall=59 success=yes exit=0 a0=55d210 a1=55d320 a2=55d400 a3=7ffd items=2 ppid=610 pid=1240 auid=0 uid=0 gid=0 euid=0 exe="/usr/sbin/cron" key=(null)
+type=EXECVE msg=audit(1718704845.220:1002): argc=2 a0="/usr/sbin/cron" a1="-f"
+type=SYSCALL msg=audit(1718704890.315:1003): arch=c000003e syscall=59 success=yes exit=0 a0=55a110 a1=55a220 a2=55a300 a3=7ffd items=2 ppid=1240 pid=1520 auid=0 uid=0 gid=0 euid=0 exe="/usr/bin/run-parts" key=(null)
+type=EXECVE msg=audit(1718704890.315:1003): argc=2 a0="/usr/bin/run-parts" a1="/etc/cron.daily"
+type=SYSCALL msg=audit(1718704930.405:1004): arch=c000003e syscall=59 success=yes exit=0 a0=55b440 a1=55b550 a2=55b660 a3=7ffd items=2 ppid=1520 pid=1890 auid=1000 uid=1000 gid=1000 euid=1000 exe="/usr/bin/uptime" key=(null)
+type=EXECVE msg=audit(1718704930.405:1004): argc=1 a0="uptime"
+type=SYSCALL msg=audit(1718704975.510:1005): arch=c000003e syscall=59 success=yes exit=0 a0=55c770 a1=55c880 a2=55c990 a3=7ffd items=2 ppid=1520 pid=2105 auid=1000 uid=1000 gid=1000 euid=1000 exe="/usr/bin/df" key=(null)
+type=EXECVE msg=audit(1718704975.510:1005): argc=2 a0="df" a1="-h"
+type=SYSCALL msg=audit(1718705020.612:1006): arch=c000003e syscall=59 success=yes exit=0 a0=55d880 a1=55d990 a2=55da00 a3=7ffd items=2 ppid=1520 pid=2450 auid=1000 uid=1000 gid=1000 euid=1000 exe="/usr/bin/free" key=(null)
+type=EXECVE msg=audit(1718705020.612:1006): argc=2 a0="free" a1="-m"
+type=SYSCALL msg=audit(1718705080.718:1007): arch=c000003e syscall=59 success=yes exit=0 a0=55e110 a1=55e220 a2=55e330 a3=7ffd items=2 ppid=1520 pid=2890 auid=1000 uid=1000 gid=1000 euid=1000 exe="/usr/bin/ps" key=(null)
+type=EXECVE msg=audit(1718705080.718:1007): argc=2 a0="ps" a1="-ef"
+type=SYSCALL msg=audit(1718705140.820:1008): arch=c000003e syscall=59 success=yes exit=0 a0=55f220 a1=55f330 a2=55f440 a3=7ffd items=2 ppid=1520 pid=3120 auid=1000 uid=1000 gid=1000 euid=1000 exe="/usr/bin/grep" key=(null)
+type=EXECVE msg=audit(1718705140.820:1008): argc=4 a0="grep" a1="-i" a2="error" a3="/var/log/syslog"
+type=SYSCALL msg=audit(1718705200.910:1009): arch=c000003e syscall=59 success=yes exit=0 a0=55a330 a1=55a440 a2=55a550 a3=7ffd items=2 ppid=1520 pid=3410 auid=1000 uid=1000 gid=1000 euid=1000 exe="/usr/bin/tail" key=(null)
+type=EXECVE msg=audit(1718705200.910:1009): argc=3 a0="tail" a1="-n" a2="50"
+type=SYSCALL msg=audit(1718705260.115:1010): arch=c000003e syscall=59 success=yes exit=0 a0=55b550 a1=55b660 a2=55b770 a3=7ffd items=2 ppid=1520 pid=3780 auid=0 uid=0 gid=0 euid=0 exe="/usr/bin/systemctl" key=(null)
+type=EXECVE msg=audit(1718705260.115:1010): argc=3 a0="systemctl" a1="status" a2="nginx"
+type=SYSCALL msg=audit(1718705320.218:1011): arch=c000003e syscall=59 success=yes exit=0 a0=55c880 a1=55c990 a2=55ca00 a3=7ffd items=2 ppid=1520 pid=4020 auid=1000 uid=1000 gid=1000 euid=1000 exe="/usr/bin/docker" key=(null)
+type=EXECVE msg=audit(1718705320.218:1011): argc=2 a0="docker" a1="ps"
+type=SYSCALL msg=audit(1718705380.322:1012): arch=c000003e syscall=59 success=yes exit=0 a0=55d990 a1=55da00 a2=55db00 a3=7ffd items=2 ppid=1520 pid=4310 auid=1000 uid=1000 gid=1000 euid=1000 exe="/usr/bin/git" key=(null)
+type=EXECVE msg=audit(1718705380.322:1012): argc=2 a0="git" a1="status"
+type=SYSCALL msg=audit(1718705440.425:1013): arch=c000003e syscall=59 success=yes exit=0 a0=55e220 a1=55e330 a2=55e440 a3=7ffd items=2 ppid=1520 pid=4650 auid=1000 uid=1000 gid=1000 euid=1000 exe="/usr/bin/python3" key=(null)
+type=EXECVE msg=audit(1718705440.425:1013): argc=4 a0="python3" a1="-m" a2="venv" a3="env"
+type=SYSCALL msg=audit(1718705500.530:1014): arch=c000003e syscall=59 success=yes exit=0 a0=55f330 a1=55f440 a2=55f550 a3=7ffd items=2 ppid=1520 pid=4920 auid=0 uid=0 gid=0 euid=0 exe="/usr/bin/apt-get" key=(null)
+type=EXECVE msg=audit(1718705500.530:1014): argc=3 a0="apt-get" a1="check" a2="-q"
+type=SYSCALL msg=audit(1718705560.635:1015): arch=c000003e syscall=59 success=yes exit=0 a0=55a440 a1=55a550 a2=55a660 a3=7ffd items=2 ppid=1520 pid=5210 auid=1000 uid=1000 gid=1000 euid=1000 exe="/usr/bin/curl" key=(null)
+type=EXECVE msg=audit(1718705560.635:1015): argc=3 a0="curl" a1="-s" a2="http://localhost:8080/health"
