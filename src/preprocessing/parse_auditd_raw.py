@@ -62,7 +62,8 @@ def parse_auditd_log(log_path="data/raw/linux_audit.log", output_path="data/proc
         parsed_records.append({
             '_id': f"auditd_real_{data['seq']}",
             '@timestamp': iso_timestamp,
-            'host.name': '4fa5a8bb3a60', # الهوست المشترك في المشروع
+            'host.name': 'auditd-host-01',
+            'host': 'auditd-host-01',
             'command_executed': command_str,
             'a0': a0,
             'argc': data['argc'],

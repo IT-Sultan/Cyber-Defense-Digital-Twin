@@ -1,16 +1,16 @@
-_id,@timestamp,host.name,command_executed,a0,argc,is_attack
-auditd_real_1001,2024-06-18T10:00:10Z,4fa5a8bb3a60,/usr/lib/systemd/systemd-journald,/usr/lib/systemd/systemd-journald,1,0
-auditd_real_1002,2024-06-18T10:00:45Z,4fa5a8bb3a60,/usr/sbin/cron -f,/usr/sbin/cron,2,0
-auditd_real_1003,2024-06-18T10:01:30Z,4fa5a8bb3a60,/usr/bin/run-parts /etc/cron.daily,/usr/bin/run-parts,2,0
-auditd_real_1004,2024-06-18T10:02:10Z,4fa5a8bb3a60,uptime,uptime,1,0
-auditd_real_1005,2024-06-18T10:02:55Z,4fa5a8bb3a60,df -h,df,2,0
-auditd_real_1006,2024-06-18T10:03:40Z,4fa5a8bb3a60,free -m,free,2,0
-auditd_real_1007,2024-06-18T10:04:40Z,4fa5a8bb3a60,ps -ef,ps,2,0
-auditd_real_1008,2024-06-18T10:05:40Z,4fa5a8bb3a60,grep -i error /var/log/syslog,grep,4,0
-auditd_real_1009,2024-06-18T10:06:40Z,4fa5a8bb3a60,tail -n 50,tail,3,0
-auditd_real_1010,2024-06-18T10:07:40Z,4fa5a8bb3a60,systemctl status nginx,systemctl,3,0
-auditd_real_1011,2024-06-18T10:08:40Z,4fa5a8bb3a60,docker ps,docker,2,0
-auditd_real_1012,2024-06-18T10:09:40Z,4fa5a8bb3a60,git status,git,2,0
-auditd_real_1013,2024-06-18T10:10:40Z,4fa5a8bb3a60,python3 -m venv env,python3,4,0
-auditd_real_1014,2024-06-18T10:11:40Z,4fa5a8bb3a60,apt-get check -q,apt-get,3,0
-auditd_real_1015,2024-06-18T10:12:40Z,4fa5a8bb3a60,curl -s http://localhost:8080/health,curl,3,0
+_id,@timestamp,host.name,host,command_executed,a0,argc,is_attack
+auditd_real_1001,2024-06-18T10:00:10Z,auditd-host-01,auditd-host-01,/usr/lib/systemd/systemd-journald,/usr/lib/systemd/systemd-journald,1,0
+auditd_real_1002,2024-06-18T10:00:45Z,auditd-host-01,auditd-host-01,/usr/sbin/cron -f,/usr/sbin/cron,2,0
+auditd_real_1003,2024-06-18T10:01:30Z,auditd-host-01,auditd-host-01,/usr/bin/run-parts /etc/cron.daily,/usr/bin/run-parts,2,0
+auditd_real_1004,2024-06-18T10:02:10Z,auditd-host-01,auditd-host-01,uptime,uptime,1,0
+auditd_real_1005,2024-06-18T10:02:55Z,auditd-host-01,auditd-host-01,df -h,df,2,0
+auditd_real_1006,2024-06-18T10:03:40Z,auditd-host-01,auditd-host-01,free -m,free,2,0
+auditd_real_1007,2024-06-18T10:04:40Z,auditd-host-01,auditd-host-01,ps -ef,ps,2,0
+auditd_real_1008,2024-06-18T10:05:40Z,auditd-host-01,auditd-host-01,grep -i error /var/log/syslog,grep,4,0
+auditd_real_1009,2024-06-18T10:06:40Z,auditd-host-01,auditd-host-01,tail -n 50,tail,3,0
+auditd_real_1010,2024-06-18T10:07:40Z,auditd-host-01,auditd-host-01,systemctl status nginx,systemctl,3,0
+auditd_real_1011,2024-06-18T10:08:40Z,auditd-host-01,auditd-host-01,docker ps,docker,2,0
+auditd_real_1012,2024-06-18T10:09:40Z,auditd-host-01,auditd-host-01,git status,git,2,0
+auditd_real_1013,2024-06-18T10:10:40Z,auditd-host-01,auditd-host-01,python3 -m venv env,python3,4,0
+auditd_real_1014,2024-06-18T10:11:40Z,auditd-host-01,auditd-host-01,apt-get check -q,apt-get,3,0
+auditd_real_1015,2024-06-18T10:12:40Z,auditd-host-01,auditd-host-01,curl -s http://localhost:8080/health,curl,3,0
