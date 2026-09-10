@@ -20,22 +20,51 @@ def calculate_entropy(text):
     return round(entropy, 4)
 
 def extract_features(df):
+    df = df.copy()
+
     df['command_executed'] = df['command_executed'].fillna('-').astype(str)
     df['a0'] = df['a0'].fillna('unknown').astype(str)
     df['argc'] = pd.to_numeric(df.get('argc', 1), errors='coerce').fillna(1)
-    
+
     df['cmd_length'] = df['command_executed'].apply(len)
     df['entropy'] = df['command_executed'].apply(calculate_entropy)
-    
+
     special_chars = [';', '|', '&', '>', '<', '`', '$']
-    df['special_char_count'] = df['command_executed'].apply(lambda cmd: sum(cmd.count(ch) for ch in special_chars))
-    
-    sensitive_paths = ['/tmp', '/etc/passwd', '/etc/shadow', 'LinEnum', 'grab_keys', 'authorized_keys', 'shadow']
-    df['is_sensitive_path'] = df['command_executed'].apply(lambda x: 1 if any(p in x for p in sensitive_paths) else 0)
-    
-    attack_tools = ['curl', 'openssl', 'tar', 'chmod', 'xxd', 'crontab', 'sudo', 'bash', 'sh', 'nc', 'ncat']
-    df['is_attack_tool'] = df['a0'].apply(lambda x: 1 if x in attack_tools else 0)
-    
+    df['special_char_count'] = df['command_executed'].apply(
+        lambda cmd: sum(cmd.count(ch) for ch in special_chars)
+    )
+
+    def has_sensitive_path(cmd):
+        cmd = str(cmd)
+        tokens = cmd.replace('"', ' ').replace("'", ' ').split()
+
+        path_hit = any(
+            token == "/tmp"
+            or token.startswith("/tmp/")
+            or token == "/etc/passwd"
+            or token == "/etc/shadow"
+            or "authorized_keys" in token
+            for token in tokens
+        )
+
+        marker_hit = any(
+            marker.lower() in cmd.lower()
+            for marker in ["LinEnum", "grab_keys"]
+        )
+
+        return int(path_hit or marker_hit)
+
+    df['is_sensitive_path'] = df['command_executed'].apply(has_sensitive_path)
+
+    attack_tools = [
+        'curl', 'openssl', 'tar', 'chmod', 'xxd',
+        'crontab', 'sudo', 'bash', 'sh', 'nc', 'ncat'
+    ]
+
+    df['is_attack_tool'] = df['a0'].apply(
+        lambda x: 1 if x in attack_tools else 0
+    )
+
     return df
 
 def main():
@@ -119,9 +148,9 @@ def main():
     # 5. التقييم على عينة الاختبار
     y_pred = clf.predict(X_test)
     y_prob = clf.predict_proba(X_test)[:, 1]
-
+    
     print("\n" + "="*50)
-    print("نتائج التقييم الزمني (Stratified Temporal Evaluation):")
+    print("نتائج التقييم الزمني (Class-wise Temporal Evaluation):")
     print(classification_report(y_test, y_pred, target_names=['Benign', 'Attack'], zero_division=0))
     if len(np.unique(y_test)) > 1:
         print(f"Test ROC-AUC Score: {roc_auc_score(y_test, y_prob):.4f}")
@@ -130,9 +159,9 @@ def main():
     # 6. توليد التوقعات لبيانات الهجوم بالكامل (الـ 46 حدث بالـ event_id العددي الأصلي)
     df_attack_features = extract_features(df_attack.copy())
     df_attack_features['a0_freq'] = df_attack_features['a0'].map(a0_freq_map).fillna(0)
-    
+
     attack_probs = clf.predict_proba(df_attack_features[feature_cols])[:, 1]
-    
+
     df_attack['ml_score'] = np.round(attack_probs, 4)
     df_attack['ml_label'] = df_attack['ml_score'].apply(
         lambda s: 'High Risk' if s >= 0.75 else ('Medium Risk' if s >= 0.40 else 'Low Risk')
@@ -146,6 +175,6 @@ def main():
     out_csv = "data/processed/ml_predictions.csv"
     out_df.to_csv(out_csv, index=False)
     print(f"\n[+] تم تحديث التوقعات لـ {len(out_df)} حدث بالـ IDs المطابقة في: {out_csv}")
-    
+
 if __name__ == "__main__":
     main()

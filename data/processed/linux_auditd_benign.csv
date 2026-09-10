@@ -1,16 +1,275 @@
 _id,@timestamp,host.name,host,command_executed,a0,argc,is_attack
-auditd_real_1001,2024-06-18T10:00:10Z,auditd-host-01,auditd-host-01,/usr/lib/systemd/systemd-journald,/usr/lib/systemd/systemd-journald,1,0
-auditd_real_1002,2024-06-18T10:00:45Z,auditd-host-01,auditd-host-01,/usr/sbin/cron -f,/usr/sbin/cron,2,0
-auditd_real_1003,2024-06-18T10:01:30Z,auditd-host-01,auditd-host-01,/usr/bin/run-parts /etc/cron.daily,/usr/bin/run-parts,2,0
-auditd_real_1004,2024-06-18T10:02:10Z,auditd-host-01,auditd-host-01,uptime,uptime,1,0
-auditd_real_1005,2024-06-18T10:02:55Z,auditd-host-01,auditd-host-01,df -h,df,2,0
-auditd_real_1006,2024-06-18T10:03:40Z,auditd-host-01,auditd-host-01,free -m,free,2,0
-auditd_real_1007,2024-06-18T10:04:40Z,auditd-host-01,auditd-host-01,ps -ef,ps,2,0
-auditd_real_1008,2024-06-18T10:05:40Z,auditd-host-01,auditd-host-01,grep -i error /var/log/syslog,grep,4,0
-auditd_real_1009,2024-06-18T10:06:40Z,auditd-host-01,auditd-host-01,tail -n 50,tail,3,0
-auditd_real_1010,2024-06-18T10:07:40Z,auditd-host-01,auditd-host-01,systemctl status nginx,systemctl,3,0
-auditd_real_1011,2024-06-18T10:08:40Z,auditd-host-01,auditd-host-01,docker ps,docker,2,0
-auditd_real_1012,2024-06-18T10:09:40Z,auditd-host-01,auditd-host-01,git status,git,2,0
-auditd_real_1013,2024-06-18T10:10:40Z,auditd-host-01,auditd-host-01,python3 -m venv env,python3,4,0
-auditd_real_1014,2024-06-18T10:11:40Z,auditd-host-01,auditd-host-01,apt-get check -q,apt-get,3,0
-auditd_real_1015,2024-06-18T10:12:40Z,auditd-host-01,auditd-host-01,curl -s http://localhost:8080/health,curl,3,0
+auditd_real_10001,2026-09-09T23:30:36Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10002,2026-09-09T23:30:45Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo auditctl -l,sudo,3,0
+auditd_real_10003,2026-09-09T23:30:45Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10004,2026-09-09T23:30:45Z,cyber-lab-ubuntu,cyber-lab-ubuntu,auditctl -l,auditctl,2,0
+auditd_real_10005,2026-09-09T23:30:45Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10006,2026-09-09T23:31:54Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 35 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10007,2026-09-09T23:31:54Z,cyber-lab-ubuntu,cyber-lab-ubuntu,systemd-tmpfiles --clean,systemd-tmpfiles,2,0
+auditd_real_10008,2026-09-09T23:31:59Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,0
+auditd_real_10009,2026-09-09T23:31:59Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10010,2026-09-09T23:32:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto /tmp,ls,3,0
+auditd_real_10011,2026-09-09T23:32:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10012,2026-09-09T23:32:36Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo ausearch -k benign_exec -ts recent -i,sudo,7,0
+auditd_real_10013,2026-09-09T23:32:36Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10014,2026-09-09T23:32:36Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ausearch -k benign_exec -ts recent -i,ausearch,6,0
+auditd_real_10015,2026-09-09T23:32:36Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10016,2026-09-09T23:34:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,0
+auditd_real_10017,2026-09-09T23:34:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10018,2026-09-09T23:34:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,0
+auditd_real_10019,2026-09-09T23:34:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10020,2026-09-09T23:34:28Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10021,2026-09-09T23:34:36Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto,ls,2,0
+auditd_real_10022,2026-09-09T23:34:36Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10023,2026-09-09T23:34:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto /tmp,ls,3,0
+auditd_real_10024,2026-09-09T23:34:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10025,2026-09-09T23:34:53Z,cyber-lab-ubuntu,cyber-lab-ubuntu,date,date,1,0
+auditd_real_10026,2026-09-09T23:34:53Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10027,2026-09-09T23:35:05Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uptime,uptime,1,0
+auditd_real_10028,2026-09-09T23:35:05Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10029,2026-09-09T23:35:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,df -h,df,2,0
+auditd_real_10030,2026-09-09T23:35:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10031,2026-09-09T23:35:21Z,cyber-lab-ubuntu,cyber-lab-ubuntu,free -h,free,2,0
+auditd_real_10032,2026-09-09T23:35:21Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10033,2026-09-09T23:35:27Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ps aux,ps,2,0
+auditd_real_10034,2026-09-09T23:35:28Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10035,2026-09-09T23:36:29Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo ausearch -k benign_exec,sudo,4,0
+auditd_real_10036,2026-09-09T23:36:29Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10037,2026-09-09T23:36:29Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ausearch -k benign_exec,ausearch,3,0
+auditd_real_10038,2026-09-09T23:43:44Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10039,2026-09-09T23:43:50Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo auditctl -l,sudo,3,0
+auditd_real_10040,2026-09-09T23:43:50Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10041,2026-09-09T23:43:50Z,cyber-lab-ubuntu,cyber-lab-ubuntu,auditctl -l,auditctl,2,0
+auditd_real_10042,2026-09-09T23:43:50Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10043,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/audit_test,mkdir,3,0
+auditd_real_10044,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,touch file1.txt,touch,2,0
+auditd_real_10045,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat file1.txt,cat,2,0
+auditd_real_10046,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp file1.txt file2.txt,cp,3,0
+auditd_real_10047,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mv file2.txt notes.txt,mv,3,0
+auditd_real_10048,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -la,ls,3,0
+auditd_real_10049,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,head file1.txt,head,2,0
+auditd_real_10050,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,tail file1.txt,tail,2,0
+auditd_real_10051,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,grep --color=auto hello file1.txt,grep,4,0
+auditd_real_10052,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,find . -type f,find,4,0
+auditd_real_10053,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,0
+auditd_real_10054,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,0
+auditd_real_10055,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,0
+auditd_real_10056,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -a,uname,2,0
+auditd_real_10057,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip addr,ip,2,0
+auditd_real_10058,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ss -tuln,ss,2,0
+auditd_real_10059,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,systemctl status auditd --no-pager,systemctl,4,0
+auditd_real_10060,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,python3 --version,python3,2,0
+auditd_real_10061,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/python3 /usr/lib/command-not-found -- git,/usr/bin/python3,4,0
+auditd_real_10062,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/snap advise-snap --format=json --command git,/usr/bin/snap,5,0
+auditd_real_10063,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10064,2026-09-09T23:44:35Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/localsearch-extractor-3 --socket-fd 3,/usr/libexec/localsearch-extractor-3,3,0
+auditd_real_10065,2026-09-09T23:45:14Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo ausearch -k benign_exec_02,sudo,4,0
+auditd_real_10066,2026-09-09T23:45:14Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10067,2026-09-09T23:45:14Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ausearch -k benign_exec_02,ausearch,3,0
+auditd_real_10068,2026-09-09T23:46:15Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10069,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/audit_session3/docs,mkdir,3,0
+auditd_real_10070,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat notes.txt,cat,2,0
+auditd_real_10071,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,wc -l numbers.txt,wc,3,0
+auditd_real_10072,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sort numbers.txt,sort,2,0
+auditd_real_10073,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cut -c 1-3 numbers.txt,cut,4,0
+auditd_real_10074,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp notes.txt docs/copy.txt,cp,3,0
+auditd_real_10075,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -R,ls,3,0
+auditd_real_10076,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,find /home/nexus/audit_session3 -type f,find,4,0
+auditd_real_10077,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,du -sh /home/nexus/audit_session3,du,3,0
+auditd_real_10078,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /usr/bin/which python3,/bin/sh,3,0
+auditd_real_10079,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,python3 -c print('benign python test'),python3,3,0
+auditd_real_10080,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,python3 -c import os; print(os.getcwd()),python3,3,0
+auditd_real_10081,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,env,env,1,0
+auditd_real_10082,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,printenv HOME,printenv,2,0
+auditd_real_10083,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,users,users,1,0
+auditd_real_10084,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,who,who,1,0
+auditd_real_10085,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,0
+auditd_real_10086,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,groups,groups,1,0
+auditd_real_10087,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uptime,uptime,1,0
+auditd_real_10088,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,df -h,df,2,0
+auditd_real_10089,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,free -h,free,2,0
+auditd_real_10090,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10091,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/localsearch-extractor-3 --socket-fd 3,/usr/libexec/localsearch-extractor-3,3,0
+auditd_real_10092,2026-09-09T23:46:51Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo ausearch -k benign_exec_03,sudo,4,0
+auditd_real_10093,2026-09-09T23:46:51Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10094,2026-09-09T23:46:51Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ausearch -k benign_exec_03,ausearch,3,0
+auditd_real_10095,2026-09-09T23:49:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10096,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat /etc/os-release,cat,2,0
+auditd_real_10097,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -r,uname,2,0
+auditd_real_10098,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostnamectl,hostnamectl,1,0
+auditd_real_10099,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 94 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10100,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-hostnamed,/usr/lib/systemd/systemd-hostnamed,1,0
+auditd_real_10101,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip link,ip,2,0
+auditd_real_10102,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip route,ip,2,0
+auditd_real_10103,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip neigh,ip,2,0
+auditd_real_10104,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ss -tun,ss,2,0
+auditd_real_10105,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,getent hosts localhost,getent,3,0
+auditd_real_10106,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ping -c 2 127.0.0.1,ping,4,0
+auditd_real_10107,2026-09-09T23:49:17Z,cyber-lab-ubuntu,cyber-lab-ubuntu,systemctl is-active auditd,systemctl,3,0
+auditd_real_10108,2026-09-09T23:49:17Z,cyber-lab-ubuntu,cyber-lab-ubuntu,systemctl list-units --type=service --state=running --no-pager,systemctl,5,0
+auditd_real_10109,2026-09-09T23:49:17Z,cyber-lab-ubuntu,cyber-lab-ubuntu,journalctl -n 10 --no-pager,journalctl,4,0
+auditd_real_10110,2026-09-09T23:49:17Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto /etc,ls,3,0
+auditd_real_10111,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto /var/log,ls,3,0
+auditd_real_10112,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,du -sh /var/log,du,3,0
+auditd_real_10113,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,apt-cache policy auditd,apt-cache,3,0
+auditd_real_10114,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/dpkg --print-foreign-architectures,/usr/bin/dpkg,2,0
+auditd_real_10115,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/dpkg --print-foreign-architectures,/usr/bin/dpkg,2,0
+auditd_real_10116,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dpkg -l,dpkg,2,0
+auditd_real_10117,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dpkg-query --list --,dpkg-query,3,0
+auditd_real_10118,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sh -c -- pager,sh,4,0
+auditd_real_10119,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,pager,pager,1,0
+auditd_real_10120,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 35 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10121,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,"sh -c ENABLED=false; [ -r /etc/default/sysstat ] && . /etc/default/sysstat; test ""${ENABLED}"" = ""true""",sh,3,0
+auditd_real_10122,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 35 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10123,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /usr/libexec/sysstat/sa1 1 1,/bin/sh,4,0
+auditd_real_10124,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/sysstat/sadc -F -L -S DISK 1 1 /var/log/sysstat,/usr/libexec/sysstat/sadc,8,0
+auditd_real_10125,2026-09-09T23:50:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /usr/bin/which sudo,/bin/sh,3,0
+auditd_real_10126,2026-09-09T23:50:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /usr/bin/which bash,/bin/sh,3,0
+auditd_real_10127,2026-09-09T23:50:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bash --version,bash,2,0
+auditd_real_10128,2026-09-09T23:50:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo --version,sudo,2,0
+auditd_real_10129,2026-09-09T23:50:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/python3 /usr/lib/command-not-found -- curl,/usr/bin/python3,4,0
+auditd_real_10130,2026-09-09T23:50:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/snap advise-snap --format=json --command curl,/usr/bin/snap,5,0
+auditd_real_10131,2026-09-09T23:50:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10132,2026-09-09T23:51:34Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo ausearch -k benign_exec_04,sudo,4,0
+auditd_real_10133,2026-09-09T23:51:34Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10134,2026-09-09T23:51:34Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ausearch -k benign_exec_04,ausearch,3,0
+auditd_real_10135,2026-09-09T23:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10136,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/audit_session5,mkdir,3,0
+auditd_real_10137,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,touch report.txt,touch,2,0
+auditd_real_10138,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat report.txt,cat,2,0
+auditd_real_10139,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,stat report.txt,stat,2,0
+auditd_real_10140,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,chmod 644 report.txt,chmod,3,0
+auditd_real_10141,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp report.txt backup.txt,cp,3,0
+auditd_real_10142,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,diff report.txt backup.txt,diff,3,0
+auditd_real_10143,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm backup.txt,rm,2,0
+auditd_real_10144,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir logs,mkdir,2,0
+auditd_real_10145,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -lah,ls,3,0
+auditd_real_10146,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,find . -maxdepth 2 -type f,find,6,0
+auditd_real_10147,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ps -ef,ps,2,0
+auditd_real_10148,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,pgrep auditd,pgrep,2,0
+auditd_real_10149,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uptime,uptime,1,0
+auditd_real_10150,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,vmstat 1 2,vmstat,3,0
+auditd_real_10151,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/localsearch-extractor-3 --socket-fd 3,/usr/libexec/localsearch-extractor-3,3,0
+auditd_real_10152,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,lsblk,lsblk,1,0
+auditd_real_10153,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mount,mount,1,0
+auditd_real_10154,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,df -Th,df,2,0
+auditd_real_10155,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,date,date,1,0
+auditd_real_10156,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,timedatectl,timedatectl,1,0
+auditd_real_10157,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 94 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10158,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-timedated,/usr/lib/systemd/systemd-timedated,1,0
+auditd_real_10159,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,0
+auditd_real_10160,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,0
+auditd_real_10161,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
+auditd_real_10162,2026-09-09T23:59:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /var/cache/fontconfig /var/cache/fontconfig --bind-try /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 101 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 96,bwrap,56,0
+auditd_real_10163,2026-09-09T23:59:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 96,/usr/libexec/glycin-loaders/2+/glycin-svg,3,0
+auditd_real_10164,2026-09-10T00:00:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 35 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10165,2026-09-10T00:00:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,"sh -c ENABLED=false; [ -r /etc/default/sysstat ] && . /etc/default/sysstat; test ""${ENABLED}"" = ""true""",sh,3,0
+auditd_real_10166,2026-09-10T00:00:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 35 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10167,2026-09-10T00:00:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /usr/libexec/sysstat/sa1 1 1,/bin/sh,4,0
+auditd_real_10168,2026-09-10T00:00:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/sysstat/sadc -F -L -S DISK 1 1 /var/log/sysstat,/usr/libexec/sysstat/sadc,8,0
+auditd_real_10169,2026-09-10T00:00:24Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 147 --log-level info --log-target auto,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10170,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/snap run --timer=00:00-24:00/8 firmware-updater.firmware-notifier,/usr/bin/snap,4,0
+auditd_real_10171,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/snapd/snap-seccomp version-info,/usr/lib/snapd/snap-seccomp,2,0
+auditd_real_10172,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/snapd/snap-confine --base core24 snap.firmware-updater.firmware-notifier /usr/lib/snapd/snap-exec firmware-updater.firmware-notifier,/usr/lib/snapd/snap-confine,6,0
+auditd_real_10173,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/localsearch-extractor-3 --socket-fd 3,/usr/libexec/localsearch-extractor-3,3,0
+auditd_real_10174,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/snapd/snap-exec firmware-updater.firmware-notifier,/usr/lib/snapd/snap-exec,2,0
+auditd_real_10175,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/bash /snap/firmware-updater/226/snap/command-chain/gpu-2404-wrapper /snap/firmware-updater/226/snap/command-chain/desktop-launch /snap/firmware-updater/226/bin/firmware-notifier,/bin/bash,4,0
+auditd_real_10176,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dirname /snap/firmware-updater/226/gpu-2404/bin/gpu-2404-provider-wrapper,dirname,2,0
+auditd_real_10177,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dirname /snap/firmware-updater/226/gpu-2404/bin/gpu-2404-provider-wrapper,dirname,2,0
+auditd_real_10178,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dirname /snap/firmware-updater/226/gpu-2404/bin/gpu-2404-provider-wrapper,dirname,2,0
+auditd_real_10179,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/bash /snap/firmware-updater/226/snap/command-chain/desktop-launch /snap/firmware-updater/226/bin/firmware-notifier,/bin/bash,3,0
+auditd_real_10180,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,date +%s.%N,date,2,0
+auditd_real_10181,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/226/.config,mkdir,3,0
+auditd_real_10182,2026-09-10T00:00:25Z,cyber-lab-ubuntu,cyber-lab-ubuntu,chmod 700 /home/nexus/snap/firmware-updater/226/.config,chmod,3,0
+auditd_real_10183,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,grep -qs ^\s*confinement:\s*classic\s* /snap/firmware-updater/226/meta/snap.yaml,grep,4,0
+auditd_real_10184,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/common/.cache,mkdir,3,0
+auditd_real_10185,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,touch -r /snap/firmware-updater/226/gnome-platform /home/nexus/snap/firmware-updater/common/.cache/desktop-runtime-date,touch,4,0
+auditd_real_10186,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,snapctl is-connected gnome-46-2404,snapctl,3,0
+auditd_real_10187,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,snapctl is-connected gsettings,snapctl,3,0
+auditd_real_10188,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/226/.local/share,mkdir,3,0
+auditd_real_10189,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sed /^#/!s#$HOME#/home/nexus#g /home/nexus/.config/user-dirs.dirs,sed,3,0
+auditd_real_10190,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,md5sum,md5sum,1,0
+auditd_real_10191,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp -a /home/nexus/.config/user-dirs.locale /home/nexus/snap/firmware-updater/226/.config,cp,4,0
+auditd_real_10192,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,md5sum,md5sum,1,0
+auditd_real_10193,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -s /run/user/1000/snap.firmware-updater/../wayland-0 /run/user/1000/snap.firmware-updater/wayland-0,ln,4,0
+auditd_real_10194,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm -rf /home/nexus/snap/firmware-updater/226/.local/share/fontconfig /home/nexus/snap/firmware-updater/226/.local/share/fonts /home/nexus/snap/firmware-updater/226/.local/share/fonts-* /home/nexus/snap/firmware-updater/226/.local/share/themes /home/nexus/snap/firmware-updater/226/.local/share/.themes,rm,7,0
+auditd_real_10195,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/226/.config/fontconfig,mkdir,3,0
+auditd_real_10196,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -sf /snap/firmware-updater/226/data-dir/themes /home/nexus/snap/firmware-updater/226/.local/share,ln,4,0
+auditd_real_10197,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -sfn /snap/firmware-updater/226/data-dir/themes /home/nexus/snap/firmware-updater/226/.themes,ln,4,0
+auditd_real_10198,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm -rf /home/nexus/snap/firmware-updater/226/.local/share/mime,rm,3,0
+auditd_real_10199,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm -rf /home/nexus/snap/firmware-updater/common/.cache/gio-modules,rm,3,0
+auditd_real_10200,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/226/.config/dconf,mkdir,3,0
+auditd_real_10201,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm -rf /home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas,rm,3,0
+auditd_real_10202,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/common/.cache/gio-modules,mkdir,3,0
+auditd_real_10203,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas,mkdir,3,0
+auditd_real_10204,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -s /home/nexus/.config/dconf/user /home/nexus/snap/firmware-updater/226/.config/dconf,ln,4,0
+auditd_real_10205,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /run/user/1000/snap.firmware-updater/dconf,mkdir,3,0
+auditd_real_10206,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -s /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gio/modules/libgiognomeproxy.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gio/modules/libgiognutls.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so /home/nexus/snap/firmware-updater/common/.cache/gio-modules,ln,7,0
+auditd_real_10207,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas/*.xml,ls,3,0
+auditd_real_10208,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -sf ../../dconf/user /run/user/1000/snap.firmware-updater/dconf/user,ln,4,0
+auditd_real_10209,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/glib-2.0/gio-querymodules /home/nexus/snap/firmware-updater/common/.cache/gio-modules,/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/glib-2.0/gio-querymodules,2,0
+auditd_real_10210,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm -f /home/nexus/snap/firmware-updater/common/.cache/gdk-pixbuf-loaders.cache,rm,3,0
+auditd_real_10211,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas/*.override,ls,3,0
+auditd_real_10212,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders,/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders,1,0
+auditd_real_10213,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /home/nexus/snap/firmware-updater/226/glib-2.0/schemas/*.xml,ls,3,0
+auditd_real_10214,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm -rf /home/nexus/snap/firmware-updater/226/.local/share/icons,rm,3,0
+auditd_real_10215,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/226/.local/share/icons,mkdir,3,0
+auditd_real_10216,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /home/nexus/snap/firmware-updater/226/glib-2.0/schemas/*.override,ls,3,0
+auditd_real_10217,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/snapctl is-connected desktop,/usr/bin/snapctl,3,0
+auditd_real_10218,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dirname /home/nexus/snap/firmware-updater/226/.config/gtk-3.0/settings.ini,dirname,2,0
+auditd_real_10219,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /snap/firmware-updater/226/data-dir/glib-2.0/schemas/*.xml,ls,3,0
+auditd_real_10220,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/226/.config/gtk-3.0,mkdir,3,0
+auditd_real_10221,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /snap/firmware-updater/226/data-dir/glib-2.0/schemas/*.override,ls,3,0
+auditd_real_10222,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -s /home/nexus/.config/gtk-3.0/settings.ini /home/nexus/snap/firmware-updater/226/.config/gtk-3.0/settings.ini,ln,4,0
+auditd_real_10223,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/snapctl is-connected gsettings,/usr/bin/snapctl,3,0
+auditd_real_10224,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /usr/share/ubuntu/glib-2.0/schemas/*.xml,ls,3,0
+auditd_real_10225,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dirname /home/nexus/snap/firmware-updater/226/.config/gtk-3.0/gtk.css,dirname,2,0
+auditd_real_10226,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -s /home/nexus/.config/gtk-3.0/gtk.css /home/nexus/snap/firmware-updater/226/.config/gtk-3.0/gtk.css,ln,4,0
+auditd_real_10227,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /usr/share/ubuntu/glib-2.0/schemas/*.override,ls,3,0
+auditd_real_10228,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dirname /home/nexus/snap/firmware-updater/226/.config/gtk-3.0/bookmarks,dirname,2,0
+auditd_real_10229,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /usr/share/gnome/glib-2.0/schemas/*.xml,ls,3,0
+auditd_real_10230,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -s /home/nexus/.config/gtk-3.0/bookmarks /home/nexus/snap/firmware-updater/226/.config/gtk-3.0/bookmarks,ln,4,0
+auditd_real_10231,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dirname /home/nexus/snap/firmware-updater/226/.config/gtk-2.0/gtkfilechooser.ini,dirname,2,0
+auditd_real_10232,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /usr/share/gnome/glib-2.0/schemas/*.override,ls,3,0
+auditd_real_10233,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/226/.config/gtk-2.0,mkdir,3,0
+auditd_real_10234,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /usr/local/share//glib-2.0/schemas/*.xml,ls,3,0
+auditd_real_10235,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -s /home/nexus/.config/gtk-2.0/gtkfilechooser.ini /home/nexus/snap/firmware-updater/226/.config/gtk-2.0/gtkfilechooser.ini,ln,4,0
+auditd_real_10236,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /usr/local/share//glib-2.0/schemas/*.override,ls,3,0
+auditd_real_10237,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/226/.config/ibus,mkdir,3,0
+auditd_real_10238,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -sfn /home/nexus/.config/ibus/bus /home/nexus/snap/firmware-updater/226/.config/ibus,ln,4,0
+auditd_real_10239,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /usr/share//glib-2.0/schemas/*.xml,ls,3,0
+auditd_real_10240,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm -rf /home/nexus/snap/firmware-updater/common/.cache/immodules,rm,3,0
+auditd_real_10241,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /usr/share//glib-2.0/schemas/*.override,ls,3,0
+auditd_real_10242,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mkdir -p /home/nexus/snap/firmware-updater/common/.cache/immodules,mkdir,3,0
+auditd_real_10243,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /var/lib/snapd/desktop/glib-2.0/schemas/*.xml,ls,3,0
+auditd_real_10244,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ln -s /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-am-et.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-broadway.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-cedilla.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-cyrillic-translit.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-fcitx.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ibus.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-inuktitut.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ipa.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-multipress.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-thai.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ti-er.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ti-et.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-viqr.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-wayland.so /snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-xim.so /home/nexus/snap/firmware-updater/common/.cache/immodules,ln,18,0
+auditd_real_10245,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /var/lib/snapd/desktop/glib-2.0/schemas/*.override,ls,3,0
+auditd_real_10246,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/libgtk-3-0/gtk-query-immodules-3.0,/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/libgtk-3-0/gtk-query-immodules-3.0,1,0
+auditd_real_10247,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /snap/firmware-updater/226/gpu-2404/usr/share/glib-2.0/schemas/*.xml,ls,3,0
+auditd_real_10248,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /snap/firmware-updater/226/gpu-2404/usr/share/glib-2.0/schemas/*.override,ls,3,0
+auditd_real_10249,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas/*.xml /home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas/*.override,ls,4,0
+auditd_real_10250,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/snap/firmware-updater/226/bin/firmware-notifier,/snap/firmware-updater/226/bin/firmware-notifier,1,0
+auditd_real_10251,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 91 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10252,2026-09-10T00:00:27Z,cyber-lab-ubuntu,cyber-lab-ubuntu,modprobe -abq sd_mod,modprobe,3,0
+auditd_real_10253,2026-09-10T00:00:27Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 93 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10254,2026-09-10T00:00:27Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/fwupd/fwupd,/usr/libexec/fwupd/fwupd,1,0
+auditd_real_10255,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /var/cache/fontconfig /var/cache/fontconfig --bind-try /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 77 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 76,bwrap,56,0
+auditd_real_10256,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 76,/usr/libexec/glycin-loaders/2+/glycin-svg,3,0
+auditd_real_10257,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 96 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10258,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/fprintd,/usr/libexec/fprintd,1,0
+auditd_real_10259,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gdm-session-worker [pam/gdm-password],gdm-session-worker [pam/gdm-password],1,0
+auditd_real_10260,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus nullok,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10261,2026-09-10T00:00:38Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus nullok,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10262,2026-09-10T00:00:38Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10263,2026-09-10T00:00:38Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/nautilus --gapplication-service,/usr/bin/nautilus,2,0
+auditd_real_10264,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/env gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app,/usr/bin/env,6,0
+auditd_real_10265,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app,gjs,5,0
+auditd_real_10266,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,nautilus --version,nautilus,2,0
+auditd_real_10267,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --seccomp 27 /usr/bin/true,bwrap,39,0
+auditd_real_10268,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/true,/usr/bin/true,1,0
+auditd_real_10269,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --seccomp 28 /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 27,bwrap,41,0
+auditd_real_10270,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 27,/usr/libexec/glycin-loaders/2+/glycin-image-rs,3,0
+auditd_real_10271,2026-09-10T00:00:40Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gjs -m /usr/share/gnome-shell/extensions/ubuntu-appindicators@ubuntu.com/tools/busAnalyzer.js,gjs,3,0
+auditd_real_10272,2026-09-10T00:00:43Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo ausearch -k benign_exec_05,sudo,4,0
+auditd_real_10273,2026-09-10T00:00:43Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
+auditd_real_10274,2026-09-10T00:00:43Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ausearch -k benign_exec_05,ausearch,3,0

@@ -1,0 +1,1254 @@
+----
+time->Thu Sep 10 02:53:58 2026
+type=PROCTITLE msg=audit(1788998038.721:738): proctitle=617564697463746C002D6100616C776179732C65786974002D46006172636800623634002D5300657865637665002D6B0062656E69676E5F657865635F3035
+type=SYSCALL msg=audit(1788998038.721:738): arch=c000003e syscall=44 success=yes exit=1072 a0=4 a1=7ffc497b9230 a2=430 a3=0 items=0 ppid=6026 pid=6027 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=4 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1788998038.721:738): auid=1000 ses=4 subj=unconfined op=add_rule key="benign_exec_05" list=4 res=1
+----
+time->Thu Sep 10 02:53:58 2026
+type=PROCTITLE msg=audit(1788998038.731:740): proctitle="/usr/libexec/vte-urlencode-cwd"
+type=PATH msg=audit(1788998038.731:740): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998038.731:740): item=0 name="/usr/libexec/vte-urlencode-cwd" inode=1725565 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998038.731:740): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998038.731:740): argc=1 a0="/usr/libexec/vte-urlencode-cwd"
+type=SYSCALL msg=audit(1788998038.731:740): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7d230 a1=5fb91aa53410 a2=5fb91aa63f80 a3=8 items=2 ppid=4075 pid=6033 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="vte-urlencode-c" exe="/usr/libexec/vte-urlencode-cwd" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.137:741): proctitle=6D6B646972002D70002F686F6D652F6E657875732F61756469745F73657373696F6E35
+type=PATH msg=audit(1788998046.137:741): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.137:741): item=0 name="/usr/bin/mkdir" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.137:741): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998046.137:741): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/audit_session5"
+type=SYSCALL msg=audit(1788998046.137:741): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7b780 a1=5fb91aa76a70 a2=5fb91aa63f80 a3=31 items=2 ppid=4075 pid=6035 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="mkdir" exe="/usr/lib/cargo/bin/coreutils/mkdir" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.145:742): proctitle=746F756368007265706F72742E747874
+type=PATH msg=audit(1788998046.145:742): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.145:742): item=0 name="/usr/bin/touch" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.145:742): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.145:742): argc=2 a0="touch" a1="report.txt"
+type=SYSCALL msg=audit(1788998046.145:742): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91a9b13b0 a1=5fb91aa79cd0 a2=5fb91aa63f80 a3=20 items=2 ppid=4075 pid=6036 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="touch" exe="/usr/lib/cargo/bin/coreutils/touch" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.154:743): proctitle=636174007265706F72742E747874
+type=PATH msg=audit(1788998046.154:743): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.154:743): item=0 name="/usr/bin/cat" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.154:743): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.154:743): argc=2 a0="cat" a1="report.txt"
+type=SYSCALL msg=audit(1788998046.154:743): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7be00 a1=5fb91aa76680 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6038 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="cat" exe="/usr/lib/cargo/bin/coreutils/cat" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.163:744): proctitle=73746174007265706F72742E747874
+type=PATH msg=audit(1788998046.163:744): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.163:744): item=0 name="/usr/bin/stat" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.163:744): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.163:744): argc=2 a0="stat" a1="report.txt"
+type=SYSCALL msg=audit(1788998046.163:744): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa77f00 a1=5fb91aa53d60 a2=5fb91aa63f80 a3=20 items=2 ppid=4075 pid=6039 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="stat" exe="/usr/lib/cargo/bin/coreutils/stat" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.177:745): proctitle=63686D6F6400363434007265706F72742E747874
+type=PATH msg=audit(1788998046.177:745): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.177:745): item=0 name="/usr/bin/chmod" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.177:745): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.177:745): argc=3 a0="chmod" a1="644" a2="report.txt"
+type=SYSCALL msg=audit(1788998046.177:745): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa775e0 a1=5fb91aa7a1b0 a2=5fb91aa63f80 a3=0 items=2 ppid=4075 pid=6041 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="chmod" exe="/usr/lib/cargo/bin/coreutils/chmod" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.183:746): proctitle=6370007265706F72742E747874006261636B75702E747874
+type=PATH msg=audit(1788998046.183:746): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.183:746): item=0 name="/usr/bin/cp" inode=1705312 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.183:746): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.183:746): argc=3 a0="cp" a1="report.txt" a2="backup.txt"
+type=SYSCALL msg=audit(1788998046.183:746): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7b870 a1=5fb91a9aff40 a2=5fb91aa63f80 a3=31 items=2 ppid=4075 pid=6042 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="cp" exe="/usr/bin/gnucp" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.186:747): proctitle=64696666007265706F72742E747874006261636B75702E747874
+type=PATH msg=audit(1788998046.186:747): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.186:747): item=0 name="/usr/bin/diff" inode=1705597 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.186:747): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.186:747): argc=3 a0="diff" a1="report.txt" a2="backup.txt"
+type=SYSCALL msg=audit(1788998046.186:747): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa79ca0 a1=5fb91aa5ff20 a2=5fb91aa63f80 a3=31 items=2 ppid=4075 pid=6043 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="diff" exe="/usr/bin/diff" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.197:748): proctitle=726D006261636B75702E747874
+type=PATH msg=audit(1788998046.197:748): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.197:748): item=0 name="/usr/bin/rm" inode=1706295 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.197:748): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.197:748): argc=2 a0="rm" a1="backup.txt"
+type=SYSCALL msg=audit(1788998046.197:748): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7ba90 a1=5fb91aa78970 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6045 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="rm" exe="/usr/bin/gnurm" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.201:749): proctitle=6D6B646972006C6F6773
+type=PATH msg=audit(1788998046.201:749): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.201:749): item=0 name="/usr/bin/mkdir" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.201:749): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.201:749): argc=2 a0="mkdir" a1="logs"
+type=SYSCALL msg=audit(1788998046.201:749): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7ba20 a1=5fb91aa77f90 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6046 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="mkdir" exe="/usr/lib/cargo/bin/coreutils/mkdir" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.213:750): proctitle=6C73002D2D636F6C6F723D6175746F002D6C6168
+type=PATH msg=audit(1788998046.213:750): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.213:750): item=0 name="/usr/bin/ls" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.213:750): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.213:750): argc=3 a0="ls" a1="--color=auto" a2="-lah"
+type=SYSCALL msg=audit(1788998046.213:750): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91a994140 a1=5fb91aa7ba20 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6047 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="ls" exe="/usr/lib/cargo/bin/coreutils/ls" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.228:751): proctitle=66696E64002E002D6D617864657074680032002D747970650066
+type=PATH msg=audit(1788998046.228:751): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.228:751): item=0 name="/usr/bin/find" inode=1704519 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.228:751): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.228:751): argc=6 a0="find" a1="." a2="-maxdepth" a3="2" a4="-type" a5="f"
+type=SYSCALL msg=audit(1788998046.228:751): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7ac20 a1=5fb91aa7c0b0 a2=5fb91aa63f80 a3=31 items=2 ppid=4075 pid=6048 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="find" exe="/usr/bin/find" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.231:752): proctitle=7073002D6566
+type=PATH msg=audit(1788998046.231:752): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.231:752): item=0 name="/usr/bin/ps" inode=1705090 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.231:752): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.231:752): argc=2 a0="ps" a1="-ef"
+type=SYSCALL msg=audit(1788998046.231:752): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa79200 a1=5fb91aa796b0 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6049 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="ps" exe="/usr/bin/ps" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.258:753): proctitle=706772657000617564697464
+type=PATH msg=audit(1788998046.258:753): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.258:753): item=0 name="/usr/bin/pgrep" inode=1705046 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.258:753): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.258:753): argc=2 a0="pgrep" a1="auditd"
+type=SYSCALL msg=audit(1788998046.258:753): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7cf90 a1=5fb91aa7bea0 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6051 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="pgrep" exe="/usr/bin/pgrep" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.278:754): proctitle="uptime"
+type=PATH msg=audit(1788998046.278:754): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.278:754): item=0 name="/usr/bin/uptime" inode=1705333 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.278:754): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.278:754): argc=1 a0="uptime"
+type=SYSCALL msg=audit(1788998046.278:754): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91a9b0ca0 a1=5fb91aa79750 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6052 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="uptime" exe="/usr/bin/uptime" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.282:755): proctitle=766D7374617400310032
+type=PATH msg=audit(1788998046.282:755): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.282:755): item=0 name="/usr/bin/vmstat" inode=1705347 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.282:755): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998046.282:755): argc=3 a0="vmstat" a1="1" a2="2"
+type=SYSCALL msg=audit(1788998046.282:755): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91a9906a0 a1=5fb91aa7ac40 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6053 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="vmstat" exe="/usr/bin/vmstat" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:06 2026
+type=PROCTITLE msg=audit(1788998046.786:756): proctitle=2F7573722F6C6962657865632F6C6F63616C7365617263682D657874726163746F722D33002D2D736F636B65742D66640033
+type=PATH msg=audit(1788998046.786:756): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998046.786:756): item=0 name="/usr/libexec/localsearch-extractor-3" inode=1725529 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998046.786:756): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998046.786:756): argc=3 a0="/usr/libexec/localsearch-extractor-3" a1="--socket-fd" a2="3"
+type=SYSCALL msg=audit(1788998046.786:756): arch=c000003e syscall=59 success=yes exit=0 a0=593c08d6c8c0 a1=593c08ae0200 a2=593c08bc7390 a3=21 items=2 ppid=3356 pid=6054 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="localsearch-ext" exe="/usr/libexec/localsearch-extractor-3" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:07 2026
+type=PROCTITLE msg=audit(1788998047.307:757): proctitle="lsblk"
+type=PATH msg=audit(1788998047.307:757): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998047.307:757): item=0 name="/usr/bin/lsblk" inode=1705525 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998047.307:757): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998047.307:757): argc=1 a0="lsblk"
+type=SYSCALL msg=audit(1788998047.307:757): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7cb50 a1=5fb91aa7cb10 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6062 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="lsblk" exe="/usr/bin/lsblk" subj=lsblk key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:07 2026
+type=PROCTITLE msg=audit(1788998047.315:758): proctitle="mount"
+type=PATH msg=audit(1788998047.315:758): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998047.315:758): item=0 name="/usr/bin/mount" inode=1705507 dev=08:02 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998047.315:758): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998047.315:758): argc=1 a0="mount"
+type=SYSCALL msg=audit(1788998047.315:758): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91a9b2470 a1=5fb91a9b02d0 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6063 auid=1000 uid=1000 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="mount" exe="/usr/bin/mount" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:07 2026
+type=PROCTITLE msg=audit(1788998047.320:759): proctitle=6466002D5468
+type=PATH msg=audit(1788998047.320:759): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998047.320:759): item=0 name="/usr/bin/df" inode=1705444 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998047.320:759): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998047.320:759): argc=2 a0="df" a1="-Th"
+type=SYSCALL msg=audit(1788998047.320:759): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7c0d0 a1=5fb91a9b02b0 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6064 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="df" exe="/usr/bin/gnudf" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:07 2026
+type=PROCTITLE msg=audit(1788998047.327:760): proctitle="date"
+type=PATH msg=audit(1788998047.327:760): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998047.327:760): item=0 name="/usr/bin/date" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998047.327:760): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998047.327:760): argc=1 a0="date"
+type=SYSCALL msg=audit(1788998047.327:760): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91a9b02f0 a1=5fb91aa768c0 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6065 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="date" exe="/usr/lib/cargo/bin/coreutils/date" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:07 2026
+type=PROCTITLE msg=audit(1788998047.336:761): proctitle="timedatectl"
+type=PATH msg=audit(1788998047.336:761): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998047.336:761): item=0 name="/usr/bin/timedatectl" inode=1705288 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998047.336:761): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998047.336:761): argc=1 a0="timedatectl"
+type=SYSCALL msg=audit(1788998047.336:761): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7a5e0 a1=5fb91aa7a8b0 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6066 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="timedatectl" exe="/usr/bin/timedatectl" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:07 2026
+type=PROCTITLE msg=audit(1788998047.359:765): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003934002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998047.359:765): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998047.359:765): item=0 name="/proc/self/fd/9" inode=1723455 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998047.359:765): cwd="/"
+type=EXECVE msg=audit(1788998047.359:765): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="94" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=SYSCALL msg=audit(1788998047.359:765): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc517bd470 a1=7ffc517bd490 a2=7ffc517bde08 a3=8 items=2 ppid=1 pid=6068 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:07 2026
+type=PROCTITLE msg=audit(1788998047.429:766): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003934002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998047.429:766): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998047.429:766): item=0 name="/usr/lib/systemd/systemd-timedated" inode=1723490 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998047.429:766): cwd="/"
+type=EXECVE msg=audit(1788998047.429:766): argc=1 a0="/usr/lib/systemd/systemd-timedated"
+type=BPRM_FCAPS msg=audit(1788998047.429:766): fver=0 fp=0 fi=0 fe=0 old_pp=000001ffffffffff old_pi=0 old_pe=000001ffffffffff old_pa=0 pp=0000000002000000 pi=0 pe=0000000002000000 pa=0 frootid=0
+type=SYSCALL msg=audit(1788998047.429:766): arch=c000003e syscall=59 success=yes exit=0 a0=569562518bb0 a1=5695625736a0 a2=569562507240 a3=0 items=2 ppid=1 pid=6068 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="systemd-timedat" exe="/usr/lib/systemd/systemd-timedated" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:07 2026
+type=PROCTITLE msg=audit(1788998047.441:768): proctitle="hostname"
+type=PATH msg=audit(1788998047.441:768): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998047.441:768): item=0 name="/usr/bin/hostname" inode=1704801 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998047.441:768): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998047.441:768): argc=1 a0="hostname"
+type=SYSCALL msg=audit(1788998047.441:768): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa79820 a1=5fb91aa7a890 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6069 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="hostname" exe="/usr/bin/hostname" subj=hostname key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:07 2026
+type=PROCTITLE msg=audit(1788998047.443:769): proctitle="id"
+type=PATH msg=audit(1788998047.443:769): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998047.443:769): item=0 name="/usr/bin/id" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998047.443:769): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998047.443:769): argc=1 a0="id"
+type=SYSCALL msg=audit(1788998047.443:769): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7b760 a1=5fb91aa7b7a0 a2=5fb91aa63f80 a3=21 items=2 ppid=4075 pid=6070 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="id" exe="/usr/lib/cargo/bin/coreutils/id" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:54:07 2026
+type=PROCTITLE msg=audit(1788998047.451:770): proctitle="/usr/libexec/vte-urlencode-cwd"
+type=PATH msg=audit(1788998047.451:770): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998047.451:770): item=0 name="/usr/libexec/vte-urlencode-cwd" inode=1725565 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998047.451:770): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998047.451:770): argc=1 a0="/usr/libexec/vte-urlencode-cwd"
+type=SYSCALL msg=audit(1788998047.451:770): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa7e120 a1=5fb91a981520 a2=5fb91aa63f80 a3=8 items=2 ppid=4075 pid=6071 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="vte-urlencode-c" exe="/usr/libexec/vte-urlencode-cwd" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:59:16 2026
+type=PROCTITLE msg=audit(1788998356.737:775): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998356.737:775): item=0 name="/usr/local/sbin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998356.737:775): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998356.737:775): arch=c000003e syscall=59 success=no exit=-2 a0=72fa22dfc910 a1=72fa1800ab10 a2=56fb4df11e80 a3=0 items=1 ppid=2868 pid=6083 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gly-hdl-loader" exe="/usr/bin/gnome-shell" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:59:16 2026
+type=PROCTITLE msg=audit(1788998356.737:776): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998356.737:776): item=0 name="/usr/local/bin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998356.737:776): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998356.737:776): arch=c000003e syscall=59 success=no exit=-2 a0=72fa22dfc910 a1=72fa1800ab10 a2=56fb4df11e80 a3=0 items=1 ppid=2868 pid=6083 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gly-hdl-loader" exe="/usr/bin/gnome-shell" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:59:16 2026
+type=PROCTITLE msg=audit(1788998356.737:777): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998356.737:777): item=0 name="/usr/sbin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998356.737:777): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998356.737:777): arch=c000003e syscall=59 success=no exit=-2 a0=72fa22dfc910 a1=72fa1800ab10 a2=56fb4df11e80 a3=0 items=1 ppid=2868 pid=6083 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gly-hdl-loader" exe="/usr/bin/gnome-shell" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 02:59:16 2026
+type=PROCTITLE msg=audit(1788998356.737:778): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998356.737:778): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998356.737:778): item=0 name="/usr/bin/bwrap" inode=1704394 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998356.737:778): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998356.737:778): argc=56 a0="bwrap" a1="--unshare-all" a2="--die-with-parent" a3="--chdir" a4="/" a5="--ro-bind" a6="/usr" a7="/usr" a8="--dev" a9="/dev" a10="--ro-bind-try" a11="/etc/ld.so.cache" a12="/etc/ld.so.cache" a13="--ro-bind-try" a14="/nix/store" a15="/nix/store" a16="--tmpfs" a17="/tmp-home" a18="--tmpfs" a19="/tmp-run" a20="--clearenv" a21="--setenv" a22="HOME" a23="/tmp-home" a24="--setenv" a25="XDG_RUNTIME_DIR" a26="/tmp-run" a27="--setenv" a28="XDG_RUNTIME_DIR" a29="/run/user/1000" a30="--symlink" a31="/usr/lib64" a32="/lib64" a33="--symlink" a34="/usr/lib" a35="/lib" a36="--ro-bind-try" a37="/etc/fonts/conf.d" a38="/etc/fonts/conf.d" a39="--ro-bind-try" a40="/etc/fonts/fonts.conf" a41="/etc/fonts/fonts.conf" a42="--ro-bind-try" a43="/var/cache/fontconfig" a44="/var/cache/fontconfig" a45="--bind-try" a46="/home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg" a47="/home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg" a48="--setenv" a49="XDG_CACHE_HOME" a50="/home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg" a51="--seccomp" a52="101" a53="/usr/libexec/glycin-loaders/2+/glycin-svg" a54="--dbus-fd" a55="96"
+type=SYSCALL msg=audit(1788998356.737:778): arch=c000003e syscall=59 success=yes exit=0 a0=72fa22dfc910 a1=72fa1800ab10 a2=56fb4df11e80 a3=0 items=2 ppid=2868 pid=6083 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="bwrap" exe="/usr/bin/bwrap" subj=bwrap key="benign_exec_05"
+----
+time->Thu Sep 10 02:59:16 2026
+type=PROCTITLE msg=audit(1788998356.764:779): proctitle=2F7573722F6C6962657865632F676C7963696E2D6C6F61646572732F322B2F676C7963696E2D737667002D2D646275732D6664003936
+type=PATH msg=audit(1788998356.764:779): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998356.764:779): item=0 name="/usr/libexec/glycin-loaders/2+/glycin-svg" inode=1849331 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998356.764:779): cwd="/"
+type=EXECVE msg=audit(1788998356.764:779): argc=3 a0="/usr/libexec/glycin-loaders/2+/glycin-svg" a1="--dbus-fd" a2="96"
+type=SYSCALL msg=audit(1788998356.764:779): arch=c000003e syscall=59 success=yes exit=0 a0=7ffdf1bd39cf a1=7ffdf1bd2fc0 a2=5ac155d12b00 a3=73751d537d3e items=2 ppid=6084 pid=6085 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="glycin-svg" exe="/usr/libexec/glycin-loaders/2+/glycin-svg" subj=bwrap//&unpriv_bwrap key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:11 2026
+type=PROCTITLE msg=audit(1788998411.889:780): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003335002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998411.889:780): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998411.889:780): item=0 name="/proc/self/fd/9" inode=1723455 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998411.889:780): cwd="/"
+type=EXECVE msg=audit(1788998411.889:780): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="35" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=SYSCALL msg=audit(1788998411.889:780): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc517bd4e0 a1=7ffc517bd500 a2=7ffc517bde08 a3=8 items=2 ppid=1 pid=6112 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:12 2026
+type=PROCTITLE msg=audit(1788998412.035:781): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003335002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998412.035:781): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998412.035:781): item=0 name="/usr/bin/sh" inode=1704440 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998412.035:781): cwd="/"
+type=EXECVE msg=audit(1788998412.035:781): argc=3 a0="sh" a1="-c" a2=454E41424C45443D66616C73653B205B202D72202F6574632F64656661756C742F73797373746174205D202626202E202F6574632F64656661756C742F737973737461743B20746573742022247B454E41424C45447D22203D20227472756522
+type=SYSCALL msg=audit(1788998412.035:781): arch=c000003e syscall=59 success=yes exit=0 a0=6525914deb40 a1=6525914deb10 a2=6525914d6440 a3=0 items=2 ppid=1 pid=6112 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sh" exe="/usr/bin/dash" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:12 2026
+type=PROCTITLE msg=audit(1788998412.042:782): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003335002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998412.042:782): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998412.042:782): item=0 name="/proc/self/fd/9" inode=1723455 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998412.042:782): cwd="/"
+type=EXECVE msg=audit(1788998412.042:782): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="35" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=SYSCALL msg=audit(1788998412.042:782): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc517bd420 a1=7ffc517bd440 a2=7ffc517bde08 a3=8 items=2 ppid=1 pid=6113 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:12 2026
+type=PROCTITLE msg=audit(1788998412.069:783): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003335002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998412.069:783): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998412.069:783): item=1 name="/bin/sh" inode=1704440 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998412.069:783): item=0 name="/usr/libexec/sysstat/sa1" inode=1849378 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998412.069:783): cwd="/"
+type=EXECVE msg=audit(1788998412.069:783): argc=4 a0="/bin/sh" a1="/usr/libexec/sysstat/sa1" a2="1" a3="1"
+type=SYSCALL msg=audit(1788998412.069:783): arch=c000003e syscall=59 success=yes exit=0 a0=5c8a984d0a10 a1=5c8a984d0a40 a2=5c8a984c8440 a3=0 items=3 ppid=1 pid=6113 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sa1" exe="/usr/bin/dash" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:12 2026
+type=PROCTITLE msg=audit(1788998412.072:784): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003335002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998412.072:784): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998412.072:784): item=0 name="/usr/libexec/sysstat/sadc" inode=1849380 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998412.072:784): cwd="/usr/libexec/sysstat"
+type=EXECVE msg=audit(1788998412.072:784): argc=8 a0="/usr/libexec/sysstat/sadc" a1="-F" a2="-L" a3="-S" a4="DISK" a5="1" a6="1" a7="/var/log/sysstat"
+type=SYSCALL msg=audit(1788998412.072:784): arch=c000003e syscall=59 success=yes exit=0 a0=64eba1a5d1d8 a1=64eba1a5d2c0 a2=64eba1a5d308 a3=64eba1a5d288 items=2 ppid=1 pid=6113 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sadc" exe="/usr/libexec/sysstat/sadc" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:24 2026
+type=PROCTITLE msg=audit(1788998424.947:787): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A6500313437002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006175746F
+type=PATH msg=audit(1788998424.947:787): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998424.947:787): item=0 name="/proc/self/fd/9" inode=1723455 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998424.947:787): cwd="/"
+type=EXECVE msg=audit(1788998424.947:787): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="147" a3="--log-level" a4="info" a5="--log-target" a6="auto"
+type=SYSCALL msg=audit(1788998424.947:787): arch=c000003e syscall=59 success=yes exit=0 a0=7ffdddc84de0 a1=7ffdddc84e00 a2=7ffdddc85760 a3=8 items=2 ppid=2544 pid=6117 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.117:788): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A6500313437002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006175746F
+type=PATH msg=audit(1788998425.117:788): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.117:788): item=0 name="/usr/bin/snap" inode=1705207 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.117:788): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.117:788): argc=4 a0="/usr/bin/snap" a1="run" a2="--timer=00:00-24:00/8" a3="firmware-updater.firmware-notifier"
+type=SYSCALL msg=audit(1788998425.117:788): arch=c000003e syscall=59 success=yes exit=0 a0=610cd1c0f600 a1=610cd1c16440 a2=610cd1c0c9b0 a3=0 items=2 ppid=2544 pid=6117 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="snap" exe="/usr/bin/snap" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.232:789): proctitle=2F7573722F6C69622F736E6170642F736E61702D736563636F6D700076657273696F6E2D696E666F
+type=PATH msg=audit(1788998425.232:789): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.232:789): item=0 name="/usr/lib/snapd/snap-seccomp" inode=1723411 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.232:789): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.232:789): argc=2 a0="/usr/lib/snapd/snap-seccomp" a1="version-info"
+type=SYSCALL msg=audit(1788998425.232:789): arch=c000003e syscall=59 success=yes exit=0 a0=1b0d7f726580 a1=1b0d7f2b9338 a2=1b0d7f34c480 a3=0 items=2 ppid=6117 pid=6125 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="snap-seccomp" exe="/usr/lib/snapd/snap-seccomp" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.256:790): proctitle=2F7573722F6C69622F736E6170642F736E61702D636F6E66696E65002D2D6261736500636F7265323400736E61702E6669726D776172652D757064617465722E6669726D776172652D6E6F746966696572002F7573722F6C69622F736E6170642F736E61702D65786563006669726D776172652D757064617465722E6669726D
+type=PATH msg=audit(1788998425.256:790): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.256:790): item=0 name="/usr/lib/snapd/snap-confine" inode=1723398 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=00000000012c00cf cap_fi=0 cap_fe=0 cap_fver=2 cap_frootid=0
+type=CWD msg=audit(1788998425.256:790): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.256:790): argc=6 a0="/usr/lib/snapd/snap-confine" a1="--base" a2="core24" a3="snap.firmware-updater.firmware-notifier" a4="/usr/lib/snapd/snap-exec" a5="firmware-updater.firmware-notifier"
+type=BPRM_FCAPS msg=audit(1788998425.256:790): fver=2 fp=00000000012c00cf fi=0 fe=0 old_pp=0 old_pi=0000000800000000 old_pe=0 old_pa=0 pp=00000000012c00cf pi=0000000800000000 pe=0 pa=0 frootid=0
+type=SYSCALL msg=audit(1788998425.256:790): arch=c000003e syscall=59 success=yes exit=0 a0=1b0d7f29d6c0 a1=1b0d7f7b82c0 a2=1b0d7f77c200 a3=0 items=2 ppid=2544 pid=6117 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="snap-confine" exe="/usr/lib/snapd/snap-confine" subj=/usr/lib/snapd/snap-confine key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.768:792): proctitle=2F7573722F6C6962657865632F6C6F63616C7365617263682D657874726163746F722D33002D2D736F636B65742D66640033
+type=PATH msg=audit(1788998425.768:792): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.768:792): item=0 name="/usr/libexec/localsearch-extractor-3" inode=1725529 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.768:792): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998425.768:792): argc=3 a0="/usr/libexec/localsearch-extractor-3" a1="--socket-fd" a2="3"
+type=SYSCALL msg=audit(1788998425.768:792): arch=c000003e syscall=59 success=yes exit=0 a0=593c08d32c10 a1=593c090a30d0 a2=593c08bc7390 a3=21 items=2 ppid=3356 pid=6140 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="localsearch-ext" exe="/usr/libexec/localsearch-extractor-3" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.922:793): proctitle=2F7573722F6C69622F736E6170642F736E61702D636F6E66696E65002D2D6261736500636F7265323400736E61702E6669726D776172652D757064617465722E6669726D776172652D6E6F746966696572002F7573722F6C69622F736E6170642F736E61702D65786563006669726D776172652D757064617465722E6669726D
+type=PATH msg=audit(1788998425.922:793): item=0 name="/usr/lib/snapd/snap-exec" inode=1723403 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.922:793): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.922:793): argc=2 a0="/usr/lib/snapd/snap-exec" a1="firmware-updater.firmware-notifier"
+type=SYSCALL msg=audit(1788998425.922:793): arch=c000003e syscall=59 success=yes exit=0 a0=56b6c19e6d20 a1=7ffcac51b348 a2=56b6c19ea170 a3=0 items=1 ppid=2544 pid=6117 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="snap-exec" exe="/usr/lib/snapd/snap-exec" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.934:794): proctitle=2F7573722F6C69622F736E6170642F736E61702D636F6E66696E65002D2D6261736500636F7265323400736E61702E6669726D776172652D757064617465722E6669726D776172652D6E6F746966696572002F7573722F6C69622F736E6170642F736E61702D65786563006669726D776172652D757064617465722E6669726D
+type=PATH msg=audit(1788998425.934:794): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.934:794): item=1 name="/bin/bash" inode=917 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.934:794): item=0 name="/snap/firmware-updater/226/snap/command-chain/gpu-2404-wrapper" inode=64 dev=07:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.934:794): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.934:794): argc=4 a0="/bin/bash" a1="/snap/firmware-updater/226/snap/command-chain/gpu-2404-wrapper" a2="/snap/firmware-updater/226/snap/command-chain/desktop-launch" a3="/snap/firmware-updater/226/bin/firmware-notifier"
+type=SYSCALL msg=audit(1788998425.934:794): arch=c000003e syscall=59 success=yes exit=0 a0=3b500e746fc0 a1=3b500e7516c0 a2=3b500e6ccb48 a3=0 items=3 ppid=2544 pid=6117 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gpu-2404-wrappe" exe="/usr/bin/bash" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.941:795): proctitle=6469726E616D65002F736E61702F6669726D776172652D757064617465722F3232362F6770752D323430342F62696E2F6770752D323430342D70726F76696465722D77726170706572
+type=PATH msg=audit(1788998425.941:795): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.941:795): item=0 name="/usr/bin/dirname" inode=975 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.941:795): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.941:795): argc=2 a0="dirname" a1="/snap/firmware-updater/226/gpu-2404/bin/gpu-2404-provider-wrapper"
+type=SYSCALL msg=audit(1788998425.941:795): arch=c000003e syscall=59 success=yes exit=0 a0=5ae406a54b30 a1=5ae406a55630 a2=5ae406a4b890 a3=1 items=2 ppid=6153 pid=6154 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="dirname" exe="/usr/bin/dirname" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.947:796): proctitle=6469726E616D65002F736E61702F6669726D776172652D757064617465722F3232362F6770752D323430342F62696E2F6770752D323430342D70726F76696465722D77726170706572
+type=PATH msg=audit(1788998425.947:796): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.947:796): item=0 name="/usr/bin/dirname" inode=975 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.947:796): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.947:796): argc=2 a0="dirname" a1="/snap/firmware-updater/226/gpu-2404/bin/gpu-2404-provider-wrapper"
+type=SYSCALL msg=audit(1788998425.947:796): arch=c000003e syscall=59 success=yes exit=0 a0=5ae406a55560 a1=5ae406a555c0 a2=5ae406a55e70 a3=1 items=2 ppid=6155 pid=6156 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="dirname" exe="/usr/bin/dirname" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.955:797): proctitle=6469726E616D65002F736E61702F6669726D776172652D757064617465722F3232362F6770752D323430342F62696E2F6770752D323430342D70726F76696465722D77726170706572
+type=PATH msg=audit(1788998425.955:797): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.955:797): item=0 name="/usr/bin/dirname" inode=975 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.955:797): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.955:797): argc=2 a0="dirname" a1="/snap/firmware-updater/226/gpu-2404/bin/gpu-2404-provider-wrapper"
+type=SYSCALL msg=audit(1788998425.955:797): arch=c000003e syscall=59 success=yes exit=0 a0=5ae406a57d80 a1=5ae406a57e20 a2=5ae406a56040 a3=1 items=2 ppid=6157 pid=6158 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="dirname" exe="/usr/bin/dirname" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.959:798): proctitle=2F7573722F6C69622F736E6170642F736E61702D636F6E66696E65002D2D6261736500636F7265323400736E61702E6669726D776172652D757064617465722E6669726D776172652D6E6F746966696572002F7573722F6C69622F736E6170642F736E61702D65786563006669726D776172652D757064617465722E6669726D
+type=PATH msg=audit(1788998425.959:798): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.959:798): item=1 name="/bin/bash" inode=917 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.959:798): item=0 name="/snap/firmware-updater/226/snap/command-chain/desktop-launch" inode=63 dev=07:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.959:798): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.959:798): argc=3 a0="/bin/bash" a1="/snap/firmware-updater/226/snap/command-chain/desktop-launch" a2="/snap/firmware-updater/226/bin/firmware-notifier"
+type=SYSCALL msg=audit(1788998425.959:798): arch=c000003e syscall=59 success=yes exit=0 a0=5ae406a535e0 a1=5ae406a5a230 a2=5ae406a667f0 a3=8 items=3 ppid=2544 pid=6117 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="desktop-launch" exe="/usr/bin/bash" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.965:799): proctitle=64617465002B25732E254E
+type=PATH msg=audit(1788998425.965:799): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.965:799): item=0 name="/usr/bin/date" inode=960 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.965:799): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.965:799): argc=2 a0="date" a1="+%s.%N"
+type=SYSCALL msg=audit(1788998425.965:799): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995dd190 a1=5d58995dda40 a2=5d58995cf910 a3=1 items=2 ppid=6117 pid=6159 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="date" exe="/usr/bin/date" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.970:800): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E666967
+type=PATH msg=audit(1788998425.970:800): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.970:800): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.970:800): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.970:800): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/226/.config"
+type=SYSCALL msg=audit(1788998425.970:800): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995e4150 a1=5d58995dc570 a2=5d58995e49e0 a3=5d58995e54e0 items=2 ppid=6117 pid=6160 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:25 2026
+type=PROCTITLE msg=audit(1788998425.997:801): proctitle=63686D6F6400373030002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E666967
+type=PATH msg=audit(1788998425.997:801): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998425.997:801): item=0 name="/usr/bin/chmod" inode=939 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998425.997:801): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998425.997:801): argc=3 a0="chmod" a1="700" a2="/home/nexus/snap/firmware-updater/226/.config"
+type=SYSCALL msg=audit(1788998425.997:801): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995d4e40 a1=5d58995dc570 a2=5d58995e49e0 a3=5d58995dc570 items=2 ppid=6117 pid=6161 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="chmod" exe="/usr/bin/chmod" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.002:802): proctitle=67726570002D7173005E5C732A636F6E66696E656D656E743A5C732A636C61737369635C732A002F736E61702F6669726D776172652D757064617465722F3232362F6D6574612F736E61702E79616D6C
+type=PATH msg=audit(1788998426.002:802): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.002:802): item=0 name="/usr/bin/grep" inode=1009 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.002:802): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.002:802): argc=4 a0="grep" a1="-qs" a2="^\s*confinement:\s*classic\s*" a3="/snap/firmware-updater/226/meta/snap.yaml"
+type=SYSCALL msg=audit(1788998426.002:802): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995e3940 a1=5d58995d0b40 a2=5d58995e61d0 a3=5d58995d0b70 items=2 ppid=6117 pid=6162 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="grep" exe="/usr/bin/grep" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.006:803): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F636F6D6D6F6E2F2E6361636865
+type=PATH msg=audit(1788998426.006:803): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.006:803): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.006:803): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.006:803): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/common/.cache"
+type=SYSCALL msg=audit(1788998426.006:803): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995e3940 a1=5d58995e74b0 a2=5d58995e76f0 a3=5d58995e74b0 items=2 ppid=6117 pid=6163 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.016:804): proctitle=746F756368002D72002F736E61702F6669726D776172652D757064617465722F3232362F676E6F6D652D706C6174666F726D002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F636F6D6D6F6E2F2E63616368652F6465736B746F702D72756E74696D652D64617465
+type=PATH msg=audit(1788998426.016:804): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.016:804): item=0 name="/usr/bin/touch" inode=1281 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.016:804): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.016:804): argc=4 a0="touch" a1="-r" a2="/snap/firmware-updater/226/gnome-platform" a3="/home/nexus/snap/firmware-updater/common/.cache/desktop-runtime-date"
+type=SYSCALL msg=audit(1788998426.016:804): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995e6c20 a1=5d58995e7230 a2=5d58995e76f0 a3=5d58995d0a10 items=2 ppid=6117 pid=6164 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="touch" exe="/usr/bin/touch" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.040:805): proctitle=736E617063746C0069732D636F6E6E656374656400676E6F6D652D34362D32343034
+type=PATH msg=audit(1788998426.040:805): item=0 name="/usr/bin/snapctl" inode=1723414 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.040:805): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.040:805): argc=3 a0="snapctl" a1="is-connected" a2="gnome-46-2404"
+type=SYSCALL msg=audit(1788998426.040:805): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995e6c40 a1=5d58995ea600 a2=5d58995e76f0 a3=5d58995ea600 items=1 ppid=6117 pid=6165 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="snapctl" exe="/usr/lib/snapd/snapctl" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.064:806): proctitle=736E617063746C0069732D636F6E6E6563746564006773657474696E6773
+type=PATH msg=audit(1788998426.064:806): item=0 name="/usr/bin/snapctl" inode=1723414 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.064:806): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.064:806): argc=3 a0="snapctl" a1="is-connected" a2="gsettings"
+type=SYSCALL msg=audit(1788998426.064:806): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995e9af0 a1=5d58995ea6c0 a2=5d58995e76f0 a3=5d58995ed850 items=1 ppid=6117 pid=6170 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="snapctl" exe="/usr/lib/snapd/snapctl" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.090:807): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F7368617265
+type=PATH msg=audit(1788998426.090:807): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.090:807): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.090:807): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.090:807): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/226/.local/share"
+type=SYSCALL msg=audit(1788998426.090:807): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995ee0e0 a1=5d58995d0850 a2=5d58995f7060 a3=5d58995dcd80 items=2 ppid=6117 pid=6175 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.100:808): proctitle=736564002F5E232F21732324484F4D45232F686F6D652F6E657875732367002F686F6D652F6E657875732F2E636F6E6669672F757365722D646972732E64697273
+type=PATH msg=audit(1788998426.100:808): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.100:808): item=0 name="/usr/bin/sed" inode=1184 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.100:808): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.100:808): argc=3 a0="sed" a1="/^#/!s#$HOME#/home/nexus#g" a2="/home/nexus/.config/user-dirs.dirs"
+type=SYSCALL msg=audit(1788998426.100:808): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995f8d50 a1=5d58995f0590 a2=5d58995faa90 a3=5d58995f7230 items=2 ppid=6117 pid=6176 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="sed" exe="/usr/bin/sed" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.107:809): proctitle="md5sum"
+type=PATH msg=audit(1788998426.107:809): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.107:809): item=0 name="/usr/bin/md5sum" inode=1081 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.107:809): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.107:809): argc=1 a0="md5sum"
+type=SYSCALL msg=audit(1788998426.107:809): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995f3c30 a1=5d58995fa890 a2=5d58995faa90 a3=5d58995f7910 items=2 ppid=6117 pid=6177 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="md5sum" exe="/usr/bin/md5sum" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.116:810): proctitle=6370002D61002F686F6D652F6E657875732F2E636F6E6669672F757365722D646972732E6C6F63616C65002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E666967
+type=PATH msg=audit(1788998426.116:810): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.116:810): item=0 name="/usr/bin/cp" inode=954 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.116:810): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.116:810): argc=4 a0="cp" a1="-a" a2="/home/nexus/.config/user-dirs.locale" a3="/home/nexus/snap/firmware-updater/226/.config"
+type=SYSCALL msg=audit(1788998426.116:810): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995f88a0 a1=5d58995f7430 a2=5d58995faa90 a3=5d58995ed8e0 items=2 ppid=6117 pid=6178 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="cp" exe="/usr/bin/cp" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.124:811): proctitle="md5sum"
+type=PATH msg=audit(1788998426.124:811): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.124:811): item=0 name="/usr/bin/md5sum" inode=1081 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.124:811): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.124:811): argc=1 a0="md5sum"
+type=SYSCALL msg=audit(1788998426.124:811): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995f7350 a1=5d58995f91c0 a2=5d58995faa90 a3=5d58995f1880 items=2 ppid=6117 pid=6179 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="md5sum" exe="/usr/bin/md5sum" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.133:812): proctitle=6C6E002D73002F72756E2F757365722F313030302F736E61702E6669726D776172652D757064617465722F2E2E2F7761796C616E642D30002F72756E2F757365722F313030302F736E61702E6669726D776172652D757064617465722F7761796C616E642D30
+type=PATH msg=audit(1788998426.133:812): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.133:812): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.133:812): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.133:812): argc=4 a0="ln" a1="-s" a2="/run/user/1000/snap.firmware-updater/../wayland-0" a3="/run/user/1000/snap.firmware-updater/wayland-0"
+type=SYSCALL msg=audit(1788998426.133:812): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995f2f30 a1=5d58995f1a20 a2=5d58995faa90 a3=5d58995fa570 items=2 ppid=6117 pid=6180 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.141:813): proctitle=726D002D7266002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F73686172652F666F6E74636F6E666967002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F73686172652F666F6E7473002F68
+type=PATH msg=audit(1788998426.141:813): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.141:813): item=0 name="/usr/bin/rm" inode=1165 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.141:813): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.141:813): argc=7 a0="rm" a1="-rf" a2="/home/nexus/snap/firmware-updater/226/.local/share/fontconfig" a3="/home/nexus/snap/firmware-updater/226/.local/share/fonts" a4="/home/nexus/snap/firmware-updater/226/.local/share/fonts-*" a5="/home/nexus/snap/firmware-updater/226/.local/share/themes" a6="/home/nexus/snap/firmware-updater/226/.local/share/.themes"
+type=SYSCALL msg=audit(1788998426.141:813): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995ff1b0 a1=5d58995faed0 a2=5d58995ff590 a3=5d58995faed0 items=2 ppid=6117 pid=6181 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="rm" exe="/usr/bin/rm" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.146:814): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F666F6E74636F6E666967
+type=PATH msg=audit(1788998426.146:814): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.146:814): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.146:814): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.146:814): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/226/.config/fontconfig"
+type=SYSCALL msg=audit(1788998426.146:814): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995ffe80 a1=5d58995ffe30 a2=5d58995ff590 a3=5d58995e54e0 items=2 ppid=6117 pid=6182 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.154:815): proctitle=6C6E002D7366002F736E61702F6669726D776172652D757064617465722F3232362F646174612D6469722F7468656D6573002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F7368617265
+type=PATH msg=audit(1788998426.154:815): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.154:815): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.154:815): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.154:815): argc=4 a0="ln" a1="-sf" a2="/snap/firmware-updater/226/data-dir/themes" a3="/home/nexus/snap/firmware-updater/226/.local/share"
+type=SYSCALL msg=audit(1788998426.154:815): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995ff1b0 a1=5d58995ffbf0 a2=5d58995ff590 a3=5d58995ffc40 items=2 ppid=6117 pid=6184 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.161:816): proctitle=6C6E002D73666E002F736E61702F6669726D776172652D757064617465722F3232362F646174612D6469722F7468656D6573002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E7468656D6573
+type=PATH msg=audit(1788998426.161:816): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.161:816): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.161:816): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.161:816): argc=4 a0="ln" a1="-sfn" a2="/snap/firmware-updater/226/data-dir/themes" a3="/home/nexus/snap/firmware-updater/226/.themes"
+type=SYSCALL msg=audit(1788998426.161:816): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995d0530 a1=5d58995ffb70 a2=5d58995ff590 a3=5d58995fb570 items=2 ppid=6117 pid=6185 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.168:817): proctitle=726D002D7266002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F73686172652F6D696D65
+type=PATH msg=audit(1788998426.168:817): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.168:817): item=0 name="/usr/bin/rm" inode=1165 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.168:817): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.168:817): argc=3 a0="rm" a1="-rf" a2="/home/nexus/snap/firmware-updater/226/.local/share/mime"
+type=SYSCALL msg=audit(1788998426.168:817): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995f32c0 a1=5d58995ee430 a2=5d58995ff590 a3=5d58995ee430 items=2 ppid=6117 pid=6186 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="rm" exe="/usr/bin/rm" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.177:818): proctitle=726D002D7266002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F636F6D6D6F6E2F2E63616368652F67696F2D6D6F64756C6573
+type=PATH msg=audit(1788998426.177:818): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.177:818): item=0 name="/usr/bin/rm" inode=1165 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.177:818): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.177:818): argc=3 a0="rm" a1="-rf" a2="/home/nexus/snap/firmware-updater/common/.cache/gio-modules"
+type=SYSCALL msg=audit(1788998426.177:818): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995f53b0 a1=5d5899600f20 a2=5d5899600130 a3=5d5899600f20 items=2 ppid=6187 pid=6188 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="rm" exe="/usr/bin/rm" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.179:819): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F64636F6E66
+type=PATH msg=audit(1788998426.179:819): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.179:819): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.179:819): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.179:819): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/226/.config/dconf"
+type=SYSCALL msg=audit(1788998426.179:819): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899600770 a1=5d5899604570 a2=5d5899600130 a3=5d5899604610 items=2 ppid=6117 pid=6190 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.179:820): proctitle=726D002D7266002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F73686172652F676C69622D322E302F736368656D6173
+type=PATH msg=audit(1788998426.179:820): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.179:820): item=0 name="/usr/bin/rm" inode=1165 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.179:820): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.179:820): argc=3 a0="rm" a1="-rf" a2="/home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas"
+type=SYSCALL msg=audit(1788998426.179:820): arch=c000003e syscall=59 success=yes exit=0 a0=5d58996053c0 a1=5d5899605470 a2=5d5899600130 a3=1 items=2 ppid=6189 pid=6191 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="rm" exe="/usr/bin/rm" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.187:821): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F636F6D6D6F6E2F2E63616368652F67696F2D6D6F64756C6573
+type=PATH msg=audit(1788998426.187:821): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.187:821): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.187:821): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.187:821): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/common/.cache/gio-modules"
+type=SYSCALL msg=audit(1788998426.187:821): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899601800 a1=5d58996017d0 a2=5d5899600130 a3=5d5899600d00 items=2 ppid=6187 pid=6192 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.187:822): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F73686172652F676C69622D322E302F736368656D6173
+type=PATH msg=audit(1788998426.187:822): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.187:822): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.187:822): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.187:822): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas"
+type=SYSCALL msg=audit(1788998426.187:822): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899605cc0 a1=5d5899605c90 a2=5d5899600130 a3=5d58996053e0 items=2 ppid=6189 pid=6193 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.188:823): proctitle=6C6E002D73002F686F6D652F6E657875732F2E636F6E6669672F64636F6E662F75736572002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F64636F6E66
+type=PATH msg=audit(1788998426.188:823): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.188:823): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.188:823): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.188:823): argc=4 a0="ln" a1="-s" a2="/home/nexus/.config/dconf/user" a3="/home/nexus/snap/firmware-updater/226/.config/dconf"
+type=SYSCALL msg=audit(1788998426.188:823): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995fc840 a1=5d5899601060 a2=5d5899600130 a3=5d58996046b0 items=2 ppid=6117 pid=6194 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.194:824): proctitle=6D6B646972002D70002F72756E2F757365722F313030302F736E61702E6669726D776172652D757064617465722F64636F6E66
+type=PATH msg=audit(1788998426.194:824): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.194:824): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.194:824): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.194:824): argc=3 a0="mkdir" a1="-p" a2="/run/user/1000/snap.firmware-updater/dconf"
+type=SYSCALL msg=audit(1788998426.194:824): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995efdc0 a1=5d58995f3670 a2=5d5899600130 a3=5d5899600d50 items=2 ppid=6117 pid=6195 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.194:825): proctitle=6C6E002D73002F736E61702F6669726D776172652D757064617465722F3232362F676E6F6D652D706C6174666F726D2F7573722F6C69622F7838365F36342D6C696E75782D676E752F67696F2F6D6F64756C65732F6C696264636F6E6673657474696E67732E736F002F736E61702F6669726D776172652D757064617465722F
+type=PATH msg=audit(1788998426.194:825): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.194:825): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.194:825): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.194:825): argc=7 a0="ln" a1="-s" a2="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gio/modules/libdconfsettings.so" a3="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gio/modules/libgiognomeproxy.so" a4="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gio/modules/libgiognutls.so" a5="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gio/modules/libgiolibproxy.so" a6="/home/nexus/snap/firmware-updater/common/.cache/gio-modules"
+type=SYSCALL msg=audit(1788998426.194:825): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899600d00 a1=5d5899600e10 a2=5d5899600130 a3=5d58995f3e60 items=2 ppid=6187 pid=6196 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.197:826): proctitle=6C73002D41002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F73686172652F676C69622D322E302F736368656D61732F2A2E786D6C
+type=PATH msg=audit(1788998426.197:826): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.197:826): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.197:826): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.197:826): argc=3 a0="ls" a1="-A" a2="/home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas/*.xml"
+type=SYSCALL msg=audit(1788998426.197:826): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899605610 a1=5d5899606510 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6197 pid=6198 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.200:827): proctitle=6C6E002D7366002E2E2F2E2E2F64636F6E662F75736572002F72756E2F757365722F313030302F736E61702E6669726D776172652D757064617465722F64636F6E662F75736572
+type=PATH msg=audit(1788998426.200:827): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.200:827): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.200:827): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.200:827): argc=4 a0="ln" a1="-sf" a2="../../dconf/user" a3="/run/user/1000/snap.firmware-updater/dconf/user"
+type=SYSCALL msg=audit(1788998426.200:827): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899600c10 a1=5d58995fff60 a2=5d5899600130 a3=5d58996007b0 items=2 ppid=6117 pid=6199 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.201:828): proctitle=2F736E61702F6669726D776172652D757064617465722F3232362F676E6F6D652D706C6174666F726D2F7573722F6C69622F7838365F36342D6C696E75782D676E752F676C69622D322E302F67696F2D71756572796D6F64756C6573002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F63
+type=PATH msg=audit(1788998426.201:828): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.201:828): item=0 name="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/glib-2.0/gio-querymodules" inode=10156 dev=07:05 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.201:828): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.201:828): argc=2 a0="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/glib-2.0/gio-querymodules" a1="/home/nexus/snap/firmware-updater/common/.cache/gio-modules"
+type=SYSCALL msg=audit(1788998426.201:828): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899601ad0 a1=5d5899600110 a2=5d5899600130 a3=5d58995f3e60 items=2 ppid=6187 pid=6200 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gio-querymodule" exe="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/glib-2.0/gio-querymodules" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.206:829): proctitle=726D002D66002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F636F6D6D6F6E2F2E63616368652F67646B2D7069786275662D6C6F61646572732E6361636865
+type=PATH msg=audit(1788998426.206:829): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.206:829): item=0 name="/usr/bin/rm" inode=1165 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.206:829): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.206:829): argc=3 a0="rm" a1="-f" a2="/home/nexus/snap/firmware-updater/common/.cache/gdk-pixbuf-loaders.cache"
+type=SYSCALL msg=audit(1788998426.206:829): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995ff590 a1=5d58995f0530 a2=5d5899604880 a3=5d58995f0530 items=2 ppid=6117 pid=6203 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="rm" exe="/usr/bin/rm" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.207:830): proctitle=6C73002D41002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F73686172652F676C69622D322E302F736368656D61732F2A2E6F76657272696465
+type=PATH msg=audit(1788998426.207:830): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.207:830): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.207:830): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.207:830): argc=3 a0="ls" a1="-A" a2="/home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas/*.override"
+type=SYSCALL msg=audit(1788998426.207:830): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899604ff0 a1=5d58996056d0 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6201 pid=6202 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.214:831): proctitle="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders"
+type=PATH msg=audit(1788998426.214:831): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.214:831): item=0 name="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders" inode=10010 dev=07:05 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.214:831): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.214:831): argc=1 a0="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders"
+type=SYSCALL msg=audit(1788998426.214:831): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899604250 a1=5d58995f31a0 a2=5d5899604880 a3=8 items=2 ppid=6117 pid=6204 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gdk-pixbuf-quer" exe="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/gdk-pixbuf-query-loaders" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.215:832): proctitle=6C73002D41002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F676C69622D322E302F736368656D61732F2A2E786D6C
+type=PATH msg=audit(1788998426.215:832): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.215:832): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.215:832): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.215:832): argc=3 a0="ls" a1="-A" a2="/home/nexus/snap/firmware-updater/226/glib-2.0/schemas/*.xml"
+type=SYSCALL msg=audit(1788998426.215:832): arch=c000003e syscall=59 success=yes exit=0 a0=5d58996064e0 a1=5d58996066a0 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6205 pid=6207 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.215:833): proctitle=726D002D7266002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F73686172652F69636F6E73
+type=PATH msg=audit(1788998426.215:833): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.215:833): item=0 name="/usr/bin/rm" inode=1165 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.215:833): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.215:833): argc=3 a0="rm" a1="-rf" a2="/home/nexus/snap/firmware-updater/226/.local/share/icons"
+type=SYSCALL msg=audit(1788998426.215:833): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899605b80 a1=5d58995f8b90 a2=5d5899604880 a3=5d58995f8b90 items=2 ppid=6117 pid=6206 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="rm" exe="/usr/bin/rm" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.222:834): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F73686172652F69636F6E73
+type=PATH msg=audit(1788998426.222:834): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.222:834): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.222:834): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.222:834): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/226/.local/share/icons"
+type=SYSCALL msg=audit(1788998426.222:834): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606760 a1=5d5899606730 a2=5d5899604880 a3=5d5899606020 items=2 ppid=6117 pid=6208 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.224:835): proctitle=6C73002D41002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F676C69622D322E302F736368656D61732F2A2E6F76657272696465
+type=PATH msg=audit(1788998426.224:835): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.224:835): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.224:835): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.224:835): argc=3 a0="ls" a1="-A" a2="/home/nexus/snap/firmware-updater/226/glib-2.0/schemas/*.override"
+type=SYSCALL msg=audit(1788998426.224:835): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606120 a1=5d5899605c90 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6209 pid=6210 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.226:836): proctitle=2F7573722F62696E2F736E617063746C0069732D636F6E6E6563746564006465736B746F70
+type=PATH msg=audit(1788998426.226:836): item=0 name="/usr/bin/snapctl" inode=1723414 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.226:836): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.226:836): argc=3 a0="/usr/bin/snapctl" a1="is-connected" a2="desktop"
+type=SYSCALL msg=audit(1788998426.226:836): arch=c000003e syscall=59 success=yes exit=0 a0=77907b93e646 a1=7ffc4f530040 a2=7ffc4f5302d8 a3=77907b5bb8a8 items=1 ppid=6204 pid=6211 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="snapctl" exe="/usr/lib/snapd/snapctl" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.234:837): proctitle=6469726E616D65002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F67746B2D332E302F73657474696E67732E696E69
+type=PATH msg=audit(1788998426.234:837): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.234:837): item=0 name="/usr/bin/dirname" inode=975 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.234:837): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.234:837): argc=2 a0="dirname" a1="/home/nexus/snap/firmware-updater/226/.config/gtk-3.0/settings.ini"
+type=SYSCALL msg=audit(1788998426.234:837): arch=c000003e syscall=59 success=yes exit=0 a0=5d58996009b0 a1=5d5899600d00 a2=5d58996069b0 a3=8 items=2 ppid=6117 pid=6216 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="dirname" exe="/usr/bin/dirname" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.235:838): proctitle=6C73002D41002F736E61702F6669726D776172652D757064617465722F3232362F646174612D6469722F676C69622D322E302F736368656D61732F2A2E786D6C
+type=PATH msg=audit(1788998426.235:838): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.235:838): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.235:838): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.235:838): argc=3 a0="ls" a1="-A" a2="/snap/firmware-updater/226/data-dir/glib-2.0/schemas/*.xml"
+type=SYSCALL msg=audit(1788998426.235:838): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606590 a1=5d5899605870 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6217 pid=6218 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.241:839): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F67746B2D332E30
+type=PATH msg=audit(1788998426.241:839): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.241:839): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.241:839): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.241:839): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/226/.config/gtk-3.0"
+type=SYSCALL msg=audit(1788998426.241:839): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899605820 a1=5d58995edeb0 a2=5d5899604880 a3=5d5899606780 items=2 ppid=6117 pid=6219 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.245:840): proctitle=6C73002D41002F736E61702F6669726D776172652D757064617465722F3232362F646174612D6469722F676C69622D322E302F736368656D61732F2A2E6F76657272696465
+type=PATH msg=audit(1788998426.245:840): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.245:840): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.245:840): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.245:840): argc=3 a0="ls" a1="-A" a2="/snap/firmware-updater/226/data-dir/glib-2.0/schemas/*.override"
+type=SYSCALL msg=audit(1788998426.245:840): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606180 a1=5d58995fb510 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6220 pid=6221 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.249:841): proctitle=6C6E002D73002F686F6D652F6E657875732F2E636F6E6669672F67746B2D332E302F73657474696E67732E696E69002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F67746B2D332E302F73657474696E67732E696E69
+type=PATH msg=audit(1788998426.249:841): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.249:841): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.249:841): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.249:841): argc=4 a0="ln" a1="-s" a2="/home/nexus/.config/gtk-3.0/settings.ini" a3="/home/nexus/snap/firmware-updater/226/.config/gtk-3.0/settings.ini"
+type=SYSCALL msg=audit(1788998426.249:841): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899600cc0 a1=5d58995ed8b0 a2=5d5899604880 a3=5d58995fa390 items=2 ppid=6117 pid=6222 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.252:842): proctitle=2F7573722F62696E2F736E617063746C0069732D636F6E6E6563746564006773657474696E6773
+type=PATH msg=audit(1788998426.252:842): item=0 name="/usr/bin/snapctl" inode=1723414 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.252:842): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.252:842): argc=3 a0="/usr/bin/snapctl" a1="is-connected" a2="gsettings"
+type=SYSCALL msg=audit(1788998426.252:842): arch=c000003e syscall=59 success=yes exit=0 a0=77907b93e646 a1=7ffc4f530050 a2=7ffc4f5302d8 a3=77907b5bb8a8 items=1 ppid=6204 pid=6223 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="snapctl" exe="/usr/lib/snapd/snapctl" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.254:843): proctitle=6C73002D41002F7573722F73686172652F7562756E74752F676C69622D322E302F736368656D61732F2A2E786D6C
+type=PATH msg=audit(1788998426.254:843): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.254:843): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.254:843): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.254:843): argc=3 a0="ls" a1="-A" a2="/usr/share/ubuntu/glib-2.0/schemas/*.xml"
+type=SYSCALL msg=audit(1788998426.254:843): arch=c000003e syscall=59 success=yes exit=0 a0=5d58996065b0 a1=5d58996066f0 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6224 pid=6225 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.255:844): proctitle=6469726E616D65002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F67746B2D332E302F67746B2E637373
+type=PATH msg=audit(1788998426.255:844): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.255:844): item=0 name="/usr/bin/dirname" inode=975 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.255:844): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.255:844): argc=2 a0="dirname" a1="/home/nexus/snap/firmware-updater/226/.config/gtk-3.0/gtk.css"
+type=SYSCALL msg=audit(1788998426.255:844): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606290 a1=5d5899600710 a2=5d58996069b0 a3=8 items=2 ppid=6117 pid=6226 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="dirname" exe="/usr/bin/dirname" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.261:845): proctitle=6C6E002D73002F686F6D652F6E657875732F2E636F6E6669672F67746B2D332E302F67746B2E637373002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F67746B2D332E302F67746B2E637373
+type=PATH msg=audit(1788998426.261:845): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.261:845): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.261:845): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.261:845): argc=4 a0="ln" a1="-s" a2="/home/nexus/.config/gtk-3.0/gtk.css" a3="/home/nexus/snap/firmware-updater/226/.config/gtk-3.0/gtk.css"
+type=SYSCALL msg=audit(1788998426.261:845): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995f8880 a1=5d58996042d0 a2=5d5899604880 a3=5d5899606350 items=2 ppid=6117 pid=6231 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.263:846): proctitle=6C73002D41002F7573722F73686172652F7562756E74752F676C69622D322E302F736368656D61732F2A2E6F76657272696465
+type=PATH msg=audit(1788998426.263:846): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.263:846): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.263:846): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.263:846): argc=3 a0="ls" a1="-A" a2="/usr/share/ubuntu/glib-2.0/schemas/*.override"
+type=SYSCALL msg=audit(1788998426.263:846): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606660 a1=5d58996062b0 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6232 pid=6233 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.269:847): proctitle=6469726E616D65002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F67746B2D332E302F626F6F6B6D61726B73
+type=PATH msg=audit(1788998426.269:847): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.269:847): item=0 name="/usr/bin/dirname" inode=975 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.269:847): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.269:847): argc=2 a0="dirname" a1="/home/nexus/snap/firmware-updater/226/.config/gtk-3.0/bookmarks"
+type=SYSCALL msg=audit(1788998426.269:847): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995fa3d0 a1=5d5899606290 a2=5d58996069b0 a3=8 items=2 ppid=6117 pid=6234 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="dirname" exe="/usr/bin/dirname" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.274:848): proctitle=6C73002D41002F7573722F73686172652F676E6F6D652F676C69622D322E302F736368656D61732F2A2E786D6C
+type=PATH msg=audit(1788998426.274:848): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.274:848): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.274:848): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.274:848): argc=3 a0="ls" a1="-A" a2="/usr/share/gnome/glib-2.0/schemas/*.xml"
+type=SYSCALL msg=audit(1788998426.274:848): arch=c000003e syscall=59 success=yes exit=0 a0=5d58996066b0 a1=5d5899606420 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6235 pid=6236 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.274:849): proctitle=6C6E002D73002F686F6D652F6E657875732F2E636F6E6669672F67746B2D332E302F626F6F6B6D61726B73002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F67746B2D332E302F626F6F6B6D61726B73
+type=PATH msg=audit(1788998426.274:849): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.274:849): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.274:849): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.274:849): argc=4 a0="ln" a1="-s" a2="/home/nexus/.config/gtk-3.0/bookmarks" a3="/home/nexus/snap/firmware-updater/226/.config/gtk-3.0/bookmarks"
+type=SYSCALL msg=audit(1788998426.274:849): arch=c000003e syscall=59 success=yes exit=0 a0=5d58996009b0 a1=5d5899606140 a2=5d5899604880 a3=5d5899606350 items=2 ppid=6117 pid=6237 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.284:850): proctitle=6469726E616D65002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F67746B2D322E302F67746B66696C6563686F6F7365722E696E69
+type=PATH msg=audit(1788998426.284:850): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.284:850): item=0 name="/usr/bin/dirname" inode=975 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.284:850): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.284:850): argc=2 a0="dirname" a1="/home/nexus/snap/firmware-updater/226/.config/gtk-2.0/gtkfilechooser.ini"
+type=SYSCALL msg=audit(1788998426.284:850): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995f9670 a1=5d58995f9240 a2=5d58996069b0 a3=8 items=2 ppid=6117 pid=6238 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="dirname" exe="/usr/bin/dirname" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.284:851): proctitle=6C73002D41002F7573722F73686172652F676E6F6D652F676C69622D322E302F736368656D61732F2A2E6F76657272696465
+type=PATH msg=audit(1788998426.284:851): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.284:851): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.284:851): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.284:851): argc=3 a0="ls" a1="-A" a2="/usr/share/gnome/glib-2.0/schemas/*.override"
+type=SYSCALL msg=audit(1788998426.284:851): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606730 a1=5d5899600e10 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6239 pid=6240 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.290:852): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F67746B2D322E30
+type=PATH msg=audit(1788998426.290:852): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.290:852): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.290:852): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.290:852): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/226/.config/gtk-2.0"
+type=SYSCALL msg=audit(1788998426.290:852): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995e6d60 a1=5d58995ff8b0 a2=5d5899604880 a3=5d58995ff590 items=2 ppid=6117 pid=6241 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.292:853): proctitle=6C73002D41002F7573722F6C6F63616C2F73686172652F2F676C69622D322E302F736368656D61732F2A2E786D6C
+type=PATH msg=audit(1788998426.292:853): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.292:853): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.292:853): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.292:853): argc=3 a0="ls" a1="-A" a2="/usr/local/share//glib-2.0/schemas/*.xml"
+type=SYSCALL msg=audit(1788998426.292:853): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606780 a1=5d5899606250 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6242 pid=6243 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.297:854): proctitle=6C6E002D73002F686F6D652F6E657875732F2E636F6E6669672F67746B2D322E302F67746B66696C6563686F6F7365722E696E69002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F67746B2D322E302F67746B66696C6563686F6F7365722E696E69
+type=PATH msg=audit(1788998426.297:854): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.297:854): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.297:854): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.297:854): argc=4 a0="ln" a1="-s" a2="/home/nexus/.config/gtk-2.0/gtkfilechooser.ini" a3="/home/nexus/snap/firmware-updater/226/.config/gtk-2.0/gtkfilechooser.ini"
+type=SYSCALL msg=audit(1788998426.297:854): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995fa3d0 a1=5d58995f7530 a2=5d5899604880 a3=5d5899606350 items=2 ppid=6117 pid=6244 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.301:855): proctitle=6C73002D41002F7573722F6C6F63616C2F73686172652F2F676C69622D322E302F736368656D61732F2A2E6F76657272696465
+type=PATH msg=audit(1788998426.301:855): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.301:855): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.301:855): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.301:855): argc=3 a0="ls" a1="-A" a2="/usr/local/share//glib-2.0/schemas/*.override"
+type=SYSCALL msg=audit(1788998426.301:855): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606800 a1=5d58995ffe00 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6245 pid=6246 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.304:856): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F69627573
+type=PATH msg=audit(1788998426.304:856): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.304:856): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.304:856): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.304:856): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/226/.config/ibus"
+type=SYSCALL msg=audit(1788998426.304:856): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995ffd50 a1=5d58995f7500 a2=5d5899604880 a3=5d5899600f90 items=2 ppid=6117 pid=6247 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.310:857): proctitle=6C6E002D73666E002F686F6D652F6E657875732F2E636F6E6669672F696275732F627573002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E636F6E6669672F69627573
+type=PATH msg=audit(1788998426.310:857): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.310:857): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.310:857): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.310:857): argc=4 a0="ln" a1="-sfn" a2="/home/nexus/.config/ibus/bus" a3="/home/nexus/snap/firmware-updater/226/.config/ibus"
+type=SYSCALL msg=audit(1788998426.310:857): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995e61b0 a1=5d58995fffc0 a2=5d5899604880 a3=5d5899606650 items=2 ppid=6117 pid=6249 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.311:858): proctitle=6C73002D41002F7573722F73686172652F2F676C69622D322E302F736368656D61732F2A2E786D6C
+type=PATH msg=audit(1788998426.311:858): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.311:858): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.311:858): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.311:858): argc=3 a0="ls" a1="-A" a2="/usr/share//glib-2.0/schemas/*.xml"
+type=SYSCALL msg=audit(1788998426.311:858): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899605450 a1=5d5899606120 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6248 pid=6250 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.319:859): proctitle=726D002D7266002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F636F6D6D6F6E2F2E63616368652F696D6D6F64756C6573
+type=PATH msg=audit(1788998426.319:859): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.319:859): item=0 name="/usr/bin/rm" inode=1165 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.319:859): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.319:859): argc=3 a0="rm" a1="-rf" a2="/home/nexus/snap/firmware-updater/common/.cache/immodules"
+type=SYSCALL msg=audit(1788998426.319:859): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899600ab0 a1=5d58995f3770 a2=5d5899607b80 a3=5d58995f3770 items=2 ppid=6117 pid=6252 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="rm" exe="/usr/bin/rm" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.319:860): proctitle=6C73002D41002F7573722F73686172652F2F676C69622D322E302F736368656D61732F2A2E6F76657272696465
+type=PATH msg=audit(1788998426.319:860): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.319:860): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.319:860): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.319:860): argc=3 a0="ls" a1="-A" a2="/usr/share//glib-2.0/schemas/*.override"
+type=SYSCALL msg=audit(1788998426.319:860): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899605af0 a1=5d5899605700 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6251 pid=6253 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.326:861): proctitle=6D6B646972002D70002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F636F6D6D6F6E2F2E63616368652F696D6D6F64756C6573
+type=PATH msg=audit(1788998426.326:861): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.326:861): item=0 name="/usr/bin/mkdir" inode=1084 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.326:861): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.326:861): argc=3 a0="mkdir" a1="-p" a2="/home/nexus/snap/firmware-updater/common/.cache/immodules"
+type=SYSCALL msg=audit(1788998426.326:861): arch=c000003e syscall=59 success=yes exit=0 a0=5d58996046c0 a1=5d5899600c90 a2=5d5899607b80 a3=5d58995e49a0 items=2 ppid=6117 pid=6254 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="mkdir" exe="/usr/bin/mkdir" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.328:862): proctitle=6C73002D41002F7661722F6C69622F736E6170642F6465736B746F702F676C69622D322E302F736368656D61732F2A2E786D6C
+type=PATH msg=audit(1788998426.328:862): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.328:862): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.328:862): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.328:862): argc=3 a0="ls" a1="-A" a2="/var/lib/snapd/desktop/glib-2.0/schemas/*.xml"
+type=SYSCALL msg=audit(1788998426.328:862): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606620 a1=5d58996056b0 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6255 pid=6256 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.332:863): proctitle=6C6E002D73002F736E61702F6669726D776172652D757064617465722F3232362F676E6F6D652D706C6174666F726D2F7573722F6C69622F7838365F36342D6C696E75782D676E752F67746B2D332E302F332E302E302F696D6D6F64756C65732F696D2D616D2D65742E736F002F736E61702F6669726D776172652D75706461
+type=PATH msg=audit(1788998426.332:863): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.332:863): item=0 name="/usr/bin/ln" inode=1058 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.332:863): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.332:863): argc=18 a0="ln" a1="-s" a2="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-am-et.so" a3="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-broadway.so" a4="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-cedilla.so" a5="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-cyrillic-translit.so" a6="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-fcitx.so" a7="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ibus.so" a8="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-inuktitut.so" a9="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ipa.so" a10="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-multipress.so" a11="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-thai.so" a12="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ti-er.so" a13="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-ti-et.so" a14="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-viqr.so" a15="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-wayland.so" a16="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/gtk-3.0/3.0.0/immodules/im-xim.so" a17="/home/nexus/snap/firmware-updater/common/.cache/immodules"
+type=SYSCALL msg=audit(1788998426.332:863): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995fbdc0 a1=5d58995f8c10 a2=5d5899607b80 a3=5d58996082e0 items=2 ppid=6117 pid=6257 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ln" exe="/usr/bin/ln" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.337:864): proctitle=6C73002D41002F7661722F6C69622F736E6170642F6465736B746F702F676C69622D322E302F736368656D61732F2A2E6F76657272696465
+type=PATH msg=audit(1788998426.337:864): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.337:864): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.337:864): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.337:864): argc=3 a0="ls" a1="-A" a2="/var/lib/snapd/desktop/glib-2.0/schemas/*.override"
+type=SYSCALL msg=audit(1788998426.337:864): arch=c000003e syscall=59 success=yes exit=0 a0=5d58996066c0 a1=5d5899605f60 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6258 pid=6259 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.340:865): proctitle="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/libgtk-3-0/gtk-query-immodules-3.0"
+type=PATH msg=audit(1788998426.340:865): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.340:865): item=0 name="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/libgtk-3-0/gtk-query-immodules-3.0" inode=11322 dev=07:05 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.340:865): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.340:865): argc=1 a0="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/libgtk-3-0/gtk-query-immodules-3.0"
+type=SYSCALL msg=audit(1788998426.340:865): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899608890 a1=5d58995f32c0 a2=5d5899607b80 a3=8 items=2 ppid=6117 pid=6260 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gtk-query-immod" exe="/snap/firmware-updater/226/gnome-platform/usr/lib/x86_64-linux-gnu/libgtk-3-0/gtk-query-immodules-3.0" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.345:866): proctitle=6C73002D41002F736E61702F6669726D776172652D757064617465722F3232362F6770752D323430342F7573722F73686172652F676C69622D322E302F736368656D61732F2A2E786D6C
+type=PATH msg=audit(1788998426.345:866): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.345:866): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.345:866): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.345:866): argc=3 a0="ls" a1="-A" a2="/snap/firmware-updater/226/gpu-2404/usr/share/glib-2.0/schemas/*.xml"
+type=SYSCALL msg=audit(1788998426.345:866): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606680 a1=5d58995f8960 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6261 pid=6262 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.354:867): proctitle=6C73002D41002F736E61702F6669726D776172652D757064617465722F3232362F6770752D323430342F7573722F73686172652F676C69622D322E302F736368656D61732F2A2E6F76657272696465
+type=PATH msg=audit(1788998426.354:867): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.354:867): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.354:867): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.354:867): argc=3 a0="ls" a1="-A" a2="/snap/firmware-updater/226/gpu-2404/usr/share/glib-2.0/schemas/*.override"
+type=SYSCALL msg=audit(1788998426.354:867): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899605dd0 a1=5d5899606250 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6263 pid=6264 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.362:868): proctitle=6C73002D41002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F73686172652F676C69622D322E302F736368656D61732F2A2E786D6C002F686F6D652F6E657875732F736E61702F6669726D776172652D757064617465722F3232362F2E6C6F63616C2F736861
+type=PATH msg=audit(1788998426.362:868): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.362:868): item=0 name="/usr/bin/ls" inode=1068 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.362:868): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.362:868): argc=4 a0="ls" a1="-A" a2="/home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas/*.xml" a3="/home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas/*.override"
+type=SYSCALL msg=audit(1788998426.362:868): arch=c000003e syscall=59 success=yes exit=0 a0=5d5899606b40 a1=5d5899605fd0 a2=5d5899600130 a3=5d5899605ce0 items=2 ppid=6265 pid=6266 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ls" exe="/usr/bin/ls" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.378:869): proctitle=2F7573722F6C69622F736E6170642F736E61702D636F6E66696E65002D2D6261736500636F7265323400736E61702E6669726D776172652D757064617465722E6669726D776172652D6E6F746966696572002F7573722F6C69622F736E6170642F736E61702D65786563006669726D776172652D757064617465722E6669726D
+type=PATH msg=audit(1788998426.378:869): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=6846 dev=07:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.378:869): item=0 name="/snap/firmware-updater/226/bin/firmware-notifier" inode=40 dev=07:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.378:869): cwd="/var/snap/firmware-updater/226"
+type=EXECVE msg=audit(1788998426.378:869): argc=1 a0="/snap/firmware-updater/226/bin/firmware-notifier"
+type=SYSCALL msg=audit(1788998426.378:869): arch=c000003e syscall=59 success=yes exit=0 a0=5d58995ffb00 a1=5d58995fa830 a2=5d5899609980 a3=8 items=2 ppid=2544 pid=6117 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="firmware-notifi" exe="/snap/firmware-updater/226/bin/firmware-notifier" subj=snap.firmware-updater.firmware-notifier key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:26 2026
+type=PROCTITLE msg=audit(1788998426.951:871): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003931002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998426.951:871): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998426.951:871): item=0 name="/proc/self/fd/9" inode=1723455 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998426.951:871): cwd="/"
+type=EXECVE msg=audit(1788998426.951:871): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="91" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=SYSCALL msg=audit(1788998426.951:871): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc517bd470 a1=7ffc517bd490 a2=7ffc517bde08 a3=8 items=2 ppid=1 pid=6269 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:27 2026
+type=PROCTITLE msg=audit(1788998427.139:872): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003931002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998427.139:872): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998427.139:872): item=0 name="/usr/sbin/modprobe" inode=1704846 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998427.139:872): cwd="/"
+type=EXECVE msg=audit(1788998427.139:872): argc=3 a0="modprobe" a1="-abq" a2="sd_mod"
+type=SYSCALL msg=audit(1788998427.139:872): arch=c000003e syscall=59 success=yes exit=0 a0=5bec14f90380 a1=5bec14f959f0 a2=5bec14f8f970 a3=0 items=2 ppid=1 pid=6269 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="modprobe" exe="/usr/bin/kmod" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:27 2026
+type=PROCTITLE msg=audit(1788998427.160:876): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003933002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998427.160:876): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998427.160:876): item=0 name="/proc/self/fd/9" inode=1723455 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998427.160:876): cwd="/"
+type=EXECVE msg=audit(1788998427.160:876): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="93" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=SYSCALL msg=audit(1788998427.160:876): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc517bd470 a1=7ffc517bd490 a2=7ffc517bde08 a3=8 items=2 ppid=1 pid=6271 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:27 2026
+type=PROCTITLE msg=audit(1788998427.304:877): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003933002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998427.304:877): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998427.304:877): item=0 name="/usr/libexec/fwupd/fwupd" inode=1849322 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998427.304:877): cwd="/"
+type=EXECVE msg=audit(1788998427.304:877): argc=1 a0="/usr/libexec/fwupd/fwupd"
+type=BPRM_FCAPS msg=audit(1788998427.304:877): fver=0 fp=0 fi=0 fe=0 old_pp=000001ffffffffff old_pi=0 old_pe=000001ffffffffff old_pa=0 pp=000001f3fdfeffff pi=0 pe=000001f3fdfeffff pa=0 frootid=0
+type=SYSCALL msg=audit(1788998427.304:877): arch=c000003e syscall=59 success=yes exit=0 a0=5d88f921a880 a1=5d88f926be70 a2=5d88f91fb440 a3=0 items=2 ppid=1 pid=6271 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="fwupd" exe="/usr/libexec/fwupd/fwupd" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:30 2026
+type=PROCTITLE msg=audit(1788998430.367:878): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998430.367:878): item=0 name="/usr/local/sbin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998430.367:878): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998430.367:878): arch=c000003e syscall=59 success=no exit=-2 a0=72fa20525910 a1=72f9bc02d660 a2=56fb4df11e80 a3=0 items=1 ppid=2868 pid=6287 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gly-hdl-loader" exe="/usr/bin/gnome-shell" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:30 2026
+type=PROCTITLE msg=audit(1788998430.367:879): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998430.367:879): item=0 name="/usr/local/bin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998430.367:879): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998430.367:879): arch=c000003e syscall=59 success=no exit=-2 a0=72fa20525910 a1=72f9bc02d660 a2=56fb4df11e80 a3=0 items=1 ppid=2868 pid=6287 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gly-hdl-loader" exe="/usr/bin/gnome-shell" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:30 2026
+type=PROCTITLE msg=audit(1788998430.367:880): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998430.367:880): item=0 name="/usr/sbin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998430.367:880): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998430.367:880): arch=c000003e syscall=59 success=no exit=-2 a0=72fa20525910 a1=72f9bc02d660 a2=56fb4df11e80 a3=0 items=1 ppid=2868 pid=6287 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gly-hdl-loader" exe="/usr/bin/gnome-shell" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:30 2026
+type=PROCTITLE msg=audit(1788998430.367:881): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998430.367:881): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998430.367:881): item=0 name="/usr/bin/bwrap" inode=1704394 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998430.367:881): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998430.367:881): argc=56 a0="bwrap" a1="--unshare-all" a2="--die-with-parent" a3="--chdir" a4="/" a5="--ro-bind" a6="/usr" a7="/usr" a8="--dev" a9="/dev" a10="--ro-bind-try" a11="/etc/ld.so.cache" a12="/etc/ld.so.cache" a13="--ro-bind-try" a14="/nix/store" a15="/nix/store" a16="--tmpfs" a17="/tmp-home" a18="--tmpfs" a19="/tmp-run" a20="--clearenv" a21="--setenv" a22="HOME" a23="/tmp-home" a24="--setenv" a25="XDG_RUNTIME_DIR" a26="/tmp-run" a27="--setenv" a28="XDG_RUNTIME_DIR" a29="/run/user/1000" a30="--symlink" a31="/usr/lib64" a32="/lib64" a33="--symlink" a34="/usr/lib" a35="/lib" a36="--ro-bind-try" a37="/etc/fonts/conf.d" a38="/etc/fonts/conf.d" a39="--ro-bind-try" a40="/etc/fonts/fonts.conf" a41="/etc/fonts/fonts.conf" a42="--ro-bind-try" a43="/var/cache/fontconfig" a44="/var/cache/fontconfig" a45="--bind-try" a46="/home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg" a47="/home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg" a48="--setenv" a49="XDG_CACHE_HOME" a50="/home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg" a51="--seccomp" a52="77" a53="/usr/libexec/glycin-loaders/2+/glycin-svg" a54="--dbus-fd" a55="76"
+type=SYSCALL msg=audit(1788998430.367:881): arch=c000003e syscall=59 success=yes exit=0 a0=72fa20525910 a1=72f9bc02d660 a2=56fb4df11e80 a3=0 items=2 ppid=2868 pid=6287 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="bwrap" exe="/usr/bin/bwrap" subj=bwrap key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:30 2026
+type=PROCTITLE msg=audit(1788998430.383:882): proctitle=2F7573722F6C6962657865632F676C7963696E2D6C6F61646572732F322B2F676C7963696E2D737667002D2D646275732D6664003736
+type=PATH msg=audit(1788998430.383:882): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998430.383:882): item=0 name="/usr/libexec/glycin-loaders/2+/glycin-svg" inode=1849331 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998430.383:882): cwd="/"
+type=EXECVE msg=audit(1788998430.383:882): argc=3 a0="/usr/libexec/glycin-loaders/2+/glycin-svg" a1="--dbus-fd" a2="76"
+type=SYSCALL msg=audit(1788998430.383:882): arch=c000003e syscall=59 success=yes exit=0 a0=7fff1069b9cf a1=7fff1069b1e0 a2=57324a38cb00 a3=7ca70b737d3e items=2 ppid=6291 pid=6293 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="glycin-svg" exe="/usr/libexec/glycin-loaders/2+/glycin-svg" subj=bwrap//&unpriv_bwrap key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:30 2026
+type=PROCTITLE msg=audit(1788998430.508:885): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003936002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998430.508:885): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998430.508:885): item=0 name="/proc/self/fd/9" inode=1723455 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998430.508:885): cwd="/"
+type=EXECVE msg=audit(1788998430.508:885): argc=7 a0="/usr/lib/systemd/systemd-executor" a1="--deserialize" a2="96" a3="--log-level" a4="info" a5="--log-target" a6="journal-or-kmsg"
+type=SYSCALL msg=audit(1788998430.508:885): arch=c000003e syscall=59 success=yes exit=0 a0=7ffc517bd470 a1=7ffc517bd490 a2=7ffc517bde08 a3=8 items=2 ppid=1 pid=6362 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="9" exe="/usr/lib/systemd/systemd-executor" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:30 2026
+type=PROCTITLE msg=audit(1788998430.601:887): proctitle=2F7573722F6C69622F73797374656D642F73797374656D642D6578656375746F72002D2D646573657269616C697A65003936002D2D6C6F672D6C6576656C00696E666F002D2D6C6F672D746172676574006A6F75726E616C2D6F722D6B6D7367
+type=PATH msg=audit(1788998430.601:887): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998430.601:887): item=0 name="/usr/libexec/fprintd" inode=1725431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998430.601:887): cwd="/"
+type=EXECVE msg=audit(1788998430.601:887): argc=1 a0="/usr/libexec/fprintd"
+type=BPRM_FCAPS msg=audit(1788998430.601:887): fver=0 fp=0 fi=0 fe=0 old_pp=000001ffffffffff old_pi=0 old_pe=000001ffffffffff old_pa=0 pp=000001f3fdfeffff pi=0 pe=000001f3fdfeffff pa=0 frootid=0
+type=SYSCALL msg=audit(1788998430.601:887): arch=c000003e syscall=59 success=yes exit=0 a0=647c38d095f0 a1=647c38d19a50 a2=647c38cf2240 a3=0 items=2 ppid=1 pid=6362 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="fprintd" exe="/usr/libexec/fprintd" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:30 2026
+type=PROCTITLE msg=audit(1788998430.602:888): proctitle=67646D2D73657373696F6E2D776F726B6572205B70616D2F67646D2D70617373776F72645D
+type=PATH msg=audit(1788998430.602:888): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998430.602:888): item=0 name="/usr/libexec/gdm-session-worker" inode=1725439 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998430.602:888): cwd="/"
+type=EXECVE msg=audit(1788998430.602:888): argc=1 a0=67646D2D73657373696F6E2D776F726B6572205B70616D2F67646D2D70617373776F72645D
+type=SYSCALL msg=audit(1788998430.602:888): arch=c000003e syscall=59 success=yes exit=0 a0=7bf078001450 a1=5a9ab7d87e18 a2=5a9ab7d89040 a3=8 items=2 ppid=2466 pid=6366 auid=1000 uid=0 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=3 comm="gdm-session-wor" exe="/usr/libexec/gdm-session-worker" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:30 2026
+type=PROCTITLE msg=audit(1788998430.622:890): proctitle=2F7573722F7362696E2F756E69785F63686B707764006E65787573006E756C6C6F6B
+type=PATH msg=audit(1788998430.622:890): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998430.622:890): item=0 name="/usr/sbin/unix_chkpwd" inode=1704618 dev=08:02 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998430.622:890): cwd="/"
+type=EXECVE msg=audit(1788998430.622:890): argc=3 a0="/usr/sbin/unix_chkpwd" a1="nexus" a2="nullok"
+type=SYSCALL msg=audit(1788998430.622:890): arch=c000003e syscall=59 success=yes exit=0 a0=7b390c80a04a a1=7ffcdc8a79c0 a2=7b390c80d018 a3=0 items=2 ppid=6366 pid=6376 auid=1000 uid=0 gid=1000 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=(none) ses=3 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:38 2026
+type=PROCTITLE msg=audit(1788998438.434:891): proctitle=2F7573722F7362696E2F756E69785F63686B707764006E65787573006E756C6C6F6B
+type=PATH msg=audit(1788998438.434:891): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998438.434:891): item=0 name="/usr/sbin/unix_chkpwd" inode=1704618 dev=08:02 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998438.434:891): cwd="/"
+type=EXECVE msg=audit(1788998438.434:891): argc=3 a0="/usr/sbin/unix_chkpwd" a1="nexus" a2="nullok"
+type=SYSCALL msg=audit(1788998438.434:891): arch=c000003e syscall=59 success=yes exit=0 a0=7b390c80a04a a1=7ffcdc8a7640 a2=7b390c80d018 a3=0 items=2 ppid=6366 pid=6394 auid=1000 uid=0 gid=1000 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=(none) ses=3 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:38 2026
+type=PROCTITLE msg=audit(1788998438.456:893): proctitle=2F7573722F7362696E2F756E69785F63686B707764006E657875730063686B657870697279
+type=PATH msg=audit(1788998438.456:893): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998438.456:893): item=0 name="/usr/sbin/unix_chkpwd" inode=1704618 dev=08:02 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998438.456:893): cwd="/"
+type=EXECVE msg=audit(1788998438.456:893): argc=3 a0="/usr/sbin/unix_chkpwd" a1="nexus" a2="chkexpiry"
+type=SYSCALL msg=audit(1788998438.456:893): arch=c000003e syscall=59 success=yes exit=0 a0=7b390c80a04a a1=7ffcdc8a7920 a2=7b390c80d028 a3=0 items=2 ppid=6366 pid=6396 auid=1000 uid=0 gid=1000 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=(none) ses=3 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:38 2026
+type=PROCTITLE msg=audit(1788998438.734:896): proctitle=2F7573722F62696E2F6E617574696C7573002D2D676170706C69636174696F6E2D73657276696365
+type=PATH msg=audit(1788998438.734:896): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998438.734:896): item=0 name="/usr/bin/nautilus" inode=1704961 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998438.734:896): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998438.734:896): argc=2 a0="/usr/bin/nautilus" a1="--gapplication-service"
+type=SYSCALL msg=audit(1788998438.734:896): arch=c000003e syscall=59 success=yes exit=0 a0=59abf367dae0 a1=59abf35fb680 a2=59abf364eab0 a3=0 items=2 ppid=6399 pid=6400 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="nautilus" exe="/usr/bin/nautilus" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.070:897): proctitle=2F7573722F62696E2F656E7600676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740
+type=PATH msg=audit(1788998439.070:897): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998439.070:897): item=1 name="/usr/bin/env" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998439.070:897): item=0 name="/usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js" inode=1867343 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.070:897): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998439.070:897): argc=6 a0="/usr/bin/env" a1="gjs" a2="/usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js" a3="-E" a4="-P" a5="/usr/share/gnome-shell/extensions/ding@rastersoft.com/app"
+type=SYSCALL msg=audit(1788998439.070:897): arch=c000003e syscall=59 success=yes exit=0 a0=56fb50484480 a1=56fb521bf850 a2=56fb504845b0 a3=0 items=3 ppid=2868 pid=6411 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ding.js" exe="/usr/lib/cargo/bin/coreutils/env" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.082:898): proctitle=2F7573722F62696E2F656E7600676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740
+type=PATH msg=audit(1788998439.082:898): item=0 name="/usr/local/sbin/gjs" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.082:898): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.082:898): arch=c000003e syscall=59 success=no exit=-2 a0=7ffe9c9582d0 a1=60186f22fdc0 a2=7ffe9c958d90 a3=60186f2329a0 items=1 ppid=2868 pid=6411 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ding.js" exe="/usr/lib/cargo/bin/coreutils/env" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.082:899): proctitle=2F7573722F62696E2F656E7600676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740
+type=PATH msg=audit(1788998439.082:899): item=0 name="/usr/local/bin/gjs" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.082:899): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.082:899): arch=c000003e syscall=59 success=no exit=-2 a0=7ffe9c9582d0 a1=60186f22fdc0 a2=7ffe9c958d90 a3=60186f2329a0 items=1 ppid=2868 pid=6411 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ding.js" exe="/usr/lib/cargo/bin/coreutils/env" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.082:900): proctitle=2F7573722F62696E2F656E7600676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740
+type=PATH msg=audit(1788998439.082:900): item=0 name="/usr/sbin/gjs" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.082:900): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.082:900): arch=c000003e syscall=59 success=no exit=-2 a0=7ffe9c9582d0 a1=60186f22fdc0 a2=7ffe9c958d90 a3=60186f2329a0 items=1 ppid=2868 pid=6411 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="ding.js" exe="/usr/lib/cargo/bin/coreutils/env" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.082:901): proctitle=2F7573722F62696E2F656E7600676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740
+type=PATH msg=audit(1788998439.082:901): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998439.082:901): item=0 name="/usr/bin/gjs" inode=1704581 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.082:901): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998439.082:901): argc=5 a0="gjs" a1="/usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js" a2="-E" a3="-P" a4="/usr/share/gnome-shell/extensions/ding@rastersoft.com/app"
+type=SYSCALL msg=audit(1788998439.082:901): arch=c000003e syscall=59 success=yes exit=0 a0=7ffe9c9582d0 a1=60186f22fdc0 a2=7ffe9c958d90 a3=60186f2329a0 items=2 ppid=2868 pid=6411 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gjs" exe="/usr/bin/gjs-console" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.844:902): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.844:902): item=0 name="/usr/local/sbin/nautilus" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.844:902): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.844:902): arch=c000003e syscall=59 success=no exit=-2 a0=7ffcad5f8fcd a1=5a66bbd2e050 a2=7ffcad5fcef8 a3=0 items=1 ppid=6411 pid=6434 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gjs" exe="/usr/bin/gjs-console" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.844:903): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.844:903): item=0 name="/usr/local/bin/nautilus" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.844:903): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.844:903): arch=c000003e syscall=59 success=no exit=-2 a0=7ffcad5f8fce a1=5a66bbd2e050 a2=7ffcad5fcef8 a3=70d2630d3a30 items=1 ppid=6411 pid=6434 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gjs" exe="/usr/bin/gjs-console" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.844:904): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.844:904): item=0 name="/usr/sbin/nautilus" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.844:904): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.844:904): arch=c000003e syscall=59 success=no exit=-2 a0=7ffcad5f8fd3 a1=5a66bbd2e050 a2=7ffcad5fcef8 a3=70d2630d3a30 items=1 ppid=6411 pid=6434 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gjs" exe="/usr/bin/gjs-console" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.844:905): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.844:905): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998439.844:905): item=0 name="/usr/bin/nautilus" inode=1704961 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.844:905): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998439.844:905): argc=2 a0="nautilus" a1="--version"
+type=SYSCALL msg=audit(1788998439.844:905): arch=c000003e syscall=59 success=yes exit=0 a0=7ffcad5f8fd4 a1=5a66bbd2e050 a2=7ffcad5fcef8 a3=70d2630d3a30 items=2 ppid=6411 pid=6434 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="nautilus" exe="/usr/bin/nautilus" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.871:906): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.871:906): item=0 name="/usr/local/sbin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.871:906): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.871:906): arch=c000003e syscall=59 success=no exit=-2 a0=70d248b8f2a0 a1=5a66bbdd85d0 a2=7ffcad5fcef8 a3=8 items=1 ppid=6411 pid=6439 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="blocking-2" exe="/usr/bin/gjs-console" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.871:907): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.871:907): item=0 name="/usr/local/bin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.871:907): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.871:907): arch=c000003e syscall=59 success=no exit=-2 a0=70d248b8f2a0 a1=5a66bbdd85d0 a2=7ffcad5fcef8 a3=8 items=1 ppid=6411 pid=6439 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="blocking-2" exe="/usr/bin/gjs-console" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.871:908): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.871:908): item=0 name="/usr/sbin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.871:908): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.871:908): arch=c000003e syscall=59 success=no exit=-2 a0=70d248b8f2a0 a1=5a66bbdd85d0 a2=7ffcad5fcef8 a3=8 items=1 ppid=6411 pid=6439 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="blocking-2" exe="/usr/bin/gjs-console" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.871:909): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.871:909): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998439.871:909): item=0 name="/usr/bin/bwrap" inode=1704394 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.871:909): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998439.871:909): argc=39 a0="bwrap" a1="--unshare-all" a2="--die-with-parent" a3="--chdir" a4="/" a5="--ro-bind" a6="/usr" a7="/usr" a8="--dev" a9="/dev" a10="--ro-bind-try" a11="/etc/ld.so.cache" a12="/etc/ld.so.cache" a13="--ro-bind-try" a14="/nix/store" a15="/nix/store" a16="--tmpfs" a17="/tmp-home" a18="--tmpfs" a19="/tmp-run" a20="--clearenv" a21="--setenv" a22="HOME" a23="/tmp-home" a24="--setenv" a25="XDG_RUNTIME_DIR" a26="/tmp-run" a27="--setenv" a28="XDG_RUNTIME_DIR" a29="/run/user/1000" a30="--symlink" a31="/usr/lib64" a32="/lib64" a33="--symlink" a34="/usr/lib" a35="/lib" a36="--seccomp" a37="27" a38="/usr/bin/true"
+type=SYSCALL msg=audit(1788998439.871:909): arch=c000003e syscall=59 success=yes exit=0 a0=70d248b8f2a0 a1=5a66bbdd85d0 a2=7ffcad5fcef8 a3=8 items=2 ppid=6411 pid=6439 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="bwrap" exe="/usr/bin/bwrap" subj=bwrap key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.878:910): proctitle="/usr/bin/true"
+type=PATH msg=audit(1788998439.878:910): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998439.878:910): item=0 name="/usr/bin/true" inode=1706321 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.878:910): cwd="/"
+type=EXECVE msg=audit(1788998439.878:910): argc=1 a0="/usr/bin/true"
+type=SYSCALL msg=audit(1788998439.878:910): arch=c000003e syscall=59 success=yes exit=0 a0=7ffe502c29f8 a1=7ffe502c23b8 a2=64f99cec3b00 a3=723688f37d3e items=2 ppid=6440 pid=6441 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="true" exe="/usr/bin/gnutrue" subj=bwrap//&unpriv_bwrap key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.883:911): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.883:911): item=0 name="/usr/local/sbin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.883:911): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.883:911): arch=c000003e syscall=59 success=no exit=-2 a0=70d24898ded0 a1=5a66bbc33cc0 a2=7ffcad5fcef8 a3=0 items=1 ppid=6411 pid=6443 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gly-hdl-loader" exe="/usr/bin/gjs-console" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.883:912): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.883:912): item=0 name="/usr/local/bin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.883:912): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.883:912): arch=c000003e syscall=59 success=no exit=-2 a0=70d24898ded0 a1=5a66bbc33cc0 a2=7ffcad5fcef8 a3=0 items=1 ppid=6411 pid=6443 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gly-hdl-loader" exe="/usr/bin/gjs-console" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.883:913): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.883:913): item=0 name="/usr/sbin/bwrap" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.883:913): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998439.883:913): arch=c000003e syscall=59 success=no exit=-2 a0=70d24898ded0 a1=5a66bbc33cc0 a2=7ffcad5fcef8 a3=0 items=1 ppid=6411 pid=6443 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gly-hdl-loader" exe="/usr/bin/gjs-console" subj=desktop-icons-ng key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.883:914): proctitle=676A73002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F6D2F6170702F64696E672E6A73002D45002D50002F7573722F73686172652F676E6F6D652D7368656C6C2F657874656E73696F6E732F64696E6740726173746572736F66742E636F
+type=PATH msg=audit(1788998439.883:914): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998439.883:914): item=0 name="/usr/bin/bwrap" inode=1704394 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.883:914): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998439.883:914): argc=41 a0="bwrap" a1="--unshare-all" a2="--die-with-parent" a3="--chdir" a4="/" a5="--ro-bind" a6="/usr" a7="/usr" a8="--dev" a9="/dev" a10="--ro-bind-try" a11="/etc/ld.so.cache" a12="/etc/ld.so.cache" a13="--ro-bind-try" a14="/nix/store" a15="/nix/store" a16="--tmpfs" a17="/tmp-home" a18="--tmpfs" a19="/tmp-run" a20="--clearenv" a21="--setenv" a22="HOME" a23="/tmp-home" a24="--setenv" a25="XDG_RUNTIME_DIR" a26="/tmp-run" a27="--setenv" a28="XDG_RUNTIME_DIR" a29="/run/user/1000" a30="--symlink" a31="/usr/lib64" a32="/lib64" a33="--symlink" a34="/usr/lib" a35="/lib" a36="--seccomp" a37="28" a38="/usr/libexec/glycin-loaders/2+/glycin-image-rs" a39="--dbus-fd" a40="27"
+type=SYSCALL msg=audit(1788998439.883:914): arch=c000003e syscall=59 success=yes exit=0 a0=70d24898ded0 a1=5a66bbc33cc0 a2=7ffcad5fcef8 a3=0 items=2 ppid=6411 pid=6443 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="bwrap" exe="/usr/bin/bwrap" subj=bwrap key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:39 2026
+type=PROCTITLE msg=audit(1788998439.891:915): proctitle=2F7573722F6C6962657865632F676C7963696E2D6C6F61646572732F322B2F676C7963696E2D696D6167652D7273002D2D646275732D6664003237
+type=PATH msg=audit(1788998439.891:915): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998439.891:915): item=0 name="/usr/libexec/glycin-loaders/2+/glycin-image-rs" inode=1849329 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998439.891:915): cwd="/"
+type=EXECVE msg=audit(1788998439.891:915): argc=3 a0="/usr/libexec/glycin-loaders/2+/glycin-image-rs" a1="--dbus-fd" a2="27"
+type=SYSCALL msg=audit(1788998439.891:915): arch=c000003e syscall=59 success=yes exit=0 a0=7fff5101e9ca a1=7fff5101dd98 a2=60e9f5c7fb00 a3=7f96c0f37d3e items=2 ppid=6444 pid=6445 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="glycin-image-rs" exe="/usr/libexec/glycin-loaders/2+/glycin-image-rs" subj=bwrap//&unpriv_bwrap key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:40 2026
+type=PROCTITLE msg=audit(1788998440.887:916): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998440.887:916): item=0 name="/usr/local/sbin/gjs" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998440.887:916): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998440.887:916): arch=c000003e syscall=59 success=no exit=-2 a0=7fffeeaa542d a1=56fb5403af80 a2=56fb4df11e80 a3=0 items=1 ppid=2868 pid=6459 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gnome-shell" exe="/usr/bin/gnome-shell" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:40 2026
+type=PROCTITLE msg=audit(1788998440.887:917): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998440.887:917): item=0 name="/usr/local/bin/gjs" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998440.887:917): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998440.887:917): arch=c000003e syscall=59 success=no exit=-2 a0=7fffeeaa542e a1=56fb5403af80 a2=56fb4df11e80 a3=72fa243bdff0 items=1 ppid=2868 pid=6459 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gnome-shell" exe="/usr/bin/gnome-shell" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:40 2026
+type=PROCTITLE msg=audit(1788998440.887:918): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998440.887:918): item=0 name="/usr/sbin/gjs" nametype=UNKNOWN cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998440.887:918): cwd="/home/nexus"
+type=SYSCALL msg=audit(1788998440.887:918): arch=c000003e syscall=59 success=no exit=-2 a0=7fffeeaa5433 a1=56fb5403af80 a2=56fb4df11e80 a3=72fa243bdff0 items=1 ppid=2868 pid=6459 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gnome-shell" exe="/usr/bin/gnome-shell" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:40 2026
+type=PROCTITLE msg=audit(1788998440.887:919): proctitle=2F7573722F62696E2F676E6F6D652D7368656C6C002D2D6D6F64653D7562756E7475
+type=PATH msg=audit(1788998440.887:919): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998440.887:919): item=0 name="/usr/bin/gjs" inode=1704581 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998440.887:919): cwd="/home/nexus"
+type=EXECVE msg=audit(1788998440.887:919): argc=3 a0="gjs" a1="-m" a2="/usr/share/gnome-shell/extensions/ubuntu-appindicators@ubuntu.com/tools/busAnalyzer.js"
+type=SYSCALL msg=audit(1788998440.887:919): arch=c000003e syscall=59 success=yes exit=0 a0=7fffeeaa5434 a1=56fb5403af80 a2=56fb4df11e80 a3=72fa243bdff0 items=2 ppid=2868 pid=6459 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=4 comm="gjs" exe="/usr/bin/gjs-console" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:43 2026
+type=PROCTITLE msg=audit(1788998443.670:920): proctitle=7375646F006175736561726368002D6B0062656E69676E5F657865635F3035
+type=PATH msg=audit(1788998443.670:920): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998443.670:920): item=0 name="/usr/bin/sudo" inode=1705004 dev=08:02 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998443.670:920): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998443.670:920): argc=4 a0="sudo" a1="ausearch" a2="-k" a3="benign_exec_05"
+type=SYSCALL msg=audit(1788998443.670:920): arch=c000003e syscall=59 success=yes exit=0 a0=5fb91aa796d0 a1=5fb91aa7ccf0 a2=5fb91aa63f80 a3=30 items=2 ppid=4075 pid=6470 auid=1000 uid=1000 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=4 comm="sudo" exe="/usr/lib/cargo/bin/sudo" subj=unconfined key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:43 2026
+type=PROCTITLE msg=audit(1788998443.680:921): proctitle=2F7573722F7362696E2F756E69785F63686B707764006E657875730063686B657870697279
+type=PATH msg=audit(1788998443.680:921): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998443.680:921): item=0 name="/usr/sbin/unix_chkpwd" inode=1704618 dev=08:02 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998443.680:921): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998443.680:921): argc=3 a0="/usr/sbin/unix_chkpwd" a1="nexus" a2="chkexpiry"
+type=SYSCALL msg=audit(1788998443.680:921): arch=c000003e syscall=59 success=yes exit=0 a0=77873d23304a a1=7fff21940630 a2=77873d236028 a3=0 items=2 ppid=6470 pid=6471 auid=1000 uid=0 gid=1000 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts0 ses=4 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="benign_exec_05"
+----
+time->Thu Sep 10 03:00:43 2026
+type=PROCTITLE msg=audit(1788998443.686:925): proctitle=6175736561726368002D6B0062656E69676E5F657865635F3035
+type=PATH msg=audit(1788998443.686:925): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1788998443.686:925): item=0 name="/usr/sbin/ausearch" inode=1706521 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1788998443.686:925): cwd="/home/nexus/audit_session5"
+type=EXECVE msg=audit(1788998443.686:925): argc=3 a0="ausearch" a1="-k" a2="benign_exec_05"
+type=SYSCALL msg=audit(1788998443.686:925): arch=c000003e syscall=59 success=yes exit=0 a0=570d127921f0 a1=570d1279a4e0 a2=570d1279a090 a3=8 items=2 ppid=6472 pid=6473 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=4 comm="ausearch" exe="/usr/sbin/ausearch" subj=unconfined key="benign_exec_05"
