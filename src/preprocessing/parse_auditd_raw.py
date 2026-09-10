@@ -6,13 +6,17 @@ from datetime import datetime, timezone
 
 
 def decode_audit_value(value):
-    value = value.strip('"')
+    value = value.strip()
 
-    # auditd أحيانًا يحول بعض القيم إلى Hex
+    # Quoted auditd arguments are already plain text
+    if len(value) >= 2 and value.startswith('"') and value.endswith('"'):
+        return value[1:-1]
+
+    # Unquoted values may be auditd hex encoding
     if re.fullmatch(r"[0-9a-fA-F]+", value) and len(value) % 2 == 0:
         try:
-            return bytes.fromhex(value).decode("utf-8", errors="replace")
-        except ValueError:
+            return bytes.fromhex(value).decode("utf-8")
+        except (ValueError, UnicodeDecodeError):
             pass
 
     return value

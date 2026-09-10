@@ -4,7 +4,7 @@ auditd_real_10002,2026-09-09T23:30:45Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo au
 auditd_real_10003,2026-09-09T23:30:45Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
 auditd_real_10004,2026-09-09T23:30:45Z,cyber-lab-ubuntu,cyber-lab-ubuntu,auditctl -l,auditctl,2,0
 auditd_real_10005,2026-09-09T23:30:45Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
-auditd_real_10006,2026-09-09T23:31:54Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 5 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10006,2026-09-09T23:31:54Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 35 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
 auditd_real_10007,2026-09-09T23:31:54Z,cyber-lab-ubuntu,cyber-lab-ubuntu,systemd-tmpfiles --clean,systemd-tmpfiles,2,0
 auditd_real_10008,2026-09-09T23:31:59Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,0
 auditd_real_10009,2026-09-09T23:31:59Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
@@ -27,7 +27,7 @@ auditd_real_10025,2026-09-09T23:34:53Z,cyber-lab-ubuntu,cyber-lab-ubuntu,date,da
 auditd_real_10026,2026-09-09T23:34:53Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
 auditd_real_10027,2026-09-09T23:35:05Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uptime,uptime,1,0
 auditd_real_10028,2026-09-09T23:35:05Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
-auditd_real_10029,2026-09-09T23:35:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,� -h,�,2,0
+auditd_real_10029,2026-09-09T23:35:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,df -h,df,2,0
 auditd_real_10030,2026-09-09T23:35:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
 auditd_real_10031,2026-09-09T23:35:21Z,cyber-lab-ubuntu,cyber-lab-ubuntu,free -h,free,2,0
 auditd_real_10032,2026-09-09T23:35:21Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
@@ -86,7 +86,7 @@ auditd_real_10084,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,who,who
 auditd_real_10085,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,0
 auditd_real_10086,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,groups,groups,1,0
 auditd_real_10087,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uptime,uptime,1,0
-auditd_real_10088,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,� -h,�,2,0
+auditd_real_10088,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,df -h,df,2,0
 auditd_real_10089,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,free -h,free,2,0
 auditd_real_10090,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
 auditd_real_10091,2026-09-09T23:46:23Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/localsearch-extractor-3 --socket-fd 3,/usr/libexec/localsearch-extractor-3,3,0
@@ -97,7 +97,7 @@ auditd_real_10095,2026-09-09T23:49:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/li
 auditd_real_10096,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat /etc/os-release,cat,2,0
 auditd_real_10097,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -r,uname,2,0
 auditd_real_10098,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostnamectl,hostnamectl,1,0
-auditd_real_10099,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize � --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10099,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 94 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
 auditd_real_10100,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-hostnamed,/usr/lib/systemd/systemd-hostnamed,1,0
 auditd_real_10101,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip link,ip,2,0
 auditd_real_10102,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip route,ip,2,0
@@ -107,7 +107,7 @@ auditd_real_10105,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,getent 
 auditd_real_10106,2026-09-09T23:49:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ping -c 2 127.0.0.1,ping,4,0
 auditd_real_10107,2026-09-09T23:49:17Z,cyber-lab-ubuntu,cyber-lab-ubuntu,systemctl is-active auditd,systemctl,3,0
 auditd_real_10108,2026-09-09T23:49:17Z,cyber-lab-ubuntu,cyber-lab-ubuntu,systemctl list-units --type=service --state=running --no-pager,systemctl,5,0
-auditd_real_10109,2026-09-09T23:49:17Z,cyber-lab-ubuntu,cyber-lab-ubuntu,journalctl -n  --no-pager,journalctl,4,0
+auditd_real_10109,2026-09-09T23:49:17Z,cyber-lab-ubuntu,cyber-lab-ubuntu,journalctl -n 10 --no-pager,journalctl,4,0
 auditd_real_10110,2026-09-09T23:49:17Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto /etc,ls,3,0
 auditd_real_10111,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto /var/log,ls,3,0
 auditd_real_10112,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,du -sh /var/log,du,3,0
@@ -118,9 +118,9 @@ auditd_real_10116,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dpkg -l
 auditd_real_10117,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,dpkg-query --list --,dpkg-query,3,0
 auditd_real_10118,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sh -c -- pager,sh,4,0
 auditd_real_10119,2026-09-09T23:49:18Z,cyber-lab-ubuntu,cyber-lab-ubuntu,pager,pager,1,0
-auditd_real_10120,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 5 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10120,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 35 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
 auditd_real_10121,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,"sh -c ENABLED=false; [ -r /etc/default/sysstat ] && . /etc/default/sysstat; test ""${ENABLED}"" = ""true""",sh,3,0
-auditd_real_10122,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 5 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10122,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 35 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
 auditd_real_10123,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /usr/libexec/sysstat/sa1 1 1,/bin/sh,4,0
 auditd_real_10124,2026-09-09T23:50:01Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/sysstat/sadc -F -L -S DISK 1 1 /var/log/sysstat,/usr/libexec/sysstat/sadc,8,0
 auditd_real_10125,2026-09-09T23:50:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /usr/bin/which sudo,/bin/sh,3,0
@@ -152,19 +152,19 @@ auditd_real_10150,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,vmstat 
 auditd_real_10151,2026-09-09T23:54:06Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/localsearch-extractor-3 --socket-fd 3,/usr/libexec/localsearch-extractor-3,3,0
 auditd_real_10152,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,lsblk,lsblk,1,0
 auditd_real_10153,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,mount,mount,1,0
-auditd_real_10154,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,� -Th,�,2,0
+auditd_real_10154,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,df -Th,df,2,0
 auditd_real_10155,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,date,date,1,0
 auditd_real_10156,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,timedatectl,timedatectl,1,0
-auditd_real_10157,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize � --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10157,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 94 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
 auditd_real_10158,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-timedated,/usr/lib/systemd/systemd-timedated,1,0
 auditd_real_10159,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,0
 auditd_real_10160,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,0
 auditd_real_10161,2026-09-09T23:54:07Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/vte-urlencode-cwd,/usr/libexec/vte-urlencode-cwd,1,0
-auditd_real_10162,2026-09-09T23:59:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /var/cache/fontconfig /var/cache/fontconfig --bind-try /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 101 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd �,bwrap,56,0
-auditd_real_10163,2026-09-09T23:59:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd �,/usr/libexec/glycin-loaders/2+/glycin-svg,3,0
-auditd_real_10164,2026-09-10T00:00:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 5 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10162,2026-09-09T23:59:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /var/cache/fontconfig /var/cache/fontconfig --bind-try /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 101 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 96,bwrap,56,0
+auditd_real_10163,2026-09-09T23:59:16Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 96,/usr/libexec/glycin-loaders/2+/glycin-svg,3,0
+auditd_real_10164,2026-09-10T00:00:11Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 35 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
 auditd_real_10165,2026-09-10T00:00:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,"sh -c ENABLED=false; [ -r /etc/default/sysstat ] && . /etc/default/sysstat; test ""${ENABLED}"" = ""true""",sh,3,0
-auditd_real_10166,2026-09-10T00:00:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 5 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10166,2026-09-10T00:00:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 35 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
 auditd_real_10167,2026-09-10T00:00:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /usr/libexec/sysstat/sa1 1 1,/bin/sh,4,0
 auditd_real_10168,2026-09-10T00:00:12Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/sysstat/sadc -F -L -S DISK 1 1 /var/log/sysstat,/usr/libexec/sysstat/sadc,8,0
 auditd_real_10169,2026-09-10T00:00:24Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 147 --log-level info --log-target auto,/usr/lib/systemd/systemd-executor,7,0
@@ -249,13 +249,13 @@ auditd_real_10247,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /
 auditd_real_10248,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /snap/firmware-updater/226/gpu-2404/usr/share/glib-2.0/schemas/*.override,ls,3,0
 auditd_real_10249,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls -A /home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas/*.xml /home/nexus/snap/firmware-updater/226/.local/share/glib-2.0/schemas/*.override,ls,4,0
 auditd_real_10250,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/snap/firmware-updater/226/bin/firmware-notifier,/snap/firmware-updater/226/bin/firmware-notifier,1,0
-auditd_real_10251,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize � --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10251,2026-09-10T00:00:26Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 91 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
 auditd_real_10252,2026-09-10T00:00:27Z,cyber-lab-ubuntu,cyber-lab-ubuntu,modprobe -abq sd_mod,modprobe,3,0
-auditd_real_10253,2026-09-10T00:00:27Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize � --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10253,2026-09-10T00:00:27Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 93 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
 auditd_real_10254,2026-09-10T00:00:27Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/fwupd/fwupd,/usr/libexec/fwupd/fwupd,1,0
-auditd_real_10255,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /var/cache/fontconfig /var/cache/fontconfig --bind-try /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp w /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd v,bwrap,56,0
-auditd_real_10256,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd v,/usr/libexec/glycin-loaders/2+/glycin-svg,3,0
-auditd_real_10257,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize � --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
+auditd_real_10255,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --ro-bind-try /etc/fonts/conf.d /etc/fonts/conf.d --ro-bind-try /etc/fonts/fonts.conf /etc/fonts/fonts.conf --ro-bind-try /var/cache/fontconfig /var/cache/fontconfig --bind-try /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --setenv XDG_CACHE_HOME /home/nexus/.cache/glycin/usr/libexec/glycin-loaders/2+/glycin-svg --seccomp 77 /usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 76,bwrap,56,0
+auditd_real_10256,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/glycin-loaders/2+/glycin-svg --dbus-fd 76,/usr/libexec/glycin-loaders/2+/glycin-svg,3,0
+auditd_real_10257,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/lib/systemd/systemd-executor --deserialize 96 --log-level info --log-target journal-or-kmsg,/usr/lib/systemd/systemd-executor,7,0
 auditd_real_10258,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/fprintd,/usr/libexec/fprintd,1,0
 auditd_real_10259,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gdm-session-worker [pam/gdm-password],gdm-session-worker [pam/gdm-password],1,0
 auditd_real_10260,2026-09-10T00:00:30Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus nullok,/usr/sbin/unix_chkpwd,3,0
@@ -265,10 +265,10 @@ auditd_real_10263,2026-09-10T00:00:38Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bi
 auditd_real_10264,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/env gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app,/usr/bin/env,6,0
 auditd_real_10265,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app,gjs,5,0
 auditd_real_10266,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,nautilus --version,nautilus,2,0
-auditd_real_10267,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --seccomp ' /usr/bin/true,bwrap,39,0
+auditd_real_10267,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --seccomp 27 /usr/bin/true,bwrap,39,0
 auditd_real_10268,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/bin/true,/usr/bin/true,1,0
-auditd_real_10269,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --seccomp ( /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd ',bwrap,41,0
-auditd_real_10270,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd ',/usr/libexec/glycin-loaders/2+/glycin-image-rs,3,0
+auditd_real_10269,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,bwrap --unshare-all --die-with-parent --chdir / --ro-bind /usr /usr --dev /dev --ro-bind-try /etc/ld.so.cache /etc/ld.so.cache --ro-bind-try /nix/store /nix/store --tmpfs /tmp-home --tmpfs /tmp-run --clearenv --setenv HOME /tmp-home --setenv XDG_RUNTIME_DIR /tmp-run --setenv XDG_RUNTIME_DIR /run/user/1000 --symlink /usr/lib64 /lib64 --symlink /usr/lib /lib --seccomp 28 /usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 27,bwrap,41,0
+auditd_real_10270,2026-09-10T00:00:39Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/libexec/glycin-loaders/2+/glycin-image-rs --dbus-fd 27,/usr/libexec/glycin-loaders/2+/glycin-image-rs,3,0
 auditd_real_10271,2026-09-10T00:00:40Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gjs -m /usr/share/gnome-shell/extensions/ubuntu-appindicators@ubuntu.com/tools/busAnalyzer.js,gjs,3,0
 auditd_real_10272,2026-09-10T00:00:43Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sudo ausearch -k benign_exec_05,sudo,4,0
 auditd_real_10273,2026-09-10T00:00:43Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/usr/sbin/unix_chkpwd nexus chkexpiry,/usr/sbin/unix_chkpwd,3,0
