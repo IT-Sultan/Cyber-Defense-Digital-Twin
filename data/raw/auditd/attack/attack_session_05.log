@@ -1,0 +1,459 @@
+----
+time->Thu Sep 10 19:20:39 2026
+type=PROCTITLE msg=audit(1789057239.852:2687): proctitle=617564697463746C002D6100616C776179732C65786974002D46006172636800623634002D5300657865637665002D4600617569640031303030002D6B0061747461636B5F657865635F3035
+type=SYSCALL msg=audit(1789057239.852:2687): arch=c000003e syscall=44 success=yes exit=1072 a0=4 a1=7ffcc7f5e4b0 a2=430 a3=0 items=0 ppid=14514 pid=14515 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=11 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1789057239.852:2687): auid=1000 ses=11 subj=unconfined op=add_rule key="attack_exec_05" list=4 res=1
+----
+time->Thu Sep 10 19:20:39 2026
+type=PROCTITLE msg=audit(1789057239.858:2689): proctitle="/usr/libexec/vte-urlencode-cwd"
+type=PATH msg=audit(1789057239.858:2689): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057239.858:2689): item=0 name="/usr/libexec/vte-urlencode-cwd" inode=1725565 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057239.858:2689): cwd="/home/nexus/attack_lab04"
+type=EXECVE msg=audit(1789057239.858:2689): argc=1 a0="/usr/libexec/vte-urlencode-cwd"
+type=SYSCALL msg=audit(1789057239.858:2689): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89e4b0 a1=63c2bf79a500 a2=63c2bf7aa390 a3=8 items=2 ppid=9428 pid=14517 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="vte-urlencode-c" exe="/usr/libexec/vte-urlencode-cwd" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:20:48 2026
+type=PROCTITLE msg=audit(1789057248.510:2690): proctitle=7375646F00617564697463746C002D6C
+type=PATH msg=audit(1789057248.510:2690): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057248.510:2690): item=0 name="/usr/bin/sudo" inode=1705004 dev=08:02 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057248.510:2690): cwd="/home/nexus/attack_lab04"
+type=EXECVE msg=audit(1789057248.510:2690): argc=3 a0="sudo" a1="auditctl" a2="-l"
+type=SYSCALL msg=audit(1789057248.510:2690): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89ca30 a1=63c2bf89d750 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14523 auid=1000 uid=1000 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="sudo" exe="/usr/lib/cargo/bin/sudo" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:20:48 2026
+type=PROCTITLE msg=audit(1789057248.523:2691): proctitle=2F7573722F7362696E2F756E69785F63686B707764006E657875730063686B657870697279
+type=PATH msg=audit(1789057248.523:2691): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057248.523:2691): item=0 name="/usr/sbin/unix_chkpwd" inode=1704618 dev=08:02 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057248.523:2691): cwd="/home/nexus/attack_lab04"
+type=EXECVE msg=audit(1789057248.523:2691): argc=3 a0="/usr/sbin/unix_chkpwd" a1="nexus" a2="chkexpiry"
+type=SYSCALL msg=audit(1789057248.523:2691): arch=c000003e syscall=59 success=yes exit=0 a0=78c5a4d9004a a1=7ffd16328160 a2=78c5a4d93028 a3=0 items=2 ppid=14523 pid=14524 auid=1000 uid=0 gid=1000 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts0 ses=11 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="attack_exec_05"
+----
+time->Thu Sep 10 19:20:48 2026
+type=PROCTITLE msg=audit(1789057248.533:2695): proctitle=617564697463746C002D6C
+type=PATH msg=audit(1789057248.533:2695): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057248.533:2695): item=0 name="/usr/sbin/auditctl" inode=1706517 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057248.533:2695): cwd="/home/nexus/attack_lab04"
+type=EXECVE msg=audit(1789057248.533:2695): argc=2 a0="auditctl" a1="-l"
+type=SYSCALL msg=audit(1789057248.533:2695): arch=c000003e syscall=59 success=yes exit=0 a0=557126ffa2c0 a1=557126ffbfc0 a2=557126ffa8a0 a3=8 items=2 ppid=14525 pid=14526 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=11 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:20:48 2026
+type=PROCTITLE msg=audit(1789057248.541:2697): proctitle="/usr/libexec/vte-urlencode-cwd"
+type=PATH msg=audit(1789057248.541:2697): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057248.541:2697): item=0 name="/usr/libexec/vte-urlencode-cwd" inode=1725565 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057248.541:2697): cwd="/home/nexus/attack_lab04"
+type=EXECVE msg=audit(1789057248.541:2697): argc=1 a0="/usr/libexec/vte-urlencode-cwd"
+type=SYSCALL msg=audit(1789057248.541:2697): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89e4b0 a1=63c2bf797100 a2=63c2bf7aa390 a3=8 items=2 ppid=9428 pid=14528 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="vte-urlencode-c" exe="/usr/libexec/vte-urlencode-cwd" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.350:2700): proctitle=6D6B646972002D70002F686F6D652F6E657875732F61747461636B5F6C616230352F646973636F76657279002F686F6D652F6E657875732F61747461636B5F6C616230352F73656372657473002F686F6D652F6E657875732F61747461636B5F6C616230352F7374616765002F686F6D652F6E657875732F61747461636B5F6C
+type=PATH msg=audit(1789057384.350:2700): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.350:2700): item=0 name="/usr/bin/mkdir" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.350:2700): cwd="/home/nexus/attack_lab04"
+type=EXECVE msg=audit(1789057384.350:2700): argc=6 a0="mkdir" a1="-p" a2="/home/nexus/attack_lab05/discovery" a3="/home/nexus/attack_lab05/secrets" a4="/home/nexus/attack_lab05/stage" a5="/home/nexus/attack_lab05/loot"
+type=SYSCALL msg=audit(1789057384.350:2700): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf894ed0 a1=63c2bf892820 a2=63c2bf7aa390 a3=41 items=2 ppid=9428 pid=14539 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="mkdir" exe="/usr/lib/cargo/bin/coreutils/mkdir" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.358:2701): proctitle="whoami"
+type=PATH msg=audit(1789057384.358:2701): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.358:2701): item=0 name="/usr/bin/whoami" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.358:2701): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.358:2701): argc=1 a0="whoami"
+type=SYSCALL msg=audit(1789057384.358:2701): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf891190 a1=63c2bf89b4a0 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14541 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="whoami" exe="/usr/lib/cargo/bin/coreutils/whoami" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.368:2702): proctitle="id"
+type=PATH msg=audit(1789057384.368:2702): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.368:2702): item=0 name="/usr/bin/id" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.368:2702): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.368:2702): argc=1 a0="id"
+type=SYSCALL msg=audit(1789057384.368:2702): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf874f40 a1=63c2bf899730 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14542 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="id" exe="/usr/lib/cargo/bin/coreutils/id" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.378:2703): proctitle="hostname"
+type=PATH msg=audit(1789057384.378:2703): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.378:2703): item=0 name="/usr/bin/hostname" inode=1704801 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.378:2703): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.378:2703): argc=1 a0="hostname"
+type=SYSCALL msg=audit(1789057384.378:2703): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf8998a0 a1=63c2bf7a8fc0 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14543 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="hostname" exe="/usr/bin/hostname" subj=hostname key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.381:2704): proctitle=756E616D65002D61
+type=PATH msg=audit(1789057384.381:2704): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.381:2704): item=0 name="/usr/bin/uname" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.381:2704): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.381:2704): argc=2 a0="uname" a1="-a"
+type=SYSCALL msg=audit(1789057384.381:2704): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf897510 a1=63c2bf899260 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14544 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="uname" exe="/usr/lib/cargo/bin/coreutils/uname" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.387:2705): proctitle="env"
+type=PATH msg=audit(1789057384.387:2705): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.387:2705): item=0 name="/usr/bin/env" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.387:2705): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.387:2705): argc=1 a0="env"
+type=SYSCALL msg=audit(1789057384.387:2705): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89b6a0 a1=63c2bf898550 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14546 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="env" exe="/usr/lib/cargo/bin/coreutils/env" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.395:2706): proctitle=69700061646472
+type=PATH msg=audit(1789057384.395:2706): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.395:2706): item=0 name="/usr/sbin/ip" inode=1704824 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.395:2706): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.395:2706): argc=2 a0="ip" a1="addr"
+type=SYSCALL msg=audit(1789057384.395:2706): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89ab30 a1=63c2bf894870 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14547 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="ip" exe="/usr/bin/ip" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.399:2707): proctitle=2F7573722F6C6962657865632F6C6F63616C7365617263682D657874726163746F722D33002D2D736F636B65742D66640033
+type=PATH msg=audit(1789057384.399:2707): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.399:2707): item=0 name="/usr/libexec/localsearch-extractor-3" inode=1725529 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.399:2707): cwd="/home/nexus"
+type=EXECVE msg=audit(1789057384.399:2707): argc=3 a0="/usr/libexec/localsearch-extractor-3" a1="--socket-fd" a2="3"
+type=SYSCALL msg=audit(1789057384.399:2707): arch=c000003e syscall=59 success=yes exit=0 a0=5d407cd5edf0 a1=5d407cfdb1f0 a2=5d407cda9410 a3=21 items=2 ppid=8709 pid=14548 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=(none) ses=11 comm="localsearch-ext" exe="/usr/libexec/localsearch-extractor-3" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.400:2708): proctitle=697000726F757465
+type=PATH msg=audit(1789057384.400:2708): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.400:2708): item=0 name="/usr/sbin/ip" inode=1704824 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.400:2708): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.400:2708): argc=2 a0="ip" a1="route"
+type=SYSCALL msg=audit(1789057384.400:2708): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf898980 a1=63c2bf894240 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14549 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="ip" exe="/usr/bin/ip" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.405:2709): proctitle=6970006E65696768
+type=PATH msg=audit(1789057384.405:2709): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.405:2709): item=0 name="/usr/sbin/ip" inode=1704824 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.405:2709): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.405:2709): argc=2 a0="ip" a1="neigh"
+type=SYSCALL msg=audit(1789057384.405:2709): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf894240 a1=63c2bf88c0e0 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14550 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="ip" exe="/usr/bin/ip" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.410:2710): proctitle=7373002D74756C6E
+type=PATH msg=audit(1789057384.410:2710): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.410:2710): item=0 name="/usr/bin/ss" inode=1705223 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.410:2710): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.410:2710): argc=2 a0="ss" a1="-tuln"
+type=SYSCALL msg=audit(1789057384.410:2710): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf8963a0 a1=63c2bf89b970 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14551 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="ss" exe="/usr/bin/ss" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.421:2711): proctitle=7073002D6566
+type=PATH msg=audit(1789057384.421:2711): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.421:2711): item=0 name="/usr/bin/ps" inode=1705090 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.421:2711): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.421:2711): argc=2 a0="ps" a1="-ef"
+type=SYSCALL msg=audit(1789057384.421:2711): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf894870 a1=63c2bf898590 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14552 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="ps" exe="/usr/bin/ps" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.467:2712): proctitle=6466002D68
+type=PATH msg=audit(1789057384.467:2712): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.467:2712): item=0 name="/usr/bin/df" inode=1705444 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.467:2712): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.467:2712): argc=2 a0="df" a1="-h"
+type=SYSCALL msg=audit(1789057384.467:2712): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf895b70 a1=63c2bf899590 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14560 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="df" exe="/usr/bin/gnudf" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.473:2713): proctitle=66726565002D68
+type=PATH msg=audit(1789057384.473:2713): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.473:2713): item=0 name="/usr/bin/free" inode=1704549 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.473:2713): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.473:2713): argc=2 a0="free" a1="-h"
+type=SYSCALL msg=audit(1789057384.473:2713): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf894240 a1=63c2bf897580 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14561 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="free" exe="/usr/bin/free" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.477:2714): proctitle=66696E64002E002D747970650066
+type=PATH msg=audit(1789057384.477:2714): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.477:2714): item=0 name="/usr/bin/find" inode=1704519 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.477:2714): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.477:2714): argc=4 a0="find" a1="." a2="-type" a3="f"
+type=SYSCALL msg=audit(1789057384.477:2714): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89b520 a1=63c2bf89b6a0 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14562 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="find" exe="/usr/bin/find" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.482:2715): proctitle=6C73002D2D636F6C6F723D6175746F002D6C610073656372657473
+type=PATH msg=audit(1789057384.482:2715): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.482:2715): item=0 name="/usr/bin/ls" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.482:2715): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.482:2715): argc=4 a0="ls" a1="--color=auto" a2="-la" a3="secrets"
+type=SYSCALL msg=audit(1789057384.482:2715): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf898590 a1=63c2bf899680 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14563 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="ls" exe="/usr/lib/cargo/bin/coreutils/ls" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.492:2716): proctitle=7374617400736563726574732F6163636F756E742E747874
+type=PATH msg=audit(1789057384.492:2716): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.492:2716): item=0 name="/usr/bin/stat" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.492:2716): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.492:2716): argc=2 a0="stat" a1="secrets/account.txt"
+type=SYSCALL msg=audit(1789057384.492:2716): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf894240 a1=63c2bf89b3b0 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14564 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="stat" exe="/usr/lib/cargo/bin/coreutils/stat" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.497:2717): proctitle=63617400736563726574732F6163636F756E742E747874
+type=PATH msg=audit(1789057384.497:2717): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.497:2717): item=0 name="/usr/bin/cat" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.497:2717): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.497:2717): argc=2 a0="cat" a1="secrets/account.txt"
+type=SYSCALL msg=audit(1789057384.497:2717): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf891800 a1=63c2bf89d580 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14566 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="cat" exe="/usr/lib/cargo/bin/coreutils/cat" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.503:2718): proctitle=63617400736563726574732F746F6B656E2E656E76
+type=PATH msg=audit(1789057384.503:2718): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.503:2718): item=0 name="/usr/bin/cat" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.503:2718): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.503:2718): argc=2 a0="cat" a1="secrets/token.env"
+type=SYSCALL msg=audit(1789057384.503:2718): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89a930 a1=63c2bf891820 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14568 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="cat" exe="/usr/lib/cargo/bin/coreutils/cat" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.509:2719): proctitle=67726570002D2D636F6C6F723D6175746F0070617373776F726400736563726574732F6163636F756E742E747874
+type=PATH msg=audit(1789057384.509:2719): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.509:2719): item=0 name="/usr/bin/grep" inode=1704728 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.509:2719): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.509:2719): argc=4 a0="grep" a1="--color=auto" a2="password" a3="secrets/account.txt"
+type=SYSCALL msg=audit(1789057384.509:2719): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89bcc0 a1=63c2bf89c8a0 a2=63c2bf7aa390 a3=41 items=2 ppid=9428 pid=14569 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="grep" exe="/usr/bin/grep" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.514:2720): proctitle=67726570002D2D636F6C6F723D6175746F00544F4B454E00736563726574732F746F6B656E2E656E76
+type=PATH msg=audit(1789057384.514:2720): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.514:2720): item=0 name="/usr/bin/grep" inode=1704728 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.514:2720): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.514:2720): argc=4 a0="grep" a1="--color=auto" a2="TOKEN" a3="secrets/token.env"
+type=SYSCALL msg=audit(1789057384.514:2720): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf88c0e0 a1=63c2bf899590 a2=63c2bf7aa390 a3=41 items=2 ppid=9428 pid=14571 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="grep" exe="/usr/bin/grep" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.518:2721): proctitle=637000736563726574732F6163636F756E742E747874006C6F6F742F
+type=PATH msg=audit(1789057384.518:2721): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.518:2721): item=0 name="/usr/bin/cp" inode=1705312 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.518:2721): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.518:2721): argc=3 a0="cp" a1="secrets/account.txt" a2="loot/"
+type=SYSCALL msg=audit(1789057384.518:2721): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf898980 a1=63c2bf89c8a0 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14572 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="cp" exe="/usr/bin/gnucp" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.522:2722): proctitle=637000736563726574732F746F6B656E2E656E76006C6F6F742F
+type=PATH msg=audit(1789057384.522:2722): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.522:2722): item=0 name="/usr/bin/cp" inode=1705312 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.522:2722): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.522:2722): argc=3 a0="cp" a1="secrets/token.env" a2="loot/"
+type=SYSCALL msg=audit(1789057384.522:2722): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf896f50 a1=63c2bf89d5a0 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14573 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="cp" exe="/usr/bin/gnucp" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.527:2723): proctitle=63700073746167652F646F63756D656E742E747874006C6F6F742F
+type=PATH msg=audit(1789057384.527:2723): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.527:2723): item=0 name="/usr/bin/cp" inode=1705312 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.527:2723): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.527:2723): argc=3 a0="cp" a1="stage/document.txt" a2="loot/"
+type=SYSCALL msg=audit(1789057384.527:2723): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf894240 a1=63c2bf896f50 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14574 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="cp" exe="/usr/bin/gnucp" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.533:2724): proctitle=746172002D6366002F746D702F6C616230355F73746167652E746172006C6F6F742F
+type=PATH msg=audit(1789057384.533:2724): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.533:2724): item=0 name="/usr/bin/tar" inode=1705278 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.533:2724): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.533:2724): argc=4 a0="tar" a1="-cf" a2="/tmp/lab05_stage.tar" a3="loot/"
+type=SYSCALL msg=audit(1789057384.533:2724): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf898590 a1=63c2bf89d5a0 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14575 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="tar" exe="/usr/bin/tar" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.537:2725): proctitle=677A6970002F746D702F6C616230355F73746167652E746172
+type=PATH msg=audit(1789057384.537:2725): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.537:2725): item=0 name="/usr/bin/gzip" inode=1704787 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.537:2725): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.537:2725): argc=2 a0="gzip" a1="/tmp/lab05_stage.tar"
+type=SYSCALL msg=audit(1789057384.537:2725): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf898fd0 a1=63c2bf89bd30 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14576 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="gzip" exe="/usr/bin/gzip" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.539:2726): proctitle=73686132353673756D002F746D702F6C616230355F73746167652E7461722E677A
+type=PATH msg=audit(1789057384.539:2726): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.539:2726): item=0 name="/usr/bin/sha256sum" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.539:2726): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.539:2726): argc=2 a0="sha256sum" a1="/tmp/lab05_stage.tar.gz"
+type=SYSCALL msg=audit(1789057384.539:2726): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89bd70 a1=63c2bf897820 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14578 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="sha256sum" exe="/usr/lib/cargo/bin/coreutils/sha256sum" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.546:2727): proctitle=62617365363400736563726574732F6163636F756E742E747874
+type=PATH msg=audit(1789057384.546:2727): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.546:2727): item=0 name="/usr/bin/base64" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.546:2727): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.546:2727): argc=2 a0="base64" a1="secrets/account.txt"
+type=SYSCALL msg=audit(1789057384.546:2727): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89b7a0 a1=63c2bf898030 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14579 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="base64" exe="/usr/lib/cargo/bin/coreutils/base64" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.552:2728): proctitle=626173653634002D64002F746D702F6C616230355F6163636F756E742E623634
+type=PATH msg=audit(1789057384.552:2728): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.552:2728): item=0 name="/usr/bin/base64" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.552:2728): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.552:2728): argc=3 a0="base64" a1="-d" a2="/tmp/lab05_account.b64"
+type=SYSCALL msg=audit(1789057384.552:2728): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf899920 a1=63c2bf89d5a0 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14580 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="base64" exe="/usr/lib/cargo/bin/coreutils/base64" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.566:2729): proctitle=636174002F746D702F6C616230355F6163636F756E745F6465636F6465642E747874
+type=PATH msg=audit(1789057384.566:2729): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.566:2729): item=0 name="/usr/bin/cat" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.566:2729): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.566:2729): argc=2 a0="cat" a1="/tmp/lab05_account_decoded.txt"
+type=SYSCALL msg=audit(1789057384.566:2729): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89c9e0 a1=63c2bf899ae0 a2=63c2bf7aa390 a3=20 items=2 ppid=9428 pid=14581 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="cat" exe="/usr/lib/cargo/bin/coreutils/cat" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.576:2730): proctitle=78786400736563726574732F746F6B656E2E656E76
+type=PATH msg=audit(1789057384.576:2730): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.576:2730): item=0 name="/usr/bin/xxd" inode=1704234 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.576:2730): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.576:2730): argc=2 a0="xxd" a1="secrets/token.env"
+type=SYSCALL msg=audit(1789057384.576:2730): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf898050 a1=63c2bf897b10 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14582 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="xxd" exe="/usr/bin/xxd" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.578:2731): proctitle=787864002D72002F746D702F6C616230355F746F6B656E2E686578
+type=PATH msg=audit(1789057384.578:2731): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.578:2731): item=0 name="/usr/bin/xxd" inode=1704234 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.578:2731): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.578:2731): argc=3 a0="xxd" a1="-r" a2="/tmp/lab05_token.hex"
+type=SYSCALL msg=audit(1789057384.578:2731): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf894240 a1=63c2bf897860 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14583 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="xxd" exe="/usr/bin/xxd" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.581:2732): proctitle=636174002F746D702F6C616230355F746F6B656E5F6465636F6465642E747874
+type=PATH msg=audit(1789057384.581:2732): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.581:2732): item=0 name="/usr/bin/cat" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.581:2732): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.581:2732): argc=2 a0="cat" a1="/tmp/lab05_token_decoded.txt"
+type=SYSCALL msg=audit(1789057384.581:2732): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89ca00 a1=63c2bf89a6c0 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14584 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="cat" exe="/usr/lib/cargo/bin/coreutils/cat" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.588:2733): proctitle=6F70656E73736C00656E63002D6165732D3235362D636263002D73616C74002D70626B646632002D7061737300706173733A4C41425F4F4E4C595F3035002D696E0073746167652F646F63756D656E742E747874002D6F7574002F746D702F6C616230355F646F63756D656E742E656E63
+type=PATH msg=audit(1789057384.588:2733): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.588:2733): item=0 name="/usr/bin/openssl" inode=1705350 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.588:2733): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.588:2733): argc=11 a0="openssl" a1="enc" a2="-aes-256-cbc" a3="-salt" a4="-pbkdf2" a5="-pass" a6="pass:LAB_ONLY_05" a7="-in" a8="stage/document.txt" a9="-out" a10="/tmp/lab05_document.enc"
+type=SYSCALL msg=audit(1789057384.588:2733): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89b160 a1=63c2bf89b6f0 a2=63c2bf7aa390 a3=81 items=2 ppid=9428 pid=14585 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="openssl" exe="/usr/bin/openssl" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.612:2734): proctitle=63686D6F64002B78002F746D702F6C616230355F72756E6E65722E7368
+type=PATH msg=audit(1789057384.612:2734): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.612:2734): item=0 name="/usr/bin/chmod" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.612:2734): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.612:2734): argc=3 a0="chmod" a1="+x" a2="/tmp/lab05_runner.sh"
+type=SYSCALL msg=audit(1789057384.612:2734): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89c3c0 a1=63c2bf89da60 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14587 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="chmod" exe="/usr/lib/cargo/bin/coreutils/chmod" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.617:2735): proctitle=2F62696E2F7368002F746D702F6C616230355F72756E6E65722E7368
+type=PATH msg=audit(1789057384.617:2735): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.617:2735): item=0 name="/bin/sh" inode=1704440 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.617:2735): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.617:2735): argc=2 a0="/bin/sh" a1="/tmp/lab05_runner.sh"
+type=SYSCALL msg=audit(1789057384.617:2735): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf899bc0 a1=63c2bf89c3e0 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14588 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="sh" exe="/usr/bin/dash" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.618:2736): proctitle="whoami"
+type=PATH msg=audit(1789057384.618:2736): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.618:2736): item=0 name="/usr/bin/whoami" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.618:2736): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.618:2736): argc=1 a0="whoami"
+type=SYSCALL msg=audit(1789057384.618:2736): arch=c000003e syscall=59 success=yes exit=0 a0=5acb15e580c8 a1=5acafc587530 a2=5acb15e57f08 a3=310 items=2 ppid=14588 pid=14589 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="whoami" exe="/usr/lib/cargo/bin/coreutils/whoami" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.622:2737): proctitle="id"
+type=PATH msg=audit(1789057384.622:2737): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.622:2737): item=0 name="/usr/bin/id" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.622:2737): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.622:2737): argc=1 a0="id"
+type=SYSCALL msg=audit(1789057384.622:2737): arch=c000003e syscall=59 success=yes exit=0 a0=5acb15e580c8 a1=5acafc587530 a2=5acb15e57f08 a3=8 items=2 ppid=14588 pid=14590 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="id" exe="/usr/lib/cargo/bin/coreutils/id" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.626:2738): proctitle="hostname"
+type=PATH msg=audit(1789057384.626:2738): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.626:2738): item=0 name="/usr/bin/hostname" inode=1704801 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.626:2738): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.626:2738): argc=1 a0="hostname"
+type=SYSCALL msg=audit(1789057384.626:2738): arch=c000003e syscall=59 success=yes exit=0 a0=5acb15e58438 a1=5acafc587540 a2=5acb15e58278 a3=2f0 items=2 ppid=14588 pid=14591 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="hostname" exe="/usr/bin/hostname" subj=hostname key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.631:2739): proctitle=63617400646973636F766572792F66616B655F63726F6E2E747874
+type=PATH msg=audit(1789057384.631:2739): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.631:2739): item=0 name="/usr/bin/cat" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.631:2739): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.631:2739): argc=2 a0="cat" a1="discovery/fake_cron.txt"
+type=SYSCALL msg=audit(1789057384.631:2739): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89be40 a1=63c2bf89c400 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14592 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="cat" exe="/usr/lib/cargo/bin/coreutils/cat" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.638:2740): proctitle=6C73002D2D636F6C6F723D6175746F002D6C68002F746D702F6C616230355F73746167652E7461722E677A002F746D702F6C616230355F646F63756D656E742E656E63002F746D702F6C616230355F72756E6E65722E7368
+type=PATH msg=audit(1789057384.638:2740): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.638:2740): item=0 name="/usr/bin/ls" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.638:2740): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.638:2740): argc=6 a0="ls" a1="--color=auto" a2="-lh" a3="/tmp/lab05_stage.tar.gz" a4="/tmp/lab05_document.enc" a5="/tmp/lab05_runner.sh"
+type=SYSCALL msg=audit(1789057384.638:2740): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf894bf0 a1=63c2bf898010 a2=63c2bf7aa390 a3=71 items=2 ppid=9428 pid=14593 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="ls" exe="/usr/lib/cargo/bin/coreutils/ls" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.648:2741): proctitle=726D002F746D702F6C616230355F6163636F756E742E623634
+type=PATH msg=audit(1789057384.648:2741): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.648:2741): item=0 name="/usr/bin/rm" inode=1706295 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.648:2741): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.648:2741): argc=2 a0="rm" a1="/tmp/lab05_account.b64"
+type=SYSCALL msg=audit(1789057384.648:2741): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf8929e0 a1=63c2bf89c1f0 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14594 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="rm" exe="/usr/bin/gnurm" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.654:2742): proctitle=726D002F746D702F6C616230355F6163636F756E745F6465636F6465642E747874
+type=PATH msg=audit(1789057384.654:2742): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.654:2742): item=0 name="/usr/bin/rm" inode=1706295 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.654:2742): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.654:2742): argc=2 a0="rm" a1="/tmp/lab05_account_decoded.txt"
+type=SYSCALL msg=audit(1789057384.654:2742): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf8919c0 a1=63c2bf897410 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14595 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="rm" exe="/usr/bin/gnurm" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.659:2743): proctitle=726D002F746D702F6C616230355F746F6B656E2E686578
+type=PATH msg=audit(1789057384.659:2743): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.659:2743): item=0 name="/usr/bin/rm" inode=1706295 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.659:2743): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.659:2743): argc=2 a0="rm" a1="/tmp/lab05_token.hex"
+type=SYSCALL msg=audit(1789057384.659:2743): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89b1a0 a1=63c2bf89c1f0 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14597 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="rm" exe="/usr/bin/gnurm" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.662:2744): proctitle=726D002F746D702F6C616230355F746F6B656E5F6465636F6465642E747874
+type=PATH msg=audit(1789057384.662:2744): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.662:2744): item=0 name="/usr/bin/rm" inode=1706295 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.662:2744): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.662:2744): argc=2 a0="rm" a1="/tmp/lab05_token_decoded.txt"
+type=SYSCALL msg=audit(1789057384.662:2744): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89be40 a1=63c2bf89b180 a2=63c2bf7aa390 a3=31 items=2 ppid=9428 pid=14598 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="rm" exe="/usr/bin/gnurm" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.665:2745): proctitle=726D002F746D702F6C616230355F72756E6E65722E7368
+type=PATH msg=audit(1789057384.665:2745): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.665:2745): item=0 name="/usr/bin/rm" inode=1706295 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.665:2745): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.665:2745): argc=2 a0="rm" a1="/tmp/lab05_runner.sh"
+type=SYSCALL msg=audit(1789057384.665:2745): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf895150 a1=63c2bf89a720 a2=63c2bf7aa390 a3=21 items=2 ppid=9428 pid=14599 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="rm" exe="/usr/bin/gnurm" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:04 2026
+type=PROCTITLE msg=audit(1789057384.668:2746): proctitle="/usr/libexec/vte-urlencode-cwd"
+type=PATH msg=audit(1789057384.668:2746): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057384.668:2746): item=0 name="/usr/libexec/vte-urlencode-cwd" inode=1725565 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057384.668:2746): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057384.668:2746): argc=1 a0="/usr/libexec/vte-urlencode-cwd"
+type=SYSCALL msg=audit(1789057384.668:2746): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf89fc20 a1=63c2bf89fca0 a2=63c2bf7aa390 a3=8 items=2 ppid=9428 pid=14600 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="vte-urlencode-c" exe="/usr/libexec/vte-urlencode-cwd" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:50 2026
+type=PROCTITLE msg=audit(1789057430.166:2747): proctitle=6964002D75
+type=PATH msg=audit(1789057430.166:2747): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057430.166:2747): item=0 name="/usr/bin/id" inode=1704431 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057430.166:2747): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057430.166:2747): argc=2 a0="id" a1="-u"
+type=SYSCALL msg=audit(1789057430.166:2747): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf8975a0 a1=63c2bf89ddf0 a2=63c2bf7aa390 a3=18 items=2 ppid=9428 pid=14604 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="id" exe="/usr/lib/cargo/bin/coreutils/id" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:50 2026
+type=PROCTITLE msg=audit(1789057430.172:2748): proctitle=7375646F00617564697463746C002D6400616C776179732C65786974002D4600617263683D623634002D5300657865637665002D4600617569643D31303030002D6B0061747461636B5F657865635F3035
+type=PATH msg=audit(1789057430.172:2748): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057430.172:2748): item=0 name="/usr/bin/sudo" inode=1705004 dev=08:02 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057430.172:2748): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057430.172:2748): argc=12 a0="sudo" a1="auditctl" a2="-d" a3="always,exit" a4="-F" a5="arch=b64" a6="-S" a7="execve" a8="-F" a9="auid=1000" a10="-k" a11="attack_exec_05"
+type=SYSCALL msg=audit(1789057430.172:2748): arch=c000003e syscall=59 success=yes exit=0 a0=63c2bf898980 a1=63c2bf896ba0 a2=63c2bf7aa390 a3=61 items=2 ppid=9428 pid=14605 auid=1000 uid=1000 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=11 comm="sudo" exe="/usr/lib/cargo/bin/sudo" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:50 2026
+type=PROCTITLE msg=audit(1789057430.184:2749): proctitle=2F7573722F7362696E2F756E69785F63686B707764006E657875730063686B657870697279
+type=PATH msg=audit(1789057430.184:2749): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057430.184:2749): item=0 name="/usr/sbin/unix_chkpwd" inode=1704618 dev=08:02 mode=0102755 ouid=0 ogid=42 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057430.184:2749): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057430.184:2749): argc=3 a0="/usr/sbin/unix_chkpwd" a1="nexus" a2="chkexpiry"
+type=SYSCALL msg=audit(1789057430.184:2749): arch=c000003e syscall=59 success=yes exit=0 a0=74684603404a a1=7ffda59a3ce0 a2=746846037028 a3=0 items=2 ppid=14605 pid=14606 auid=1000 uid=0 gid=1000 euid=0 suid=0 fsuid=0 egid=42 sgid=42 fsgid=42 tty=pts0 ses=11 comm="unix_chkpwd" exe="/usr/sbin/unix_chkpwd" subj=unix-chkpwd key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:50 2026
+type=PROCTITLE msg=audit(1789057430.189:2753): proctitle=617564697463746C002D6400616C776179732C65786974002D4600617263683D623634002D5300657865637665002D4600617569643D31303030002D6B0061747461636B5F657865635F3035
+type=PATH msg=audit(1789057430.189:2753): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=1705467 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1789057430.189:2753): item=0 name="/usr/sbin/auditctl" inode=1706517 dev=08:02 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=CWD msg=audit(1789057430.189:2753): cwd="/home/nexus/attack_lab05"
+type=EXECVE msg=audit(1789057430.189:2753): argc=11 a0="auditctl" a1="-d" a2="always,exit" a3="-F" a4="arch=b64" a5="-S" a6="execve" a7="-F" a8="auid=1000" a9="-k" a10="attack_exec_05"
+type=SYSCALL msg=audit(1789057430.189:2753): arch=c000003e syscall=59 success=yes exit=0 a0=587b47f2e030 a1=587b47f4b180 a2=587b47f49750 a3=8 items=2 ppid=14607 pid=14608 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=11 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key="attack_exec_05"
+----
+time->Thu Sep 10 19:23:50 2026
+type=PROCTITLE msg=audit(1789057430.192:2754): proctitle=617564697463746C002D6400616C776179732C65786974002D4600617263683D623634002D5300657865637665002D4600617569643D31303030002D6B0061747461636B5F657865635F3035
+type=SOCKADDR msg=audit(1789057430.192:2754): saddr=100000000000000000000000
+type=SYSCALL msg=audit(1789057430.192:2754): arch=c000003e syscall=44 success=yes exit=1072 a0=4 a1=7ffcd40d0e80 a2=430 a3=0 items=0 ppid=14607 pid=14608 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts1 ses=11 comm="auditctl" exe="/usr/sbin/auditctl" subj=unconfined key=(null)
+type=CONFIG_CHANGE msg=audit(1789057430.192:2754): auid=1000 ses=11 subj=unconfined op=remove_rule key="attack_exec_05" list=4 res=1

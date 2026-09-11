@@ -136,7 +136,8 @@ def parse_auditd_log(
             "command_executed": command_str,
             "a0": a0,
             "argc": data["argc"],
-            "is_attack": 0
+            "is_attack": 0,
+            "session_id": os.path.splitext(data["source"])[0]
         })
 
     df = pd.DataFrame(parsed_records)

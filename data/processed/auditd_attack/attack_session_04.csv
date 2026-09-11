@@ -1,0 +1,29 @@
+_id,@timestamp,host.name,host,command_executed,a0,argc,is_attack,session_id
+auditd_attack_04_0001,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_04
+auditd_attack_04_0002,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_04
+auditd_attack_04_0003,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,1,attack_session_04
+auditd_attack_04_0004,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -a,uname,2,1,attack_session_04
+auditd_attack_04_0005,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,find . -maxdepth 2 -type f,find,6,1,attack_session_04
+auditd_attack_04_0006,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,find . -type f -name .*,find,6,1,attack_session_04
+auditd_attack_04_0007,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,stat home_sim/.bash_history,stat,2,1,attack_session_04
+auditd_attack_04_0008,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat home_sim/.bash_history,cat,2,1,attack_session_04
+auditd_attack_04_0009,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat home_sim/authorized_keys,cat,2,1,attack_session_04
+auditd_attack_04_0010,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat home_sim/fake_cloud.env,cat,2,1,attack_session_04
+auditd_attack_04_0011,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,grep --color=auto SECRET home_sim/fake_cloud.env,grep,4,1,attack_session_04
+auditd_attack_04_0012,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp home_sim/.bash_history loot/,cp,3,1,attack_session_04
+auditd_attack_04_0013,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp home_sim/authorized_keys loot/,cp,3,1,attack_session_04
+auditd_attack_04_0014,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp home_sim/fake_cloud.env loot/,cp,3,1,attack_session_04
+auditd_attack_04_0015,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp staging/project.txt loot/,cp,3,1,attack_session_04
+auditd_attack_04_0016,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,tar -cf /tmp/lab04_loot.tar loot/,tar,4,1,attack_session_04
+auditd_attack_04_0017,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gzip /tmp/lab04_loot.tar,gzip,2,1,attack_session_04
+auditd_attack_04_0018,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sha256sum /tmp/lab04_loot.tar.gz,sha256sum,2,1,attack_session_04
+auditd_attack_04_0019,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64 home_sim/fake_cloud.env,base64,2,1,attack_session_04
+auditd_attack_04_0020,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64 -d /tmp/lab04_cloud.b64,base64,3,1,attack_session_04
+auditd_attack_04_0021,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat /tmp/lab04_cloud_decoded.txt,cat,2,1,attack_session_04
+auditd_attack_04_0022,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,"python3 -c import pathlib; print(pathlib.Path(""home_sim/fake_cloud.env"").read_text())",python3,3,1,attack_session_04
+auditd_attack_04_0023,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,"python3 -c import base64; print(base64.b64encode(b""LAB04_PAYLOAD"").decode())",python3,3,1,attack_session_04
+auditd_attack_04_0024,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:LAB_ONLY_04 -in staging/project.txt -out /tmp/lab04_project.enc,openssl,11,1,attack_session_04
+auditd_attack_04_0025,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,chmod +x /tmp/lab04_runner.sh,chmod,3,1,attack_session_04
+auditd_attack_04_0026,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /tmp/lab04_runner.sh,/bin/sh,2,1,attack_session_04
+auditd_attack_04_0027,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_04
+auditd_attack_04_0028,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -lh /tmp/lab04_loot.tar.gz /tmp/lab04_project.enc /tmp/lab04_runner.sh,ls,6,1,attack_session_04

