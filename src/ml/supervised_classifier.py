@@ -30,8 +30,11 @@ def extract_features(df):
     special_chars = [';', '|', '&', '>', '<', '`', '$']
     df['special_char_count'] = df['command_executed'].apply(lambda cmd: sum(cmd.count(ch) for ch in special_chars))
     
-    sensitive_paths = ['/tmp', '/etc/passwd', '/etc/shadow', 'LinEnum', 'grab_keys', 'authorized_keys', 'shadow']
-    df['is_sensitive_path'] = df['command_executed'].apply(lambda x: 1 if any(p in x for p in sensitive_paths) else 0)
+    # استخدام has_sensitive_path المعتمد فقط مع تفادي إيجابيات tmp العامة
+    sensitive_targets = ['/etc/passwd', '/etc/shadow', 'linenum', 'grab_keys', 'authorized_keys', '/tmp/malicious', '/tmp/reports.xlsm']
+    df['has_sensitive_path'] = df['command_executed'].apply(
+        lambda x: 1 if any(p in x.lower() for p in sensitive_targets) else 0
+    )
     
     attack_tools = ['curl', 'openssl', 'tar', 'chmod', 'xxd', 'crontab', 'sudo', 'bash', 'sh', 'nc', 'ncat']
     df['is_attack_tool'] = df['a0'].apply(lambda x: 1 if x in attack_tools else 0)
@@ -40,7 +43,6 @@ def extract_features(df):
 def main():
     print("[+] Training Production ML Classifier on Full Auditd Telemetry...")
     
-    # 1. تحميل داتا الـ Auditd الكاملة لتدريب المودل النهائي
     attack_raw = pd.read_csv("data/processed/linux_auditd_attack.csv")
     benign_raw = pd.read_csv("data/processed/linux_auditd_benign.csv")
     
@@ -50,39 +52,43 @@ def main():
     full_telemetry = pd.concat([attack_raw, benign_raw], ignore_index=True)
     full_telemetry = extract_features(full_telemetry)
 
-    # حساب a0_freq
+    # حساب a0_map أثناء التدريب
     a0_map = full_telemetry['a0'].value_counts(normalize=True).to_dict()
     full_telemetry['a0_freq'] = full_telemetry['a0'].map(a0_map).fillna(0)
 
-    feature_cols = ['argc', 'cmd_length', 'entropy', 'special_char_count', 'is_sensitive_path', 'is_attack_tool', 'a0_freq']
+    feature_cols = ['argc', 'cmd_length', 'entropy', 'special_char_count', 'has_sensitive_path', 'is_attack_tool', 'a0_freq']
     
-    # 2. تدريب المودل المعتمد
     clf = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42, class_weight='balanced')
     clf.fit(full_telemetry[feature_cols], full_telemetry['is_attack'])
     
-    # حفظ المودل المدرب
+    THRESHOLD = 0.60
+    
+    # حفظ النموذج مع ملحقاته كـ Bundle كامل
     os.makedirs("models", exist_ok=True)
-    joblib.dump(clf, "models/production_random_forest.pkl")
-    print(f"[+] Model saved to: models/production_random_forest.pkl")
+    artifact = {
+        'model': clf,
+        'threshold': THRESHOLD,
+        'a0_map': a0_map,
+        'feature_cols': feature_cols
+    }
+    joblib.dump(artifact, "models/production_random_forest.pkl")
+    print(f"[+] Complete model artifact saved to: models/production_random_forest.pkl")
 
-    # 3. تشغيل الـ Inference على أحداث APT41 الـ 46 لربطها بالـ Pipeline والـ SOC Alerts
+    # Ingestion على APT41 للتوافق مع البايبلاين
     clean_apt_file = "data/processed/apt41_clean.csv"
     df_apt = pd.read_csv(clean_apt_file, low_memory=False)
 
     df_apt_feat = extract_features(df_apt)
     df_apt_feat['a0_freq'] = df_apt_feat['a0'].map(a0_map).fillna(0)
 
-    # حساب الـ Scores وتطبيق الـ Threshold 0.60
     probs = clf.predict_proba(df_apt_feat[feature_cols])[:, 1]
     
-    THRESHOLD = 0.60
     df_apt['ml_score'] = np.round(probs, 4)
     df_apt['ml_label'] = df_apt['ml_score'].apply(
         lambda s: 'High Risk' if s >= THRESHOLD else ('Medium Risk' if s >= 0.40 else 'Low Risk')
     )
     df_apt['model_name'] = 'RandomForest_Retrained_Auditd_v2'
 
-    # تجهيز ملف التوقعات ليتوافق 100% مع البايبلاين
     if 'event_id' in df_apt.columns:
         df_apt['event_id'] = df_apt['event_id'].astype('int64')
     else:
@@ -94,7 +100,7 @@ def main():
     out_df = df_apt[['event_id', '@timestamp', 'host', 'ml_score', 'ml_label', 'model_name']].copy()
     out_csv = "data/processed/ml_predictions.csv"
     out_df.to_csv(out_csv, index=False)
-    print(f"[+] Production predictions updated with threshold {THRESHOLD} in: {out_csv}")
+    print(f"[+] Production predictions updated in: {out_csv}")
 
 if __name__ == "__main__":
     main()
