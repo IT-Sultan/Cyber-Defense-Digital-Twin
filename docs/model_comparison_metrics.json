@@ -1,0 +1,25 @@
+{
+  "validation_strategy": "5-Fold Group Cross-Validation across 5 Attack and 5 Benign Sessions",
+  "threshold_strategy": "Inner-fold train tuning (mean threshold: 0.54, production threshold: 0.60)",
+  "models": {
+    "legacy_baseline": {
+      "training_source": "APT41 Logs Only",
+      "precision": 0.8853,
+      "recall": 0.4140,
+      "f1_score": 0.5639,
+      "roc_auc": 0.8375,
+      "total_fn": 93,
+      "total_fp": 9
+    },
+    "retrained_production_model": {
+      "training_source": "Ubuntu Auditd Telemetry (433 events)",
+      "precision": 0.7743,
+      "recall": 0.8286,
+      "f1_score": 0.7817,
+      "roc_auc": 0.9124,
+      "total_fn": 28,
+      "total_fp": 45
+    }
+  },
+  "decision": "Adopted Retrained Model (v2) due to a 100% relative improvement in attack recall and significant reduction of False Negatives from 93 to 28."
+}
