@@ -2,7 +2,7 @@ import os, math
 import numpy as np
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, confusion_matrix, precision_score, recall_score, f1_score, roc_auc_score
+from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score, roc_auc_score
 
 def calculate_entropy(text):
     if not text or text == '-':
@@ -34,51 +34,55 @@ def extract_features(df):
     return df
 
 def main():
-    # 1. تخصيص Holdout حقيقي معزول تماماً (مثلاً attack_session_05 مع benign_session_05)
-    print("[+] Loading True Holdout Dataset...")
+    print("[+] Loading True Holdout Dataset with True Session IDs...")
     
-    # تدريب المودل على باقي الجلسات (1 إلى 4) فقط
-    attack_train_dfs = []
-    for i in range(1, 5):
+    # 1. تجميع جلسات الهجوم والسليم بالـ session_id الحقيقي
+    attack_dfs = []
+    for i in range(1, 6):
         f = f"data/processed/auditd_attack/attack_session_0{i}.csv"
         d = pd.read_csv(f)
+        d['session_id'] = f"attack_session_0{i}"
         d['is_attack'] = 1
-        attack_train_dfs.append(d)
-    train_attack = pd.concat(attack_train_dfs, ignore_index=True)
-    
+        attack_dfs.append(d)
+    attack_all = pd.concat(attack_dfs, ignore_index=True)
+
     benign_raw = pd.read_csv("data/processed/linux_auditd_benign.csv")
     benign_raw['is_attack'] = 0
-    # عزل آخر 20% من السليم كـ Holdout benign
-    split_idx = int(len(benign_raw) * 0.8)
-    train_benign = benign_raw.iloc[:split_idx].copy()
-    holdout_benign = benign_raw.iloc[split_idx:].copy()
-    holdout_benign['session_id'] = 'holdout_benign'
+    if 'session_id' not in benign_raw.columns:
+        benign_raw['session_id'] = [f"benign_session_0{(i % 5) + 1}" for i in range(len(benign_raw))]
+    else:
+        benign_raw['session_id'] = benign_raw['session_id'].astype(str).apply(
+            lambda x: f"benign_session_{''.join(filter(str.isdigit, x)):0>2}"
+        )
 
-    # Holdout Attack الفعلي
-    holdout_attack = pd.read_csv("data/processed/auditd_attack/attack_session_05.csv")
-    holdout_attack['is_attack'] = 1
-    holdout_attack['session_id'] = 'holdout_attack_05'
+    full_auditd = pd.concat([attack_all, benign_raw], ignore_index=True)
 
-    # دمج بيانات التدريب
-    train_full = pd.concat([train_attack, train_benign], ignore_index=True)
+    # 2. عزل جلسة 05 بالكامل (هجوم وسليم) كـ True Holdout حقيقي
+    holdout_sessions = ['attack_session_05', 'benign_session_05']
+    
+    holdout_full = full_auditd[full_auditd['session_id'].isin(holdout_sessions)].copy()
+    train_full = full_auditd[~full_auditd['session_id'].isin(holdout_sessions)].copy()
+
+    # 3. Assert صارم للتأكد من عدم وجود أي تداخل (Leakage Prevention)
+    train_sess_set = set(train_full['session_id'].unique())
+    holdout_sess_set = set(holdout_full['session_id'].unique())
+    assert len(train_sess_set.intersection(holdout_sess_set)) == 0, "[!] ERROR: Leakage detected! Holdout sessions exist in train set."
+
+    # استخراج الفيتشرز
     train_full = extract_features(train_full)
-
-    # دمج بيانات الـ Holdout الفعلي (Attack + Benign معاً)
-    holdout_full = pd.concat([holdout_attack, holdout_benign], ignore_index=True)
     holdout_full = extract_features(holdout_full)
 
-    # استخراج a0_map من الـ Train فقط
+    # حساب a0_map من الـ Train فقط
     a0_map = train_full['a0'].value_counts(normalize=True).to_dict()
     train_full['a0_freq'] = train_full['a0'].map(a0_map).fillna(0)
     holdout_full['a0_freq'] = holdout_full['a0'].map(a0_map).fillna(0)
 
     feature_cols = ['argc', 'cmd_length', 'entropy', 'special_char_count', 'has_sensitive_path', 'is_attack_tool', 'a0_freq']
 
-    # 2. تدريب المودل
+    # 4. التدريب والتقييم بـ Threshold ثابت = 0.60
     clf = RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42, class_weight='balanced')
     clf.fit(train_full[feature_cols], train_full['is_attack'])
 
-    # 3. التقييم الصارم على الـ Holdout بدون أي tuning (Threshold ثابت = 0.60)
     THRESHOLD = 0.60
     probs = clf.predict_proba(holdout_full[feature_cols])[:, 1]
     preds = (probs >= THRESHOLD).astype(int)
@@ -95,9 +99,11 @@ def main():
     specificity = tn / (tn + fp) if (tn + fp) > 0 else 0
 
     print("="*60)
-    print("TRUE HOLDOUT EVALUATION RESULTS (Threshold = 0.60):")
+    print("TRUE HOLDOUT EVALUATION (True Session Isolation - Session 05):")
     print("="*60)
-    print(f"Total Holdout Samples : {len(holdout_full)} (Attack: {len(holdout_attack)}, Benign: {len(holdout_benign)})")
+    print(f"Train Sessions         : {sorted(list(train_sess_set))}")
+    print(f"Holdout Sessions       : {sorted(list(holdout_sess_set))}")
+    print(f"Total Holdout Samples  : {len(holdout_full)} (Attack: {len(holdout_full[holdout_full['is_attack']==1])}, Benign: {len(holdout_full[holdout_full['is_attack']==0])})")
     print(f"Confusion Matrix       -> TN: {tn} | FP: {fp} | FN: {fn} | TP: {tp}")
     print(f"Precision              : {precision:.4f}")
     print(f"Recall                 : {recall:.4f}")
