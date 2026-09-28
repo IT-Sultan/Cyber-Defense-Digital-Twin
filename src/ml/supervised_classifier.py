@@ -68,6 +68,7 @@ def extract_features(df):
     return df
 
 def main():
+    THRESHOLD = 0.60
     # 1. تحميل سجلات APT41 النظيفة حصراً لضمان تطابق الـ event_id العددي
     clean_file = "data/processed/apt41_clean.csv"
     if not os.path.exists(clean_file):
@@ -164,8 +165,8 @@ def main():
 
     df_attack['ml_score'] = np.round(attack_probs, 4)
     df_attack['ml_label'] = df_attack['ml_score'].apply(
-        lambda s: 'High Risk' if s >= 0.75 else ('Medium Risk' if s >= 0.40 else 'Low Risk')
-    )
+    lambda s: 'Anomaly' if s >= THRESHOLD else 'Inlier'
+)
     df_attack['model_name'] = 'RandomForest_TemporalSplit_v1'
 
     required_cols = ['event_id', '@timestamp', 'host', 'ml_score', 'ml_label', 'model_name']
