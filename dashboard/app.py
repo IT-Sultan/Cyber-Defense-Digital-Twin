@@ -744,7 +744,33 @@ with mitre_tab:
 
     st.subheader("MITRE ATT&CK View")
 
+    show_all_events = st.toggle(
+        "Show all dataset events",
+        value=False,
+        key="mitre_show_all_events"
+    )
+
     if not timeline_df.empty:
+
+        timeline_df = timeline_df.sort_values(
+            by=["@timestamp", "event_id"]
+        )
+
+        if selected_event_ids and not show_all_events:
+            timeline_df = timeline_df[
+                timeline_df["event_id"].isin(selected_event_ids)
+            ]
+            st.caption(
+                f"Showing the {len(timeline_df)} events of the selected chain. "
+                "Tactics and techniques below are the dataset's original "
+                "ATT&CK labels (ground truth), not the detection engine's "
+                "output. See the Detections tab for detected tactics."
+            )
+        else:
+            st.caption(
+                f"Showing all {len(timeline_df)} events in the dataset with "
+                "the dataset's original ATT&CK labels (ground truth)."
+            )
 
         if "tactic" in timeline_df.columns:
 
