@@ -273,7 +273,7 @@ queue_df = queue_df.rename(columns={
     "risk_score": "Risk Score",
     "host": "Host",
     "correlated_events": "Events",
-    "unique_attack_stages": "MITRE Stages",
+    "unique_attack_stages": "Detected Tactics",
     "anomaly_ratio": "High-Risk ML Ratio"
 })
 
@@ -417,7 +417,7 @@ bottom_cols[0].metric(
 )
 
 bottom_cols[1].metric(
-    "MITRE Stages",
+    "Detected Tactics",
     unique_stages
 )
 
