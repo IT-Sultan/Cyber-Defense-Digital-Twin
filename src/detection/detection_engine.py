@@ -37,7 +37,7 @@ rules = [
     {
         "rule_id": "DET003",
         "name": "SSH Remote Service",
-        "pattern": r"\bssh\b",
+        "pattern": r"(?:^|[\s/])ssh\s",
         "severity": "high",
         "tactic": "lateral-movement",
         "technique_id": "T1021.004",
@@ -46,7 +46,7 @@ rules = [
     {
         "rule_id": "DET004",
         "name": "Shadow File Access",
-        "pattern": r"/etc/(shadow|passwd)",
+        "pattern": r"/etc/shadow",
         "severity": "critical",
         "tactic": "credential-access",
         "technique_id": "T1003.008",
@@ -87,6 +87,15 @@ rules = [
         "tactic": "discovery",
         "technique_id": "T1082",
         "technique": "System Information Discovery"
+    },
+    {
+        "rule_id": "DET009",
+        "name": "Passwd File Read",
+        "pattern": r"/etc/passwd",
+        "severity": "medium",
+        "tactic": "discovery",
+        "technique_id": "T1087.001",
+        "technique": "Account Discovery: Local Account"
     }
 ]
 

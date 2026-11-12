@@ -101,6 +101,9 @@ for chain_id, group in df.groupby("chain_id"):
     if "Shadow File Access" in rules:
         context.append("Credential access activity")
 
+    if "Passwd File Read" in rules:
+        context.append("Account discovery activity")
+
     if "File Encryption Activity" in rules:
         context.append("Impact / encryption activity")
 
